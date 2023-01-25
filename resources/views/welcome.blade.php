@@ -1256,7 +1256,7 @@
                             <span class="wt-title-subline font-16 text-gray-dark m-b15">Get started in three steps</span>
                             <h2 class="text-uppercase">How It Work</h2>
                             <div class="wt-separator-outer"><div class="wt-separator bg-primary"></div></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eos optio ducimus odit, labore hic fugiat iusto veniam necessitatibus quas doloremque sapiente maiores.</p>
+                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eos optio ducimus odit, labore hic fugiat iusto veniam necessitatibus quas doloremque sapiente maiores.</p> --}}
                         </div>
                         <!-- TITLE END-->
                         <div class="section-content no-col-gap">
