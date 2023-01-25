@@ -1856,7 +1856,9 @@
             <div class="loading-box"></div>
             <div class="loading-pic">
                 <div class="cssload-container">
-                    <div class="cssload-dot bg-primary"><i class="fa fa-bitcoin"></i></div>
+                    <div class="cssload-dot bg-primary">
+                        <img src="{{ asset('website-assets/images/favicon-white.png?v=20200120143222') }}" width="230" height="67" alt="" />
+                    </div>
                     <div class="step" id="cssload-s1"></div>
                     <div class="step" id="cssload-s2"></div>
                     <div class="step" id="cssload-s3"></div>
