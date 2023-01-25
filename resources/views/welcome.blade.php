@@ -40,7 +40,9 @@
         <!-- THEME COLOR CHANGE STYLE SHEET -->
         <link rel="stylesheet" class="skin" type="text/css" href="{{ asset('website-assets/css/skin/skin-1.css') }}">
         <!-- CUSTOM  STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/custom.css') }}"> 
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/custom.css') }}">
+        <!-- SIDE SWITCHER STYLE SHEET -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/switcher.css') }}">
 
         
         <!-- REVOLUTION SLIDER CSS -->
