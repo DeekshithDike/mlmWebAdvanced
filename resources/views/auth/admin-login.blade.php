@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Admin Login | {{ config('app.name', 'MLM') }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=16353637') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20200120143222') }}" />
 
     <!-- CSS Assets -->
     <link rel="stylesheet" href="{{ asset('dashboard-assets/css/app.css') }}" />
@@ -46,7 +46,7 @@
           <div class="text-center">
             <img
               class="mx-auto h-16 w-16"
-              src="{{ asset('website-assets/images/favicon.png?v=16353637') }}"
+              src="{{ asset('website-assets/images/favicon.png?v=20200120143222') }}"
               alt="logo"
             />
             <div class="mt-4">
