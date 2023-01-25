@@ -1887,6 +1887,7 @@
 
         <script   src="{{ asset('website-assets/js/custom.js') }}"></script><!-- CUSTOM FUCTIONS  -->
         <script   src="{{ asset('website-assets/js/shortcode.js') }}"></script><!-- SHORTCODE FUCTIONS  -->
+        <script   src="{{ asset('website-assets/js/switcher.js') }}"></script><!-- SWITCHER FUCTIONS  -->
         <script  src="{{ asset('website-assets/js/jquery.bgscroll.js') }}"></script><!-- BACKGROUND SCROLL -->
         <script  src="{{ asset('website-assets/js/tickerNews.min.js') }}"></script><!-- TICKERNEWS-->
         <!-- TICKERNEWS FUNCTiON -->
