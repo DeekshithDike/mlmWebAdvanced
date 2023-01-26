@@ -67,8 +67,8 @@
                             <div class="clearfix">
                                 <div class="wt-topbar-left">
                                     <ul class="list-unstyled e-p-bx pull-left">
-                                        <li><i class="fa fa-envelope"></i>support@kryptomusk.com</li>
-                                        <li><i class="fa fa-phone"></i>(+44) 736 204 9625</li>
+                                        <li><i class="fa fa-envelope"></i><a href="mailto:support@kryptomusk.com">support@kryptomusk.com</a></li>
+                                        <li><i class="fa fa-whatsapp"></i><a target="_blank" href="https://api.whatsapp.com/send?phone=447362049625">(+44) 736 204 9625</a></li>
                                     </ul>
                                 </div>
                                 
@@ -1431,7 +1431,7 @@
                                             <div class="text-center">
                                                 <h3 class="text-uppercase font-weight-500 text-white">Call Us</h3>
                                                 <p class="text-white">Call us to clarify if you've any query.</p>
-                                                <h4 class="text-primary">(+44) 736 204 9625</h4>
+                                                <h4><i class="fa fa-whatsapp text-primary"></i>&nbsp;<a class="text-primary" target="_blank" href="https://api.whatsapp.com/send?phone=447362049625">(+44) 736 204 9625</a></h4>
                                             </div>    
                                         </div>
                                     </div>                               
@@ -1445,7 +1445,7 @@
                                             <div class="text-center">
                                                 <h3 class="text-uppercase font-weight-500 text-white">Email Us</h3>
                                                 <p class="text-white">Send us email for any clarifcation required on our service.</p>
-                                                <h4 class="text-secondry">support@kryptomusk.com</h4>
+                                                <h4><i class="fa fa-envelope text-white"></i>&nbsp;<a class="text-white" href="mailto:support@kryptomusk.com">support@kryptomusk.com</a></h4>
                                             </div>                               
                                         </div>                                
                                     </div>
@@ -1850,7 +1850,7 @@
                                         </div>
                                         <div class="icon-content text-white">
                                             <h5 class="wt-tilte text-uppercase m-b0">Phone</h5>
-                                            <p class="m-b0">(+44) 736 204 9625</p>
+                                            <p class="m-b0"><a target="_blank" href="https://api.whatsapp.com/send?phone=447362049625">(+44) 736 204 9625</a></p>
                                         </div>
                                 </div>
                             </div>
@@ -1872,7 +1872,7 @@
                                     </div>
                                     <div class="icon-content text-white">
                                         <h5 class="wt-tilte text-uppercase m-b0">Email</h5>
-                                        <p class="m-b0">support@kryptomusk.com</p>
+                                        <p class="m-b0"><a href="mailto:support@kryptomusk.com">support@kryptomusk.com</a></p>
                                     </div>
                                 </div>
                             </div>
