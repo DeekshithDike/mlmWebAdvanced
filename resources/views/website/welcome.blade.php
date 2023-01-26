@@ -68,7 +68,7 @@
                                 <div class="wt-topbar-left">
                                     <ul class="list-unstyled e-p-bx pull-left">
                                         <li><i class="fa fa-envelope"></i>support@kryptomusk.com</li>
-                                        <li><i class="fa fa-phone"></i>(+44) 123-4587</li>
+                                        <li><i class="fa fa-phone"></i>(+44) 736 204 9625</li>
                                     </ul>
                                 </div>
                                 
@@ -103,39 +103,27 @@
                             <!-- MAIN Vav -->
                             <div class="header-nav navbar-collapse collapse ">
                                 <ul class=" nav navbar-nav">
-                                    <li class="active">
-                                        <a href="javascript:;">Home</a>
+                                    <li>
+                                        <a href="{{ url('/') }}">Home</a>
                                     </li>
                                 
                                     <li>
-                                        <a href="javascript:;">About Us</a>
+                                        <a href="#aboutUs">About Us</a>
                                     </li>
                                     
                                     <li>
-                                        <a href="javascript:;">Trading</a>
+                                        <a href="#trading">Trading</a>
                                     </li>
-                                
+                                    
                                     <li>
-                                        <a href="javascript:;">Mining</a>
+                                        <a href="#packages">Packages</a>
                                     </li>
                                     
-                                    <li class="submenu-direction">
-                                        <a href="javascript:;">Packages</a>
+                                    <li>
+                                        <a href="#faq">Faq</a>
                                     </li>
                                     
-                                    <li class="has-mega-menu ">
-                                        <a href="javascript:;">Affiliate</a>
-                                    </li>
-                                    
-                                    <li class="has-mega-menu ">
-                                        <a href="javascript:;">Deposit</a>
-                                    </li>
-                                    
-                                    <li class="has-mega-menu ">
-                                        <a href="javascript:;">Withdrawal</a>
-                                    </li>
-                                    
-                                    <li class="has-mega-menu ">
+                                    <li>
                                         <a href="#contactUs">Contact Us</a>
                                     </li>
                                 </ul>
@@ -249,7 +237,7 @@
                                         border-width:0px;">
                                         
                                         <div style="font-family: 'Poppins', sans-serif; text-transform:uppercase;">
-                                            <span class="text-white" style="padding-right:10px;">We Trade</span><span class="text-primary">And</span>
+                                            <span class="text-white" style="padding-right:10px;">We</span><span class="text-primary">Trade</span>
                                         </div>
                                         
                                         </div>
@@ -282,7 +270,7 @@
                                         font-weight: 700;
                                         border-width:0px;">
                                         <div style="font-family: 'Poppins', sans-serif; text-transform:uppercase ;">
-                                            <span class="text-primary" style="padding-right:10px;">Mine</span><span class="text-white">For You</span>
+                                            <span class="text-primary" style="padding-right:10px;">For</span><span class="text-white">You</span>
                                         </div>
                                         
                                         </div>
@@ -1060,7 +1048,7 @@
                 <!-- MARQUEE SCROLL SECTION  END -->    
                         
                 <!-- ABOUT COMPANY SECTION START -->           
-                <div class="section-full home-about-section p-t80 bg-no-repeat bg-bottom-right"  style="background-image:url({{ asset('website-assets/images/background/bg-coin.png?v=20200120143222') }})">
+                <div id="aboutUs" class="section-full home-about-section p-t80 bg-no-repeat bg-bottom-right"  style="background-image:url({{ asset('website-assets/images/background/bg-coin.png?v=20200120143222') }})">
                     <div class="container-fluid ">
                         <div class="row">
                             <div class="col-md-6">
@@ -1080,13 +1068,12 @@
                                         <div class="section-content">
                                             <div class="wt-box">
                                                 <p>
-                                                    Krypto Musk is one of the first hybrid trading and cloud mining platform founded by a group of visionaries whose idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases. Our vision and standards that we value are simple.
+                                                    Krypto Musk is one of the first hybrid trading platform founded by a group of visionaries whose idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases  our vision is service over sales, honor over hustle and most importantly people over profits.
                                                 </p>
                                                 <p>
-                                                    Krypto Musk came into existence in 2016 and since then has enjoyed numerous success stories all over the globe. With offices in more than 9 countries, there is never downtime.
+                                                    The hybrid crypto program is a unique program where it combines the best of centralized and decentralized exchanges – offering high liquidity and fast transactions of centralized exchanges and anonymity and protection of decentralized exchanges.
                                                 </p>
-                                                <a href="javascript:void(0)" class="site-button text-uppercase m-r15">Read More</a>
-                                                <a href="#contactUs" class="site-button-secondry text-uppercase">Contact us</a>
+                                                <a href="{{ url('/about') }}" class="site-button text-uppercase m-r15">Read More</a>
                                             </div>
                                         </div>                                	
                                     </div>
@@ -1101,7 +1088,7 @@
                     <div class="container">
                         <!-- TITLE START-->
                         <div class="section-head text-center">
-                            <span class="wt-title-subline font-16 text-gray-dark m-b15">Mine and Trade Cryptocurrencies</span>
+                            <span class="wt-title-subline font-16 text-gray-dark m-b15">Invest and Earn Cryptocurrencies</span>
                             <h2 class="text-uppercase">Why Choose Krypto Musk</h2>
                             <div class="wt-separator-outer">
                                 <div class="wt-separator bg-primary"></div>
@@ -1210,37 +1197,14 @@
                                     <h3 class="font-24">The Krypto Musk</h3>
                                     <h2 class="font-60 font-weight-600"><span class="text-primary"> AWESOME FACTS</span></h2>
                                     <p>
-                                        Krypto Musk offers seamless and progressive Bitcoin/Ethereum cloud mining and trading. Our facility with over 98,000 square feet of space is one of the largest data centers of its kind in the world. Our trading offices number more than 50 professional traders around the world with an experience that are responsible for daily trades. Benefit from 24/7 support and assistance where you can reach our managers via live chat and social media.
+                                        The hybrid exchange offers the best of both worlds and is part of a new generation of crypto trading platforms. Compared to older exchanges, these new exchanges offer greater functionality, liquidity, and security than centralized exchanges.
                                     </p>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-4">
-                                        <div class="status-marks  text-white m-tb10">
-                                            <div class="status-value text-right">
-                                                <span class="counter">2582</span>
-                                                <i class="fa fa-building font-26 m-l15"></i>
-                                            </div>
-                                            <h6 class="text-uppercase text-right">PROJECT COMPLETED</h6>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <div class="status-marks  text-white m-tb10">
-                                            <div class="status-value text-right">
-                                                <span class="counter">2366</span>
-                                                <i class="fa fa-users font-26 m-l15"></i>
-                                            </div>
-                                            <h6 class="text-uppercase text-white text-right">HAPPY CLIENTS</h6>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4">
-                                        <div class="status-marks  text-white m-tb10">
-                                            <div class="status-value text-right">
-                                                <span class="counter">52</span>
-                                                <i class="fa fa-user-plus font-26 m-l15"></i>
-                                            </div>
-                                            <h6 class="text-uppercase text-white text-right">WORKERS EMPLOYED</h6>
-                                        </div>
-                                    </div>
+                                    <p>
+                                        In the crypto space, hybrid exchanges are relatively new, boasting fast transaction speeds without compromising their users' privacy. It will take time to see if they are successful or not due to high costs, limited scalability, and limited assets.
+                                    </p>
+                                    <p>
+                                        Hybrid decentralized exchanges are the Combination of both ethereum decentralized exchange and TRON Decentralized exchange in just one single platform.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1309,7 +1273,7 @@
                 <!-- HOW IT WORK  SECTION END -->
                         
                 <!-- SECTION CONTENT START -->
-                <div class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20200120143222') }});">
+                <div id="trading" class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20200120143222') }});">
                     
                     <div class="container">
                             
@@ -1330,7 +1294,7 @@
                                                     
                                                     <div id="collapseOne6" class="acod-body collapse in">
                                                         <div class="acod-content p-tb15">
-                                                            Krypto Musk boast of about 12, 000 users around 50 countries. All users of Krypto Musk invest are satisfied with our services, you see some of their recommendations on this site. Since coming into existence, Krypto Musk has won several investment awards.
+                                                            Krypto Musk is one of the first hybrid trading platform founded by a group of visionaries whose idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases  our vision is service over sales, honor over hustle and most importantly people over profits.
                                                         </div>
                                                     </div>
                                                     
@@ -1346,7 +1310,8 @@
                                                     </div>
                                                     <div id="collapseTwo6" class="acod-body collapse">
                                                         <div class="acod-content p-tb15">
-                                                            Our facility with over 98,000 square feet of space is one of the largest data centers of its kind in world. Our trading offices number more than 50 professional traders around the world with experience that are responsible for daily trades.
+                                                            What are the main types of crypto exchanges?<br />
+                                                            Like stock exchanges, crypto traders can buy, sell, and convert cryptocurrencies on crypto exchanges. There are currently three types of cryptocurrency exchanges—centralised exchanges (CEXs), decentralised exchanges (DEX) and hybrid exchanges (HEX).
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1361,23 +1326,7 @@
                                                     </div>
                                                     <div id="collapseThree6" class="acod-body collapse">
                                                         <div class="acod-content p-tb15">
-                                                            Simply sign up, verify your details and choose cloud mining, trading or Hybrid option you prefer. You can fully manage your account. Platform support immediate deposits and withdrawals once client request it or select daily, weekly or monthly bases.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="panel wt-panel">
-                                                    <div class="acod-head">
-                                                    <h6 class="acod-title text-uppercase">
-                                                        <a data-toggle="collapse"  href="#collapseFour6" class="collapsed"  data-parent="#accordion6">
-                                                    When? 
-                                                        <span class="indicator"><i class="fa fa-plus"></i></span>
-                                                        </a>
-                                                    </h6>
-                                                    </div>
-                                                    <div id="collapseFour6" class="acod-body collapse">
-                                                        <div class="acod-content p-tb15">
-                                                            Company started 2018 with headquarters in Vilnius, Lithuania. There's a reason why more than 12,000 accounts have been opened with us. Sign up for new account and make passive income immediately. Start today and feel financial freedom with Krypto Musk.
+                                                            Simple sign up youself using the give link, very your details and register, one's you register you can activate your account using minimum investment.
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1402,6 +1351,71 @@
                     </div>
                 </div>
                 <!-- SECTION CONTENT  END -->
+
+                <!-- Packages SECTION START  -->
+                <div id="packages" class="section-full  p-t80 p-b80 bg-gray">
+                    <div class="container">
+                        <!-- TITLE START-->
+                        <div class="section-head text-center">
+                            <span class="wt-title-subline font-16 text-gray-dark m-b15">Our Joining Package</span>
+                            <h2 class="text-uppercase">Packages</h2>
+                            <div class="wt-separator-outer"><div class="wt-separator bg-primary"></div></div>
+                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eos optio ducimus odit, labore hic fugiat iusto veniam necessitatibus quas doloremque sapiente maiores.</p> --}}
+                        </div>
+                        <!-- TITLE END-->
+                        <div class="section-content no-col-gap">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 step-number-block">
+                                    <div class="wt-icon-box-wraper  p-a30 bg-secondry m-a5">
+                                        <div class="icon-content text-white">
+                                            <h2 class="wt-tilte text-uppercase font-weight-500">Basic Plan</h2>
+                                            <ul class="list-check-circle primary">
+                                                <li>25$ - 9999$</li>
+                                                <li>1.25℅ ROI</li>
+                                                <li>8℅ Referrals</li>
+                                                <li>10℅ Binary</li>
+                                                <li>Duration 180 days</li>
+                                                <li>Capping 1000$</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 step-number-block">
+                                    <div class="wt-icon-box-wraper  p-a30 bg-primary m-a5">
+                                        <div class="icon-content text-white">
+                                            <h2 class="wt-tilte text-uppercase font-weight-500">Premium Plan</h2>
+                                            <ul class="list-check-circle white">
+                                                <li>10000$ - 49999$</li>
+                                                <li>1.75℅ ROI</li>
+                                                <li>9℅ Referrals</li>
+                                                <li>10℅ Binary</li>
+                                                <li>Duration 150 days</li>
+                                                <li>Capping 5000$</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 step-number-block">
+                                    <div class="wt-icon-box-wraper  p-a30 bg-secondry m-a5">
+                                        <div class="icon-content text-white">
+                                            <h2 class="wt-tilte text-uppercase font-weight-500">Executive plan</h2>
+                                            <ul class="list-check-circle primary">
+                                                <li>50000$ - 149999$</li>
+                                                <li>2.25℅ ROI</li>
+                                                <li>10℅ Referrals</li>
+                                                <li>10℅ Binary</li>
+                                                <li>Duration 120 days</li>
+                                                <li>Capping 15000$</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- Packages  SECTION END -->
                 
                 <!-- SECTION CONTENT START -->
                 <div class="section-full no-col-gap bg-repeat" id="contactUs">
@@ -1409,23 +1423,27 @@
                             
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 bg-secondry">
-                                    <div class="section-content p-tb60 p-r30 clearfix">
+                                    <div class="section-content p-b100 p-t150 p-r30 clearfix">
                                         <div class="wt-left-part any-query">
                                             <img src="{{ asset('website-assets/images/any-query.png?v=20200120143222') }}" alt="">
+                                            <br />
+                                            <br />
                                             <div class="text-center">
-                                                <h3 class="text-uppercase font-weight-500 text-white">Any Query?</h3>
+                                                <h3 class="text-uppercase font-weight-500 text-white">Call Us</h3>
                                                 <p class="text-white">Call us to clarify if you've any query.</p>
-                                                <h4 class="text-primary">(+44) 123-4587</h4>
+                                                <h4 class="text-primary">(+44) 736 204 9625</h4>
                                             </div>    
                                         </div>
                                     </div>                               
                                 </div>
                                 <div class="col-md-6 col-sm-6 bg-primary">
-                                    <div class="section-content p-tb60 p-l30 clearfix">
-                                        <div class="wt-right-part any-query-contact">
+                                    <div class="section-content p-b100 p-t150 p-l30 clearfix">
+                                        <div class="wt-right-part any-query">
                                             <img src="{{ asset('website-assets/images/any-query-contact.png?v=20200120143222') }}" alt="">
+                                            <br />
+                                            <br />
                                             <div class="text-center">
-                                                <h3 class="text-uppercase font-weight-500 text-white">Contact Us</h3>
+                                                <h3 class="text-uppercase font-weight-500 text-white">Email Us</h3>
                                                 <p class="text-white">Send us email for any clarifcation required on our service.</p>
                                                 <h4 class="text-secondry">support@kryptomusk.com</h4>
                                             </div>                               
@@ -1547,119 +1565,148 @@
                     </div>
                 </div>
                 <!-- LATEST BLOG SECTION END -->
-                
+
                 <!-- SECTION CONTENT START -->
-                <div class="section-full p-t80 p-b50 bg-center bg-full-height bg-no-repeat"  style="background-image:url({{ asset('website-assets/images/background/bg-testimonial.jpg?v=20200120143222') }});">
+                <div id="faq" class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20200120143222') }});">
+                    
                     <div class="container">
-                        <!-- TITLE START -->    
+                        <!-- TITLE -->
                         <div class="section-head text-center">
-                            <span class="wt-title-subline font-16 text-gray-dark m-b15">Our Clients</span>
-                            <h2 class="text-uppercase">Our Client Say</h2>
+                            <h2 class="text-uppercase text-white">FAQ</h2>
                             <div class="wt-separator-outer">
                                 <div class="wt-separator bg-primary"></div>
                             </div>
                         </div>
-                        <!-- TITLE END -->
-                        
-                        <!-- TESTIMONIAL 4 START ON BACKGROUND -->   
-                        <div class="section-content">
-                            <div class="owl-carousel home-carousel-1">
-                                <div class="item">
-                                    <div class="testimonial-5">
-                                        <div class="testimonial-pic-block radius-bx"> 
-                                            <div class="testimonial-pic radius">
-                                                <img src="{{ asset('website-assets/images/testimonials/pic1.jpg?v=20200120143222') }}" width="132" height="132" alt="">
+                        <!-- TITLE -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- ACCORDION START -->
+                                <div class="wt-accordion acc-bg-gray" id="accordion5">
+                                
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head acc-actives">
+                                            <h3 class="acod-title">
+                                                <a data-toggle="collapse" href="#collapseOne5" data-parent="#accordion5" >
+                                                    What is kryptomusk?
+                                                    <span class="indicator"><i class="fa fa-plus"></i></span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseOne5" class="acod-body collapse in">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                Krypto Musk is one of the first hybrid trading platform where you can invest and earn daily returns                                        
                                             </div>
                                         </div>
-                                        <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left text-primary"></span>
-                                            <p>
-                                                Finally perfect program with no hidden agendas. Everything is transparent and easy to work with.  Managers are very polite and always have time for clients.
-                                            </p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">RINDA SMITH</strong>
-                                            <span class="testimonial-position text-primary p-t10">Founder</span>
-                                        </div>
                                     </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimonial-5">
-                                        <div class="testimonial-pic-block radius-bx"> 
-                                            <div class="testimonial-pic radius">
-                                                <img src="{{ asset('website-assets/images/testimonials/pic2.jpg?v=20200120143222') }}" width="132" height="132" alt="">
+                                    
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head">
+                                            <h3 class="acod-title">
+                                                <a data-toggle="collapse" href="#collapseTwo5" class="collapsed" data-parent="#accordion5">
+                                                    How Does kryptomusk generate profits?
+                                                    <span class="indicator"><i class="fa fa-plus"></i></span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseTwo5" class="acod-body collapse">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                Krypto Musk traders with top centralized and decentralised  crypto currency and generate profits every day
                                             </div>
                                         </div>
-                                        <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left text-primary"></span>
-                                            <p>
-                                                I have been working in marketing industry for the last 10 years and never dealt with a product like Krypto Musk. This company performance speak for itself and it’s so easy to promote.
-                                            </p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">ADLER BECKER</strong>
-                                            <span class="testimonial-position text-primary p-t10">Founder</span>
-                                        </div>
                                     </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimonial-5">
-                                        <div class="testimonial-pic-block radius-bx"> 
-                                            <div class="testimonial-pic radius">
-                                                <img src="{{ asset('website-assets/images/testimonials/pic1.jpg?v=20200120143222') }}" width="132" height="132" alt="">
+                                    
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head">
+                                            <h3 class="acod-title">
+                                            <a data-toggle="collapse"  href="#collapseThree5" class="collapsed"  data-parent="#accordion5">
+                                            What is the mission of kryptomusk?
+                                            <span class="indicator"><i class="fa fa-plus"></i></span>
+                                            </a>
+                                        </h3>
+                                        </div>
+                                        <div id="collapseThree5" class="acod-body collapse">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                The mission is to give end users the convenience of a centralized exchange while also giving them the security and freedom of a decentralized exchange.
                                             </div>
                                         </div>
-                                        <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left text-primary"></span>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                when an unknown printer took a galley of type and specimen book.
-                                            </p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">RINDA SMITH</strong>
-                                            <span class="testimonial-position text-primary p-t10">Founder</span>
-                                        </div>
                                     </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimonial-5">
-                                        <div class="testimonial-pic-block radius-bx"> 
-                                            <div class="testimonial-pic radius">
-                                                <img src="{{ asset('website-assets/images/testimonials/pic2.jpg?v=20200120143222') }}" width="132" height="132" alt="">
+                                    
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head">
+                                            <h3 class="acod-title">
+                                                <a data-toggle="collapse" href="#collapseFour5" data-parent="#accordion5" >
+                                                    Where is the headquarters of kryptomusk?
+                                                    <span class="indicator"><i class="fa fa-plus"></i></span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseFour5" class="acod-body collapse">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                Company headquartered in United Kingdom
                                             </div>
                                         </div>
-                                        <div class="testimonial-text clearfix">
-                                        <div class="testimonial-paragraph">
-                                            <span class="fa fa-quote-left text-primary"></span>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                when an unknown printer took a galley of type and specimen book.
-                                            </p>
+                                    </div>
+                                    
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head">
+                                            <h3 class="acod-title">
+                                                <a data-toggle="collapse" href="#collapseFive5" class="collapsed" data-parent="#accordion5">
+                                                How Can One join kryptomusk?
+                                                <span class="indicator"><i class="fa fa-plus"></i></span>
+                                                </a>
+                                            </h3>
                                         </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">RINDA SMITH</strong>
-                                            <span class="testimonial-position text-primary p-t10">Founder</span>
+                                        <div id="collapseFive5" class="acod-body collapse">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                You can join here in kryptomusk using the registration link,if you got any questions you can contact support team
+                                            </div>
                                         </div>
                                     </div>
-                                        
+                                    
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head">
+                                            <h3 class="acod-title">
+                                                <a data-toggle="collapse" href="#collapseSix5" class="collapsed" data-parent="#accordion5">
+                                                How many types of profit are there?
+                                                <span class="indicator"><i class="fa fa-plus"></i></span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseSix5" class="acod-body collapse">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                There are 3 type of profit
+                                                <p class="mb-0">1. Daily income</p>
+                                                <p class="mb-0">2. Refferal income</p>
+                                                <p class="mb-0">3. Binary income</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
+                                    <div class="panel wt-panel">
+                                        <div class="acod-head">
+                                            <h3 class="acod-title">
+                                                <a data-toggle="collapse" href="#collapseSeven5" class="collapsed" data-parent="#accordion5">
+                                                When can you withdrawal your profits?
+                                                <span class="indicator"><i class="fa fa-plus"></i></span>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseSeven5" class="acod-body collapse">
+                                            <div class="acod-content p-tb15 text-white font-16">
+                                                You can withdraw your daily income on every Saturday and binary income and refferal income on every day. It will take 24 hours to proceed.
+                                            </div>
+                                        </div>
+                                    </div>
+                    
                                 </div>
+                                <!-- ACCORDION END -->  
                             </div>
                         </div>
                         
                     </div>
                 </div>
-                <!-- SECTION CONTENT END -->                        
+                <!-- SECTION CONTENT  END -->                    
                                         
             </div>
             <!-- CONTENT END -->
@@ -1679,7 +1726,7 @@
                                         <a href="{{ url('/') }}"><img src="{{ asset('website-assets/images/logo-white.png?v=20200120143222') }}" width="230" height="67" alt=""/></a>
                                     </div>
                                     <p>
-                                        Krypto Musk is one of the first hybrid trading and cloud mining platform founded by a group of visionaries who's idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases. Our vision and standards that we value are simple.
+                                        Krypto Musk is one of the first hybrid trading platform founded by a group of visionaries whose idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases our vision is service over sales, honor over hustle and most importantly people over profits.
                                     </p>  
                                 </div>
                             </div> 
@@ -1743,12 +1790,26 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="widget widget_services">
                                     <h4 class="widget-title text-white">Useful links</h4>
-                                    <ul>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Trading</a></li>
-                                        <li><a href="#">Mining</a></li>
-                                        <li><a href="#">Packages</a></li>
-                                        <li><a href="#contactUs">Contact Us</a></li>
+                                    <ul>                                    
+                                        <li>
+                                            <a href="#aboutUs">About Us</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#trading">Trading</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#packages">Packages</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#faq">Faq</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#contactUs">Contact Us</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1782,44 +1843,40 @@
                             </div>
                         </div>
                         <div class="row">
-                        
-                        <div class="col-md-4 col-sm-12  p-tb20">
-                            <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
-                                    <div class="icon-md text-primary">
-                                        <span class="iconmoon-travel"></span>
-                                    </div>
-                                    <div class="icon-content text-white">
-                                        <h5 class="wt-tilte text-uppercase m-b0">Address</h5>
-                                        <p>20-22 Wenlock Road, London, England, N1 7GU</p>
-                                    </div>
+                            <div class="col-md-4 col-sm-12  p-tb20 ">
+                                <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix ">
+                                        <div class="icon-md text-primary">
+                                            <span class="iconmoon-smartphone-1"></span>
+                                        </div>
+                                        <div class="icon-content text-white">
+                                            <h5 class="wt-tilte text-uppercase m-b0">Phone</h5>
+                                            <p class="m-b0">(+44) 736 204 9625</p>
+                                        </div>
+                                </div>
                             </div>
+                            <div class="col-md-4 col-sm-12  p-tb20">
+                                <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                                        <div class="icon-md text-primary">
+                                            <span class="iconmoon-travel"></span>
+                                        </div>
+                                        <div class="icon-content text-white">
+                                            <h5 class="wt-tilte text-uppercase m-b0">Address</h5>
+                                            <p>20-22 Wenlock Road, London, England, N1 7GU</p>
+                                        </div>
+                                </div>
                             </div>
-                        <div class="col-md-4 col-sm-12  p-tb20 ">
-                            <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix ">
-                                    <div class="icon-md text-primary">
-                                        <span class="iconmoon-smartphone-1"></span>
-                                    </div>
-                                    <div class="icon-content text-white">
-                                        <h5 class="wt-tilte text-uppercase m-b0">Phone</h5>
-                                        <p class="m-b0">(+44) 123-4587</p>
-                                        <p>(+44) 123-4587</p>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12 p-tb20">
-                            <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                            <div class="col-md-4 col-sm-12 p-tb20">
+                                <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
                                     <div class="icon-md text-primary">
                                         <span class="iconmoon-email"></span>
                                     </div>
                                     <div class="icon-content text-white">
                                         <h5 class="wt-tilte text-uppercase m-b0">Email</h5>
                                         <p class="m-b0">support@kryptomusk.com</p>
-                                        <p>info@kryptomusk.com</p>
                                     </div>
                                 </div>
                             </div>
-
-                    </div>
+                        </div>
                     </div>
                 </div>
                 <!-- FOOTER COPYRIGHT -->
@@ -1830,14 +1887,6 @@
                         <div class="row">
                             <div class="wt-footer-bot-left">
                                 <span class="copyrights-text">© {{ date('Y') }} kryptomusk. All Rights Reserved. Designed By kryptomusk.</span>
-                            </div>
-                            <div class="wt-footer-bot-right">
-                                <ul class="copyrights-nav pull-right"> 
-                                    <li><a href="javascript:void(0);">Terms  & Condition</a></li>
-                                    <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                                    <li><a href="{{ asset('website-assets/087-554407_20221228_14558382.pdf') }}" download="">License</a></li>
-                                    <li><a href="{{ asset('website-assets/087-554407_20221223-135802_14727.pdf') }}" download="">Share Capital</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,11 @@ use App\Http\Controllers\CommonController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('website.welcome');
+});
+
+Route::get('/about', function () {
+    return view('website.about');
 });
 
 // Authenticated & Email verified users routes for all users
