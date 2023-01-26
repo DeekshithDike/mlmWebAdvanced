@@ -302,7 +302,7 @@
                                         font-weight: 500; 
                                         color:#fff;
                                         border-width:0px;">
-                                        <span style="font-family: 'Poppins', sans-serif;">We provides always our best services for our clients and  always  try to achieve our client's trust and satisfaction.</span>
+                                        <span style="font-family: 'Poppins', sans-serif;">We provides always our best services for SECURED BYs and  always  try to achieve SECURED BY's trust and satisfaction.</span>
                                         </div>
                                     
                                         <!-- LAYER NR. 6 [ for see all service botton ] -->
@@ -1706,10 +1706,164 @@
                         
                     </div>
                 </div>
-                <!-- SECTION CONTENT  END -->                    
+                <!-- SECTION CONTENT  END --> 
+                
+
+                <!-- Packages SECTION START  -->
+                <div id="packages" class="section-full  p-t80 p-b80 bg-gray">
+                    <div class="container">
+                        <!-- TITLE START-->
+                        <div class="section-head text-center">
+                            <span class="wt-title-subline font-16 text-gray-dark m-b15">Our Website Secured By</span>
+                            <h2 class="text-uppercase">Secured By</h2>
+                            <div class="wt-separator-outer"><div class="wt-separator bg-primary"></div></div>
+                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eos optio ducimus odit, labore hic fugiat iusto veniam necessitatibus quas doloremque sapiente maiores.</p> --}}
+                        </div>
+                        <!-- TITLE END-->
+                        <div class="section-content no-col-gap">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 step-number-block">
+                                    <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/Lets-Encrypt-Logo.png?v=20200126120555') }}" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 step-number-block">
+                                    <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/Cloudflare-Logo.png?v=20200126120555') }}" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 step-number-block">
+                                    <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/ncl.png?v=20200126120555') }}" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 step-number-block">
+                                    <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/duoLogo-web.png?v=20200126120555') }}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- Packages  SECTION END -->
                                         
             </div>
             <!-- CONTENT END -->
+
+            <!-- SECURED BY SLIDER START -->
+            <div class="section-full overlay-wraper bg-cover bg-repeat-x bg-primary" style="background-image:url(images/background/bg-7.png)">
+                <div class="container">
+                   
+                    <!-- IMAGE CAROUSEL START -->
+                    <div class="section-content">
+                        <div class="owl-carousel home-logo-carousel">
+                        
+                        	<!-- COLUMNS 1 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w1.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 2 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w2.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 3 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w3.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 4 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w4.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 5 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w5.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 6 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w6.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 7 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w1.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 8 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w2.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 9 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w3.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 10 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w4.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 11 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w5.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COLUMNS 12 --> 
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo wt-img-effect on-color">
+                                        <a href="#"><img src="images/client-logo/w6.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                        </div>
+                    </div>
+                    <!-- IMAGE CAROUSEL START -->
+                </div>
+            
+            </div>
+            <!-- SECURED BY SLIDER END -->   
             
             <!-- FOOTER START -->
             <footer class="site-footer footer-dark bg-no-repeat bg-full-height bg-center "  style="background-image:url({{ asset('website-assets/images/background/footer-bg.jpg?v=20200126120555') }});">
