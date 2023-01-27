@@ -45,18 +45,18 @@
         <div class="w-full max-w-[26rem] p-4 sm:px-5">
           <div class="text-center">
             <img
-              class="mx-auto h-16 w-16"
+              class="mx-auto h-16"
               src="{{ asset('website-assets/images/logo-white.png?v=20230127233845') }}"
               alt="logo"
             />
             <div class="mt-4">
               <h2
-                class="text-2xl font-semibold text-slate-600 dark:text-navy-100"
+                class="text-2xl font-semibold text-primary"
               >
-                Welcome To {{ config('app.name', 'MLM') }}
+                Create New Account
               </h2>
               <p class="text-slate-400 dark:text-navy-300">
-                Please sign up to continue
+                Please create an account to continue
               </p>
             </div>
           </div>
