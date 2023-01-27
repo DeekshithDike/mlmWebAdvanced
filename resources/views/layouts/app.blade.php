@@ -12,7 +12,7 @@
 
         <title>{{ config('app.name', 'MLM') }} | @yield('title')</title>
             
-        <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20200126120555') }}" />
+        <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20230127104155') }}" />
 
         <!-- CSS Assets -->
         <link rel="stylesheet" href="{{ asset('dashboard-assets/css/app.css') }}" />

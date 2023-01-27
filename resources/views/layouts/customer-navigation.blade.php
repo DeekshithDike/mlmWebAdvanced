@@ -7,7 +7,7 @@
             <a href="{{ route('dashboard') }}">
             <img
                 class="h-11 w-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
-                src="{{ asset('website-assets/images/favicon.png?v=20200126120555') }}"
+                src="{{ asset('website-assets/images/favicon.png?v=20230127104155') }}"
                 alt="logo"
                 />
             </a>
