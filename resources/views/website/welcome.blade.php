@@ -1336,7 +1336,7 @@
                                 <div class="col-md-6">
                                     <div class="wt-box graph-part-right text-white">
                                         <strong class="text-uppercase title-first">Krypto Musk</strong>
-                                        <span class="text-uppercase text-primary display-block title-second">DON’T WASTE YOUT VALUABLE TIME, START NOW!</span>
+                                        <span class="text-uppercase text-primary display-block title-second">DON’T WASTE YOUR VALUABLE TIME, START NOW!</span>
                                         <p><strong>Step into financial freedom and become a member of the fastest rising company on the market.</strong></p>
                                         <ul class="list-check-circle primary">
                                             <li>More than 12,000 clients</li>
