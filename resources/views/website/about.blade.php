@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">        
 
         <!-- FAVICONS ICON -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230127104155') }}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230127110455') }}" />
         
         <!-- PAGE TITLE HERE -->
         <title>{{ config('app.name', 'MLM') }}</title>
@@ -20,35 +20,35 @@
         <![endif] -->
         
         <!-- BOOTSTRAP STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap.min.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap.min.css?v=20230127110455') }}">
         <!-- FONTAWESOME STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/fontawesome/css/font-awesome.min.css?v=20230127104155') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/fontawesome/css/font-awesome.min.css?v=20230127110455') }}" />
         <!-- FLATICON STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/flaticon.min.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/flaticon.min.css?v=20230127110455') }}">
         <!-- ANIMATE STYLE SHEET --> 
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/animate.min.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/animate.min.css?v=20230127110455') }}">
         <!-- OWL CAROUSEL STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/owl.carousel.min.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/owl.carousel.min.css?v=20230127110455') }}">
         <!-- BOOTSTRAP SELECT BOX STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap-select.min.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap-select.min.css?v=20230127110455') }}">
         <!-- MAGNIFIC POPUP STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/magnific-popup.min.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/magnific-popup.min.css?v=20230127110455') }}">
         <!-- LOADER STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/loader.min.css?v=20230127104155') }}">    
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/loader.min.css?v=20230127110455') }}">    
         <!-- MAIN STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/style.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/style.css?v=20230127110455') }}">
         <!-- THEME COLOR CHANGE STYLE SHEET -->
-        <link rel="stylesheet" class="skin" type="text/css" href="{{ asset('website-assets/css/skin/skin-1.css?v=20230127104155') }}">
+        <link rel="stylesheet" class="skin" type="text/css" href="{{ asset('website-assets/css/skin/skin-1.css?v=20230127110455') }}">
         <!-- CUSTOM  STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/custom.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/custom.css?v=20230127110455') }}">
         <!-- SIDE SWITCHER STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/switcher.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/switcher.css?v=20230127110455') }}">
 
         
         <!-- REVOLUTION SLIDER CSS -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/settings.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/settings.css?v=20230127110455') }}">
         <!-- REVOLUTION NAVIGATION STYLE -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/navigation.css?v=20230127104155') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/navigation.css?v=20230127110455') }}">
         
         <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">  
@@ -89,7 +89,7 @@
                     <div class="container">
                         <div class="logo-header">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset('website-assets/images/logo-blue.png?v=20230127104155') }}" width="216" height="37" alt="" />
+                                <img src="{{ asset('website-assets/images/logo-blue.png?v=20230127110455') }}" width="216" height="37" alt="" />
                             </a>
                         </div>
                         <div class="header-info">
@@ -139,7 +139,7 @@
                             <!-- MAIN Vav -->
                             <div class="header-nav navbar-collapse collapse ">
                                 <ul class=" nav navbar-nav">
-                                    <li class="active">
+                                    <li>
                                         <a href="{{ url('/') }}">Home</a>
                                     </li>
                                 
@@ -148,15 +148,15 @@
                                     </li>
                                     
                                     <li>
-                                        <a href="javascript:;">Trading</a>
+                                        <a href="{{ url('/') }}#trading">Trading</a>
                                     </li>
                                     
                                     <li>
-                                        <a href="javascript:;">Packages</a>
+                                        <a href="{{ url('/') }}#packages">Packages</a>
                                     </li>
                                     
                                     <li>
-                                        <a href="javascript:;">Faq</a>
+                                        <a href="{{ url('/') }}#faq">Faq</a>
                                     </li>
                                     
                                     <li>
@@ -175,7 +175,7 @@
             <div class="page-content">
             
                 <!-- INNER PAGE BANNER -->
-                <div class="wt-bnr-inr overlay-wraper" style="background-image:url({{ asset('website-assets/images/banner/about-banner.jpg?v=20230127104155') }});">
+                <div class="wt-bnr-inr overlay-wraper" style="background-image:url({{ asset('website-assets/images/banner/about-banner.jpg?v=20230127110455') }});">
                     <div class="overlay-main bg-black opacity-07"></div>
                     <div class="container">
                         <div class="wt-bnr-inr-entry">
@@ -221,7 +221,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="wt-media">
-                                    <img src="{{ asset('website-assets/images/banner/pic3.jpg?v=20230127104155') }}" alt="" class="img-responsive"/>
+                                    <img src="{{ asset('website-assets/images/banner/pic3.jpg?v=20230127110455') }}" alt="" class="img-responsive"/>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
             <!-- CONTENT END -->
             
             <!-- FOOTER START -->
-            <footer class="site-footer footer-dark bg-no-repeat bg-full-height bg-center "  style="background-image:url({{ asset('website-assets/images/background/footer-bg.jpg?v=20230127104155') }});">
+            <footer class="site-footer footer-dark bg-no-repeat bg-full-height bg-center "  style="background-image:url({{ asset('website-assets/images/background/footer-bg.jpg?v=20230127110455') }});">
                 <!-- FOOTER BLOCKES START -->  
                 <div class="footer-top overlay-wraper">
                     <div class="overlay-main bg-black opacity-05"></div>
@@ -244,7 +244,7 @@
                                 <div class="widget widget_about">
                                     <h4 class="widget-title text-white">About Company</h4>
                                     <div class="logo-footer clearfix p-b15">
-                                        <a href="{{ url('/') }}"><img src="{{ asset('website-assets/images/logo-white.png?v=20230127104155') }}" width="230" height="67" alt=""/></a>
+                                        <a href="{{ url('/') }}"><img src="{{ asset('website-assets/images/logo-white.png?v=20230127110455') }}" width="230" height="67" alt=""/></a>
                                     </div>
                                     <p>
                                         Krypto Musk is one of the first hybrid trading platform founded by a group of visionaries whose idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases our vision is service over sales, honor over hustle and most importantly people over profits.
@@ -317,19 +317,23 @@
                                         </li>
                                         
                                         <li>
-                                            <a href="javascript:;">Trading</a>
+                                            <a href="{{ url('/') }}#trading">Trading</a>
                                         </li>
                                         
                                         <li>
-                                            <a href="javascript:;">Packages</a>
+                                            <a href="{{ url('/') }}#packages">Packages</a>
                                         </li>
                                         
                                         <li>
-                                            <a href="javascript:;">Faq</a>
+                                            <a href="{{ url('/') }}#faq">Faq</a>
                                         </li>
                                         
                                         <li>
                                             <a href="{{ url('/') }}#contactUs">Contact Us</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="{{ url('/') }}#documents">Company Documents</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -427,7 +431,7 @@
             <div class="loading-pic">
                 <div class="cssload-container">
                     <div class="cssload-dot bg-primary">
-                        <img src="{{ asset('website-assets/images/favicon-white.png?v=20230127104155') }}" width="230" height="67" alt="" />
+                        <img src="{{ asset('website-assets/images/favicon-white.png?v=20230127110455') }}" width="230" height="67" alt="" />
                     </div>
                     <div class="step" id="cssload-s1"></div>
                     <div class="step" id="cssload-s2"></div>
@@ -438,30 +442,30 @@
         <!-- LOADING AREA  END -->
 
         <!-- JAVASCRIPT  FILES ========================================= --> 
-        <script   src="{{ asset('website-assets/js/jquery-1.12.4.min.js?v=20230127104155') }}"></script><!-- JQUERY.MIN JS -->
-        <script   src="{{ asset('website-assets/js/bootstrap.min.js?v=20230127104155') }}"></script><!-- BOOTSTRAP.MIN JS -->
+        <script   src="{{ asset('website-assets/js/jquery-1.12.4.min.js?v=20230127110455') }}"></script><!-- JQUERY.MIN JS -->
+        <script   src="{{ asset('website-assets/js/bootstrap.min.js?v=20230127110455') }}"></script><!-- BOOTSTRAP.MIN JS -->
 
-        <script   src="{{ asset('website-assets/js/bootstrap-select.min.js?v=20230127104155') }}"></script><!-- FORM JS -->
-        <script   src="{{ asset('website-assets/js/jquery.bootstrap-touchspin.min.js?v=20230127104155') }}"></script><!-- FORM JS -->
+        <script   src="{{ asset('website-assets/js/bootstrap-select.min.js?v=20230127110455') }}"></script><!-- FORM JS -->
+        <script   src="{{ asset('website-assets/js/jquery.bootstrap-touchspin.min.js?v=20230127110455') }}"></script><!-- FORM JS -->
 
-        <script   src="{{ asset('website-assets/js/magnific-popup.min.js?v=20230127104155') }}"></script><!-- MAGNIFIC-POPUP JS -->
+        <script   src="{{ asset('website-assets/js/magnific-popup.min.js?v=20230127110455') }}"></script><!-- MAGNIFIC-POPUP JS -->
 
-        <script   src="{{ asset('website-assets/js/waypoints.min.js?v=20230127104155') }}"></script><!-- WAYPOINTS JS -->
-        <script   src="{{ asset('website-assets/js/counterup.min.js?v=20230127104155') }}"></script><!-- COUNTERUP JS -->
-        <script   src="{{ asset('website-assets/js/waypoints-sticky.min.js?v=20230127104155') }}"></script><!-- COUNTERUP JS -->
+        <script   src="{{ asset('website-assets/js/waypoints.min.js?v=20230127110455') }}"></script><!-- WAYPOINTS JS -->
+        <script   src="{{ asset('website-assets/js/counterup.min.js?v=20230127110455') }}"></script><!-- COUNTERUP JS -->
+        <script   src="{{ asset('website-assets/js/waypoints-sticky.min.js?v=20230127110455') }}"></script><!-- COUNTERUP JS -->
 
-        <script  src="{{ asset('website-assets/js/isotope.pkgd.min.js?v=20230127104155') }}"></script><!-- MASONRY  -->
+        <script  src="{{ asset('website-assets/js/isotope.pkgd.min.js?v=20230127110455') }}"></script><!-- MASONRY  -->
 
-        <script   src="{{ asset('website-assets/js/owl.carousel.min.js?v=20230127104155') }}"></script><!-- OWL  SLIDER  -->
+        <script   src="{{ asset('website-assets/js/owl.carousel.min.js?v=20230127110455') }}"></script><!-- OWL  SLIDER  -->
 
-        <script   src="{{ asset('website-assets/js/stellar.min.js?v=20230127104155') }}"></script><!-- PARALLAX BG IMAGE   --> 
-        <script   src="{{ asset('website-assets/js/scrolla.min.js?v=20230127104155') }}"></script><!-- ON SCROLL CONTENT ANIMTE   --> 
+        <script   src="{{ asset('website-assets/js/stellar.min.js?v=20230127110455') }}"></script><!-- PARALLAX BG IMAGE   --> 
+        <script   src="{{ asset('website-assets/js/scrolla.min.js?v=20230127110455') }}"></script><!-- ON SCROLL CONTENT ANIMTE   --> 
 
-        <script   src="{{ asset('website-assets/js/custom.js?v=20230127104155') }}"></script><!-- CUSTOM FUCTIONS  -->
-        <script   src="{{ asset('website-assets/js/shortcode.js?v=20230127104155') }}"></script><!-- SHORTCODE FUCTIONS  -->
-        <script   src="{{ asset('website-assets/js/switcher.js?v=20230127104155') }}"></script><!-- SWITCHER FUCTIONS  -->
-        <script  src="{{ asset('website-assets/js/jquery.bgscroll.js?v=20230127104155') }}"></script><!-- BACKGROUND SCROLL -->
-        <script  src="{{ asset('website-assets/js/tickerNews.min.js?v=20230127104155') }}"></script><!-- TICKERNEWS-->
+        <script   src="{{ asset('website-assets/js/custom.js?v=20230127110455') }}"></script><!-- CUSTOM FUCTIONS  -->
+        <script   src="{{ asset('website-assets/js/shortcode.js?v=20230127110455') }}"></script><!-- SHORTCODE FUCTIONS  -->
+        <script   src="{{ asset('website-assets/js/switcher.js?v=20230127110455') }}"></script><!-- SWITCHER FUCTIONS  -->
+        <script  src="{{ asset('website-assets/js/jquery.bgscroll.js?v=20230127110455') }}"></script><!-- BACKGROUND SCROLL -->
+        <script  src="{{ asset('website-assets/js/tickerNews.min.js?v=20230127110455') }}"></script><!-- TICKERNEWS-->
         
     </body>    
 </html>

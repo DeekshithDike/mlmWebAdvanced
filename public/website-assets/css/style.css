@@ -12793,3 +12793,13 @@ ol.commentlist li::after {
 .rev-hide-timer .tp-bannertimer{
 	display:none;
 }
+
+.justify-content-center {
+	-webkit-box-pack: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+}
+
+.d-flex {
+	display: flex !important;
+}
