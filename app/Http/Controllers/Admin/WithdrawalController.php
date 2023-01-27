@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Models\WithdrawalHistory;
 use App\Models\User;
 
@@ -21,6 +22,14 @@ class WithdrawalController extends Controller
         WithdrawalHistory::updateWithdrawalHistory($request->withdrawalRequestId, [
             "withdrawal_status" => "CONFIRMED"
         ]);
+
+        $WithdrawalHistory = WithdrawalHistory::viewWithdrawalHistory(["withdrawal_histories_id" => $request->withdrawalRequestId]);
+        $mailData = array('name' => $WithdrawalHistory->name, 'userId' => $WithdrawalHistory->login_id, 'email' => $WithdrawalHistory->email, 'amount' => $WithdrawalHistory->withdrawal_amount);
+
+        Mail::send('mail.withdrawal-successful', $mailData, function ($message) use ($mailData) {
+            $message->to($mailData['email'], $mailData['name'])->subject('Withdrawal Successful');
+            $message->from(config('mail.from.address'), config('mail.from.name'));
+        });
         
         return redirect()->back()->with('success', 'Withdrawal confirmed successfully.');
     }

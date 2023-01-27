@@ -12,13 +12,13 @@
 
         <title>{{ config('app.name', 'MLM') }} | @yield('title')</title>
             
-        <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20230127184122') }}" />
+        <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20230127224926') }}" />
 
         <!-- CSS Assets -->
-        <link rel="stylesheet" href="{{ asset('dashboard-assets/css/app.css?v=20230127184122') }}" />
+        <link rel="stylesheet" href="{{ asset('dashboard-assets/css/app.css?v=20230127224926') }}" />
 
         <!-- Javascript Assets -->
-        <script src="{{ asset('dashboard-assets/js/app.js?v=20230127184122') }}" defer></script>
+        <script src="{{ asset('dashboard-assets/js/app.js?v=20230127224926') }}" defer></script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com/" />

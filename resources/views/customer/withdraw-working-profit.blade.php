@@ -35,7 +35,7 @@
             
             <h4 class="py-4 text-info">Your working wallet balance: ${{ Auth::user()->working_wallet_amount }}</h4>
             
-            <form method="POST" action="{{ route('customerWithdrawWorkingProfitSave') }}">
+            <form method="POST" action="{{ route('customerWithdrawWorkingReqSendOTP') }}">
                 @csrf
                 <div class="max-w-xl">
                     <div x-data="pages.formValidation.initFormValidationExample" class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6">

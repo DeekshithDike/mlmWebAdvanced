@@ -53,6 +53,9 @@ Route::prefix('customer')->group(function () {
             Route::post('save-working-profit', [WithdrawalController::class, 'withdrawWorkingProfitSave'])->name('customerWithdrawWorkingProfitSave');
             Route::get('roi-profit', [WithdrawalController::class, 'withdrawRoiProfit'])->name('customerWithdrawRoiProfit');
             Route::post('save-roi-profit', [WithdrawalController::class, 'withdrawRoiProfitSave'])->name('customerWithdrawRoiProfitSave');
+            
+            Route::post('send-withdrawal-working-otp', [WithdrawalController::class, 'withdrawWorkingReqSendOTP'])->name('customerWithdrawWorkingReqSendOTP');
+            Route::post('send-withdrawal-roi-otp', [WithdrawalController::class, 'withdrawRoiReqSendOTP'])->name('customerWithdrawRoiReqSendOTP');
 
             Route::prefix('report')->group(function () {
                 Route::get('working-profit', [WithdrawalController::class, 'workingProfitReport'])->name('customerWithdrawWorkingProfitReport');

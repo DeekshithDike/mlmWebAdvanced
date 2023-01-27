@@ -21,6 +21,11 @@ class CoinbaseCharges extends Model
         return $result->id;
     }
 
+    public static function getCoinbaseChargesDetails($condition)
+    {
+        return self::where($condition)->first();
+    }
+
     /* Update the CoinbaseCharges based on Id
     */
     public static function updateCoinbaseCharges($id, $data )

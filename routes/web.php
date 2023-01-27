@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\CoinbaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,11 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('website.about');
+});
+
+// coinbase Webhook subscriptions
+Route::prefix('webhook')->group(function () {
+    Route::post('charge/confirmed', [CoinbaseController::class, 'chargeConfirmed']);
 });
 
 // Authenticated & Email verified users routes for all users

@@ -27,6 +27,13 @@ class FundHistory extends Model
         self::where('id', $id)->update($data);
     }
 
+    /* Update the FundHistory based on coinbase_charges_id
+    */
+    public static function updateFundHistoryByChargeId($coinbase_charges_id, $data)
+    {
+        self::where('coinbase_charges_id', $coinbase_charges_id)->update($data);
+    }
+
     /* Fetch FundHistory data
     */
     public static function getAllFundHistory($filter)
