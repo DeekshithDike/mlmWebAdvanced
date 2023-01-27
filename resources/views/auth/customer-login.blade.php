@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Customer Login | {{ config('app.name', 'MLM') }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20230127110455') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('website-assets/images/favicon.png?v=20230127184122') }}" />
 
     <!-- CSS Assets -->
     <link rel="stylesheet" href="{{ asset('dashboard-assets/css/app.css') }}" />
@@ -38,22 +38,22 @@
     <!-- Page Wrapper -->
     <div
       id="root"
-      class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900"
+      class="min-h-100vh flex grow bg-slate-50 dark:bg-navy-900" style="background-image:url({{ asset('website-assets/images/background/bg-3.jpg?v=20230127184122') }});"
       x-cloak
     >
       <main class="grid w-full grow grid-cols-1 place-items-center">
         <div class="w-full max-w-[26rem] p-4 sm:px-5">
           <div class="text-center">
             <img
-              class="mx-auto h-16 w-16"
-              src="{{ asset('website-assets/images/favicon.png?v=20230127110455') }}"
+              class="mx-auto h-16"
+              src="{{ asset('website-assets/images/logo-white.png?v=20230127184122') }}"
               alt="logo"
             />
             <div class="mt-4">
               <h2
-                class="text-2xl font-semibold text-slate-600 dark:text-navy-100"
+                class="text-2xl font-semibold text-primary"
               >
-                Welcome To {{ config('app.name', 'MLM') }}
+                Customer Login
               </h2>
               <p class="text-slate-400 dark:text-navy-300">
                 Please sign in to continue

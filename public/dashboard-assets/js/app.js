@@ -12322,7 +12322,7 @@
                             },
                             theme: {
                                 monochrome: {
-                                    color: "#5F5AF6",
+                                    color: "#03a9f4",
                                     enabled: !0,
                                     shadeTo: "light",
                                     shadeIntensity: .65
