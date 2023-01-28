@@ -59,4 +59,20 @@ class ActivationHistory extends Model
         
         return $data->get();
     }
+
+    public static function activeTopOnePackage($filter) {
+        $data = self::select('id','users_id', 'login_id','packages_referral');
+
+        if (isset($filter['login_id'])) {
+            $data = $data->where('login_id', $filter['login_id']);
+        }
+
+        if (isset($filter['users_id'])) {
+            $data = $data->where('users_id', $filter['users_id']);
+        }
+
+        return $data->where('activation_status', '=', 'ACTIVATED')
+                ->where('expiry_date', '>=', date('Y-m-d'))
+                ->max('packages_referral');
+    }
 }

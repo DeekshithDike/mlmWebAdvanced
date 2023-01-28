@@ -75,17 +75,24 @@ class AccountActivationController extends Controller
             User::updateUser($userId, ['fund_wallet_amount' => $latestAccountWalletFund]);
 
             // update direct income
-            $sponsorWalletDet = User::getWalletDetail(["login_id" => $activationUserWalletDet->sponsor_id]);
-            $directIncome = ($request->activationAmount * $packageIdExist->referral) / 100;
-            
-            DirectIncome::addDirectIncome([
-                "users_id" => $sponsorWalletDet->id,
-                "referred" => $request->activationUserId,
-                "amount" => $directIncome,
-                "status" => "PAID",
+            $referralPercentage = ActivationHistory::activeTopOnePackage([
+                "login_id" => $activationUserWalletDet->sponsor_id
             ]);
-            $latestWorkingWalletAmount = $sponsorWalletDet->working_wallet_amount + $directIncome;
-            User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
+
+            if ($referralPercentage) {
+                $sponsorWalletDet = User::getWalletDetail(["login_id" => $activationUserWalletDet->sponsor_id]);
+                $directIncome = ($request->activationAmount * $referralPercentage) / 100;
+                
+                DirectIncome::addDirectIncome([
+                    "users_id" => $sponsorWalletDet->id,
+                    "referred" => $request->activationUserId,
+                    "amount" => $directIncome,
+                    "status" => "PAID",
+                ]);
+                $latestWorkingWalletAmount = $sponsorWalletDet->working_wallet_amount + $directIncome;
+                User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
+            }
+            
 
             // call API to add binary income to users
             // $client = new \GuzzleHttp\Client();

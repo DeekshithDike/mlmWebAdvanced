@@ -97,6 +97,7 @@ Route::prefix('admin')->group(function () {
         Route::prefix('customer')->group(function () {
             Route::get('profile/{id}', [ManageUsersController::class, 'viewEditUserProfile'])->name('adminEditUserProfile');
             Route::post('profile', [ManageUsersController::class, 'storeCustomerProfilePhoto'])->name('adminSubmitCustomerProfilePhoto');
+            Route::post('profile/save', [ManageUsersController::class, 'storeCustomerProfileDet'])->name('adminStoreCustomerProfileDet');
             
             Route::get('change-password/{id}', [ManageUsersController::class, 'viewCustomerChangePassword'])->name('adminCustomerChangePassword');
             Route::post('change-password', [ManageUsersController::class, 'adminCustomerChangePasswordSave'])->name('adminCustomerChangePasswordSave');

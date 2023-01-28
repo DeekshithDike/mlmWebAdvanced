@@ -174,6 +174,19 @@ class ManageUsersController extends Controller
         }        
     }
 
+    public function storeCustomerProfileDet(Request $request) {
+        $request->validate([
+            'name' => ['required', 'string', 'max:75'],
+            'email' => ['required', 'string', 'email', 'max:75'],
+            'mobile_number' => ['required','numeric','digits_between:4,20'],
+            'users_id' => ['required'],
+            'oldEmailId' => ['required']
+        ]);
+
+        User::updateUser($request->users_id, ["email" => $request->email, "name" => $request->name, "mobile_no" => $request->mobile_number]);
+        return redirect()->back()->with('success', 'Customer details updated successfully.');
+    }
+
     public function viewCustomerChangePassword($id) {
         $users_id = Crypt::decrypt($id);
         $data = User::getUsersDetails(['id' => $users_id]);

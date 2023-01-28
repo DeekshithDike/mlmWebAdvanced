@@ -176,7 +176,11 @@
                   </div>
                 </div>
                 <div class="my-7 h-px bg-slate-200 dark:bg-navy-500"></div>
-                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <form method="POST" action="{{ route('adminStoreCustomerProfileDet') }}">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">                      
+                        @csrf
+                        <input type="hidden" value="{{ $data->id }}" name="users_id" />
+                        <input type="hidden" value="{{ $data->email }}" name="oldEmailId" />
                         <label class="block">
                             <span>User ID </span>
                             <span class="relative mt-1.5 flex">
@@ -201,8 +205,9 @@
                                 class="form-input peer w-full rounded-full border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                 placeholder="Enter full name"
                                 type="text"
+                                name="name"
                                 value="{{ $data->name }}"
-                                readonly
+                                required
                             />
                             <span
                                 class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent"
@@ -218,8 +223,9 @@
                                 class="form-input peer w-full rounded-full border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                 placeholder="Enter email address"
                                 type="text"
+                                name="email"
                                 value="{{ $data->email }}"
-                                readonly
+                                required
                             />
                             <span
                                 class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent"
@@ -235,8 +241,9 @@
                                 class="form-input peer w-full rounded-full border border-slate-300 bg-transparent px-3 py-2 pl-9 placeholder:text-slate-400/70 hover:border-slate-400 focus:border-primary dark:border-navy-450 dark:hover:border-navy-400 dark:focus:border-accent"
                                 placeholder="Enter phone number"
                                 type="text"
+                                name="mobile_number"
                                 value="{{ $data->mobile_no }}"
-                                readonly
+                                required
                             />
                             <span
                                 class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400 peer-focus:text-primary dark:text-navy-300 dark:peer-focus:text-accent"
@@ -246,6 +253,14 @@
                             </span>
                         </label>
                     </div>
+                    <div class="flex justify-end space-x-2 mt-5">
+                        <button type="submit"
+                            class="btn min-w-[7rem] rounded-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
+                        >
+                            Save
+                        </button>
+                    </div>
+                    </form>
                     <div class="my-7 h-px bg-slate-200 dark:bg-navy-500"></div>
                     <div class="space-y-2">
                         <h2>Country: <span class="text-primary">{{ $data->country }}</span></h2>
