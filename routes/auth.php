@@ -27,6 +27,9 @@ Route::middleware('guest')->group(function () {
     Route::get('admin/login', [AuthenticatedSessionController::class, 'adminLoginView'])
                 ->name('adminLoginView');
 
+    Route::post('admin/login/verify', [AuthenticatedSessionController::class, 'adminLoginOtp'])
+                ->name('adminLoginOtp');
+
     Route::post('admin/login', [AuthenticatedSessionController::class, 'adminLogin'])
                 ->name('adminLogin');
 

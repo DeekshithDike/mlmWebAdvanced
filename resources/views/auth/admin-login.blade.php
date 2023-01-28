@@ -68,7 +68,7 @@
             <!-- Validation Errors -->
             <x-auth-validation-errors class="pb-5 text-error" :errors="$errors" />
 
-            <form method="POST" action="{{ route('adminLogin') }}" autocomplete="off">
+            <form method="POST" action="{{ route('adminLoginOtp') }}" autocomplete="off">
                 @csrf
                 <label class="block">
                 <span>Email ID</span>

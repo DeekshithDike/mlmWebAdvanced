@@ -115,4 +115,6 @@ return [
         ],
     ],
 
+    'adminmailid' => env('ADMIN_MAIL_ID'),
+
 ];
