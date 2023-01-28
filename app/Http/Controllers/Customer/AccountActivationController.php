@@ -44,8 +44,13 @@ class AccountActivationController extends Controller
             return back()->withErrors([
                 'activationUserId' => 'Activation amount not within selected package.',
             ]);
-        }else {
+        } else {
             $activationUserWalletDet = User::getWalletDetail(['login_id' => $request->activationUserId]);
+
+            // expiry date calculation
+            $startDate = date('Y-m-d'); $noOfDaysToAdd = $packageIdExist->duration; $count = 0;
+            $expiryDate = self::getExpiryDate($startDate, $noOfDaysToAdd, $count);
+
             ActivationHistory::addActivationHistory([
                 "users_id" => $activationUserWalletDet->id,
                 "login_id" => $request->activationUserId,
@@ -59,6 +64,7 @@ class AccountActivationController extends Controller
                 "packages_binary" => $packageIdExist->binary,
                 "packages_capping" => $packageIdExist->capping,
                 "packages_duration" => $packageIdExist->duration,
+                "expiry_date" => $expiryDate,
                 "activation_status" => "ACTIVATED",
                 "created_by" => $userId
             ]);
@@ -80,7 +86,13 @@ class AccountActivationController extends Controller
             $latestWorkingWalletAmount = $sponsorWalletDet->working_wallet_amount + $directIncome;
             User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
 
-            return redirect()->back()->with('success', 'Activation request sent successfully.');
+            // call API to add binary income to users
+            // $client = new \GuzzleHttp\Client();
+            // $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
+            // $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);            
+            // $promise->wait();
+
+            return redirect()->back()->with('success', 'Activation successful.');
         }
     }
 
@@ -117,5 +129,18 @@ class AccountActivationController extends Controller
         ]);
         
         return ['id' => $response->data->id, 'code' => $response->data->code, 'hosted_url' => $response->data->hosted_url];
+    }
+
+    public static function getExpiryDate($_startDate, $noOfDaysToAdd, $count){
+        if($count < $noOfDaysToAdd){
+            $_startDate = date('Y-m-d', strtotime($_startDate. ' + 1 days'));
+            $dayOfWeek = date("N", strtotime($_startDate));
+            
+            if($dayOfWeek != 6 && $dayOfWeek != 7){
+              $count++;
+            }
+            return self::getExpiryDate($_startDate, $noOfDaysToAdd, $count);
+        }
+        return $_startDate;
     }
 }
