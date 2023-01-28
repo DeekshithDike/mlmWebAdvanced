@@ -302,7 +302,7 @@
                                         font-weight: 500; 
                                         color:#fff;
                                         border-width:0px;">
-                                        <span style="font-family: 'Poppins', sans-serif;">We provides always our best services for SECURED BYs and  always  try to achieve SECURED BY's trust and satisfaction.</span>
+                                        <span style="font-family: 'Poppins', sans-serif;">We always provide our best services to our customer and always try to achieve customer's trust and satisfaction.</span>
                                         </div>
                                     
                                         <!-- LAYER NR. 6 [ for see all service botton ] -->
@@ -563,7 +563,7 @@
                                         font-weight: 500; 
                                         color:#fff;
                                         border-width:0px;">
-                                        <span style="font-family: 'Poppins', sans-serif;">We help you business grow and expand.</span>
+                                        <span style="font-family: 'Poppins', sans-serif;">We help your business grow and expand.</span>
                                         </div>
                                     
                                         <!-- LAYER NR. 6 [ for see all service botton ] -->
@@ -1575,7 +1575,7 @@
                                         </div>
                                         <div id="collapseTwo5" class="acod-body collapse">
                                             <div class="acod-content p-tb15 text-white font-16">
-                                                Krypto Musk traders with top centralized and decentralised  crypto currency and generate profits every day
+                                                Krypto Musk trades with top centralized and decentralised  crypto currency and generate profits every day
                                             </div>
                                         </div>
                                     </div>
@@ -1658,7 +1658,7 @@
                                         </div>
                                         <div id="collapseSeven5" class="acod-body collapse">
                                             <div class="acod-content p-tb15 text-white font-16">
-                                                You can withdraw your daily income on every Saturday and binary income and refferal income on every day. It will take 24 hours to proceed.
+                                                You can withdraw your daily income every Saturday and binary income and referral income every day. It will take 24 hours to proceed.
                                             </div>
                                         </div>
                                     </div>

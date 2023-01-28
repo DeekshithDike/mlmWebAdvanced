@@ -215,7 +215,7 @@
                                         Hybrid cryptocurrency exchanges are an attempt to blend the best of both worlds from centralized and decentralized into one exchange. Their aim is to give end users the convenience of a centralized exchange while also giving them the security and freedom of a decentralized exchange.
                                     </p>
                                     <p>
-                                        Here in kryptomusk company provides passive income for our clients by managing the trading account,creating profits on daily basis based on there investment,kryptomusk is an investment company mainly based on united kingdom, the principal activity of the company is provision of investment services to individuals in accordance with the provisions of the applicable legislation and requirment.
+                                        Here at Krypto Musk, we provide passive income to our clients by managing the trading account and creating profits on a daily basis based on there investment,kryptomusk is an investment company mainly based on united kingdom, the principal activity of the company is provision of investment services to individuals in accordance with the provisions of the applicable legislation and requirement.
                                     </p>
                                 </div>
                             </div>
