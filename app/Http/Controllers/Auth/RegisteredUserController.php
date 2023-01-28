@@ -118,7 +118,8 @@ class RegisteredUserController extends Controller
                     $message->from(config('mail.from.address'), config('mail.from.name'));
                 });
 
-                return redirect()->back()->with('success', 'Registration successful, Your login details sent to '.$request->email);
+                return view('auth.user_credentials')->with(["userId" => $loginId, "password" => $request->password]);
+                // return redirect()->back()->with('success', 'Registration successful, Your login details sent to '.$request->email);
             } catch (\Throwable $th) {
                 User::where('id', $user->id)->delete();
                 return back()->withErrors([
