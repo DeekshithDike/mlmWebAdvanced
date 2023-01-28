@@ -65,6 +65,7 @@ class AccountActivationController extends Controller
                 "packages_capping" => $packageIdExist->capping,
                 "packages_duration" => $packageIdExist->duration,
                 "expiry_date" => $expiryDate,
+                "activated_on" => date('Y-m-d h:m:s'),
                 "activation_status" => "ACTIVATED",
                 "created_by" => $userId
             ]);
