@@ -144,7 +144,8 @@ class AccountActivationController extends Controller
                 "activation_by" => "ADMIN",
                 "expiry_date" => $expiryDate,
                 "activated_on" => date('Y-m-d h:m:s'),
-                "activation_status" => "ACTIVATED"
+                "activation_status" => "ACTIVATED",
+                "created_by" => $userId
             ]);
 
             return redirect()->back()->with('success', 'Topup successful.');
