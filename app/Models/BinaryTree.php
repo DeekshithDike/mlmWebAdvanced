@@ -60,11 +60,6 @@ class BinaryTree extends Model
                 ->select('activation_histories.users_id', 'activation_histories.packages_id', 'activation_histories.packages_name', 'activation_histories.activation_amount');   
         }
 
-        public function getAllActivations(){
-            return $this->hasMany('App\Models\ActivationHistory', 'users_id', 'userID')
-                ->select('activation_histories.users_id', 'activation_histories.packages_id', 'activation_histories.packages_name', 'activation_histories.activation_amount');   
-        }
-
         public function getLoginIdByParentId(){
             return $this->hasOne('App\Models\User', 'id', 'parentId')
                 ->select('users.id', 'users.login_id');
@@ -75,7 +70,7 @@ class BinaryTree extends Model
             return BinaryTreeLeft::select('binary_tree_lefts.users_id', 'binary_tree_lefts.child_id', 'users.id as userID', 'users.login_id', 'users.name', 'users.email', 'users.mobile_no', 'users.country', 'users.sponsor_id', 'users.position', 'users.created_at')
                     ->where('binary_tree_lefts.users_id', '=', $users_id)
                     ->join('users', 'binary_tree_lefts.child_id', '=', 'users.id')
-                    ->with('getAllActivations')
+                    ->with('getActiveActivations')
                     ->get();
         }
 
@@ -84,7 +79,7 @@ class BinaryTree extends Model
             return BinaryTreeRight::select('binary_tree_rights.users_id', 'binary_tree_rights.child_id', 'users.id as userID', 'users.login_id', 'users.name', 'users.email', 'users.mobile_no', 'users.country', 'users.sponsor_id', 'users.position', 'users.created_at')
                     ->where('binary_tree_rights.users_id', '=', $users_id)
                     ->join('users', 'binary_tree_rights.child_id', '=', 'users.id')
-                    ->with('getAllActivations')
+                    ->with('getActiveActivations')
                     ->get();
         }
 }

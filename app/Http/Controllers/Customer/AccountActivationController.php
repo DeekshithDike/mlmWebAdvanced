@@ -8,6 +8,7 @@ use App\Models\Packages;
 use App\Models\User;
 use App\Models\CoinbaseCharges;
 use App\Models\ActivationHistory;
+use App\Models\DirectIncome;
 use Auth;
 
 class AccountActivationController extends Controller
