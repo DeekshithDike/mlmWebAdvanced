@@ -242,7 +242,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <h3>$56</h3>
+                            <h3>{{ $totalRoiIncome }}</h3>
                         </div>
                         <div class="flex cursor-pointer items-center justify-between space-x-2">
                             <div class="flex items-center space-x-3">
@@ -272,7 +272,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <h3>$56</h3>
+                            <h3>{{ $totalDirectIncome }}</h3>
                         </div>
                     </div>
                 </div>
