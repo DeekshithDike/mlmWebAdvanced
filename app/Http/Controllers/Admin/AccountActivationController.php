@@ -127,9 +127,11 @@ class AccountActivationController extends Controller
             // expiry date calculation
             $startDate = date('Y-m-d'); $noOfDaysToAdd = $packageIdExist->duration; $count = 0;
             $expiryDate = self::getExpiryDate($startDate, $noOfDaysToAdd, $count);
+            
+            $activationUserWalletDet = User::getWalletDetail(['login_id' => $request->activationUserId]);
 
             ActivationHistory::addActivationHistory([
-                "users_id" => $userId,
+                "users_id" => $activationUserWalletDet->id,
                 "login_id" => $request->activationUserId,
                 "packages_id" => $request->package,
                 "activation_amount" => $request->activationAmount,
