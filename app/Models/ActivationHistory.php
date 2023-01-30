@@ -75,4 +75,18 @@ class ActivationHistory extends Model
                 ->where('expiry_date', '>=', date('Y-m-d'))
                 ->max('packages_referral');
     }
+
+    public static function totalInvestment($filter) {
+        $data = self::where('activation_status', '=', 'ACTIVATED');
+        
+        if (isset($filter['login_id'])) {
+            $data = $data->where('login_id', $filter['login_id']);
+        }
+
+        if (isset($filter['users_id'])) {
+            $data = $data->where('users_id', $filter['users_id']);
+        }
+
+        return $data->sum('activation_amount');
+    }
 }

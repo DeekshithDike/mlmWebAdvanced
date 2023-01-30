@@ -92,12 +92,11 @@ class AccountActivationController extends Controller
                 $latestWorkingWalletAmount = $sponsorWalletDet->working_wallet_amount + $directIncome;
                 User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
             }
-            
 
             // call API to add binary income to users
             // $client = new \GuzzleHttp\Client();
             // $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
-            // $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);            
+            // $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);
             // $promise->wait();
 
             return redirect()->back()->with('success', 'Activation successful.');

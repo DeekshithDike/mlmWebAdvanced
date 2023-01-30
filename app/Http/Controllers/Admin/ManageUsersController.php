@@ -13,6 +13,7 @@ use App\Models\BinaryTreeRight;
 use App\Models\RoiIncome;
 use App\Models\DirectIncome;
 use App\Models\BinaryIncome;
+use App\Models\ActivationHistory;
 use Crypt;
 use Auth;
 
@@ -262,7 +263,8 @@ class ManageUsersController extends Controller
         $totalBinaryIncome = BinaryIncome::getBinaryIncomeSum([
             "users_id" => $userId
         ]);
-
+        $totalInvestment = ActivationHistory::totalInvestment(["users_id" => $userId]);
+        
         $userDet = User::getUsersDetails(["id" => $userId]);
         return view('admin.customer-dashboard')->with([
             'totalLeftUserCount' => $totalLeftUserCount,
@@ -281,6 +283,7 @@ class ManageUsersController extends Controller
             "fund_wallet_amount" => $userDet->fund_wallet_amount,
             "roi_wallet_amount" => $userDet->roi_wallet_amount,
             "working_wallet_amount" => $userDet->working_wallet_amount,
+            "totalInvestment" => $totalInvestment
         ]);
     }
 }

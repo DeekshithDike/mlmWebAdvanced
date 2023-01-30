@@ -11,6 +11,7 @@ use App\Models\BinaryTreeLeft;
 use App\Models\BinaryTreeRight;
 use App\Models\RoiIncome;
 use App\Models\DirectIncome;
+use App\Models\ActivationHistory;
 use App\Models\User;
 use Auth;
 
@@ -55,6 +56,7 @@ class DashboardController extends Controller
         $totalBinaryIncome = BinaryIncome::getBinaryIncomeSum([
             "users_id" => $userId
         ]);
+        $totalInvestment = ActivationHistory::totalInvestment(["users_id" => $userId]);
 
         return view('customer.dashboard')->with([
             'totalLeftUserCount' => $totalLeftUserCount,
@@ -66,6 +68,7 @@ class DashboardController extends Controller
             "totalBinaryIncome" => $totalBinaryIncome,
             "totalRoiIncome" => $totalRoiIncome,
             "totalDirectIncome" => $totalDirectIncome,
+            "totalInvestment" => $totalInvestment
         ]);
     }
 
