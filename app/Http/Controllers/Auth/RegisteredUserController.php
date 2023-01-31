@@ -96,10 +96,11 @@ class RegisteredUserController extends Controller
                     'users_id' => $user->id,
                     'sponsor_id' => $userDet->id,
                     'parent_id' => $parent_id,
-                    'child_position' => $request->position,
+                    'child_position' => strtolower($request->position),
                     'name' => $request->name,
                     'email' => $request->email,
-                    'mobile_no' => $request->mobileNumber
+                    'mobile_no' => $request->mobileNumber,
+                    'today' => date('Y-m-d H:i:s')
                 ];
                 
                 // call API to send credentials and add user to the tree
