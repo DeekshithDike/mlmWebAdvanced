@@ -106,6 +106,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['parent_det']->created_at)) }}
                                                     </li>
+                                                    <li>
+                                                        <strong>Investment:</strong> ${{ $data['parent_det']->getActiveActivations->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Left Business:</strong> ${{ $data['parent_det']->getLeftBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Right Business:</strong> ${{ $data['parent_det']->getRightBusiness->sum('activation_amount') }}
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -124,6 +133,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> NA
                                                     </li>
+                                                    <li>
+                                                        <strong> Investment: </strong> NA
+                                                    </li>
+                                                    <li>
+                                                        <strong> Left Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Right Business: </strong> NA
+                                                    </li> 
                                                 </ul>
                                             @endif
                                             
@@ -135,180 +153,53 @@
                         </div> 
                         <div class="row midline">
                             <div class="line-H">
-                            </div> 
-                            <div class="col-6">
-                            <div class="tree-level2">
-                                @if ($data['right_child_1'])
-                                    <a href="{{ url($treeUrl.Crypt::encrypt($data['right_child_1']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                @else
-                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                @endif
-
-                                @if ($data['right_child_1'])
-                                    @if (count($data['right_child_1']['getActiveActivations']))
-                                        <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
-                                    @else
-                                        <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
-                                    @endif
-                                    <span>{{ $data['right_child_1']->login_id }}</span>
-                                @else
-                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
-                                    <span>Absent</span>
-                                @endif
-                                <div class="LupazTree-tooip-text">
-                                    <div class="too-mid">
-                                        @if ($data['right_child_1'])
-                                            <ul>
-                                                <li>
-                                                    <strong> User Id: </strong> {{ $data['right_child_1']->login_id }}
-                                                </li> 
-                                                <li>
-                                                    <strong> Name: </strong> {{ $data['right_child_1']->name }}
-                                                </li> 
-                                                <li>
-                                                    <strong> Sponsor Id: </strong> {{ $data['right_child_1']->sponsor_id }}
-                                                </li> 
-                                                <li>
-                                                    <strong> Placement Id: </strong> {{ $data['right_child_1']['getLoginIdByParentId']->login_id }}
-                                                </li>
-                                                <li>
-                                                    <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_1']->created_at)) }}
-                                                </li>
-                                            </ul>
-                                        @else
-                                            <ul>
-                                                <li>
-                                                    <strong> User Id: </strong> NA
-                                                </li> 
-                                                <li>
-                                                    <strong> Name: </strong> NA
-                                                </li> 
-                                                <li>
-                                                    <strong> Sponsor Id: </strong> NA
-                                                </li> 
-                                                <li>
-                                                    <strong> Placement Id: </strong> NA
-                                                </li>
-                                                <li>
-                                                    <strong> Daet of Joining: </strong> NA
-                                                </li>
-                                            </ul>
-                                        @endif
-                                        
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
                             </div>
                             <div class="col-6">
-                            <div class="tree-level2">
-                                @if ($data['left_child_1'])
-                                    <a href="{{ url($treeUrl.Crypt::encrypt($data['left_child_1']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                @else
-                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                @endif
-                                
-                                @if ($data['left_child_1'])
-                                    @if (count($data['left_child_1']['getActiveActivations']))
-                                        <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
-                                    @else
-                                        <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
-                                    @endif
-                                    <span>{{ $data['left_child_1']->login_id }}</span>
-                                @else
-                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
-                                    <span>Absent</span>
-                                @endif
-                                <div class="LupazTree-tooip-text">
-                                    <div class="too-mid">
-                                        @if ($data['left_child_1'])
-                                            <ul>
-                                                <li>
-                                                    <strong> User Id: </strong> {{ $data['left_child_1']->login_id }}
-                                                </li> 
-                                                <li>
-                                                    <strong> Name: </strong> {{ $data['left_child_1']->name }}
-                                                </li> 
-                                                <li>
-                                                    <strong> Sponsor Id: </strong> {{ $data['left_child_1']->sponsor_id }}
-                                                </li> 
-                                                <li>
-                                                    <strong> Placement Id: </strong> {{ $data['left_child_1']['getLoginIdByParentId']->login_id }}
-                                                </li>
-                                                <li>
-                                                    <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_1']->created_at)) }}
-                                                </li>
-                                            </ul>
-                                        @else
-                                            <ul>
-                                                <li>
-                                                    <strong> User Id: </strong> NA
-                                                </li> 
-                                                <li>
-                                                    <strong> Name: </strong> NA
-                                                </li> 
-                                                <li>
-                                                    <strong> Sponsor Id: </strong> NA
-                                                </li> 
-                                                <li>
-                                                    <strong> Placement Id: </strong> NA
-                                                </li>
-                                                <li>
-                                                    <strong> Daet of Joining: </strong> NA
-                                                </li>
-                                            </ul>
-                                        @endif
-                                        
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
-                            </div> 
-                            <div class="line-v">
-                            </div>
-                        </div> 
-                        <div class="row t-row-3">
-                            <div class="col-6">
-                            <div class="row midline">
-                                <div class="line-H">
-                                </div> 
-                                <div class="col-6 p-0">
-                                <div class="tree-level3 tree-level3-1">
-                                    @if ($data['right_child_3'])
-                                        <a href="{{ url($treeUrl.Crypt::encrypt($data['right_child_3']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                <div class="tree-level2">
+                                    @if ($data['left_child_1'])
+                                        <a href="{{ url($treeUrl.Crypt::encrypt($data['left_child_1']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
                                     @else
                                         <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
                                     @endif
                                     
-                                    @if ($data['right_child_3'])
-                                        @if (count($data['right_child_3']['getActiveActivations']))
+                                    @if ($data['left_child_1'])
+                                        @if (count($data['left_child_1']['getActiveActivations']))
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
                                         @else
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                         @endif
-                                        <span>{{ $data['right_child_3']->login_id }}</span>
+                                        <span>{{ $data['left_child_1']->login_id }}</span>
                                     @else
                                         <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                         <span>Absent</span>
                                     @endif
                                     <div class="LupazTree-tooip-text">
                                         <div class="too-mid">
-                                            @if ($data['right_child_3'])
+                                            @if ($data['left_child_1'])
                                                 <ul>
                                                     <li>
-                                                        <strong> User Id: </strong> {{ $data['right_child_3']->login_id }}
+                                                        <strong> User Id: </strong> {{ $data['left_child_1']->login_id }}
                                                     </li> 
                                                     <li>
-                                                        <strong> Name: </strong> {{ $data['right_child_3']->name }}
+                                                        <strong> Name: </strong> {{ $data['left_child_1']->name }}
                                                     </li> 
                                                     <li>
-                                                        <strong> Sponsor Id: </strong> {{ $data['right_child_3']->sponsor_id }}
+                                                        <strong> Sponsor Id: </strong> {{ $data['left_child_1']->sponsor_id }}
                                                     </li> 
                                                     <li>
-                                                        <strong> Placement Id: </strong> {{ $data['right_child_3']['getLoginIdByParentId']->login_id }}
+                                                        <strong> Placement Id: </strong> {{ $data['left_child_1']['getLoginIdByParentId']->login_id }}
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_3']->created_at)) }}
+                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_1']->created_at)) }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Investment:</strong> ${{ $data['left_child_1']->getActiveActivations->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Left Business:</strong> ${{ $data['left_child_1']->getLeftBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Right Business:</strong> ${{ $data['left_child_1']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
                                                 </ul>
                                             @else
@@ -328,121 +219,69 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> NA
                                                     </li>
+                                                    <li>
+                                                        <strong> Investment: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Left Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Right Business: </strong> NA
+                                                    </li> 
                                                 </ul>
                                             @endif
+                                            
                                         </div>
                                     </div>
                                     </a>
                                 </div>
-                                </div> 
-                                <div class="col-6 p-0">
-                                <div class="tree-level3">
-                                    @if ($data['left_child_3'])
-                                        <a href="{{ url($treeUrl.Crypt::encrypt($data['left_child_3']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                    @else
-                                        <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                    @endif
-                                
-                                    @if ($data['left_child_3'])
-                                        @if (count($data['left_child_3']['getActiveActivations']))
-                                            <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
-                                        @else
-                                            <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
-                                        @endif
-                                        <span>{{ $data['left_child_3']->login_id }}</span>
-                                    @else
-                                        <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
-                                        <span>Absent</span>
-                                    @endif
-                                    <div class="LupazTree-tooip-text">
-                                        <div class="too-mid">
-                                            @if ($data['left_child_3'])
-                                                <ul>
-                                                    <li>
-                                                        <strong> User Id: </strong> {{ $data['left_child_3']->login_id }}
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Name: </strong> {{ $data['left_child_3']->name }}
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Sponsor Id: </strong> {{ $data['left_child_3']->sponsor_id }}
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Placement Id: </strong> {{ $data['left_child_3']['getLoginIdByParentId']->login_id }}
-                                                    </li>
-                                                    <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_3']->created_at)) }}
-                                                    </li>
-                                                </ul>
-                                            @else
-                                                <ul>
-                                                    <li>
-                                                        <strong> User Id: </strong> NA
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Name: </strong> NA
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Sponsor Id: </strong> NA
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Placement Id: </strong> NA
-                                                    </li>
-                                                    <li>
-                                                        <strong> Daet of Joining: </strong> NA
-                                                    </li>
-                                                </ul>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    </a>
-                                </div>
-                                </div> 
-                                <div class="line-v">
-                                </div>
-                            </div>
                             </div> 
                             <div class="col-6">
-                            <div class="row midline">
-                                <div class="line-H">
-                                </div> 
-                                <div class="col-6 p-0">
-                                <div class="tree-level">
-                                    @if ($data['right_child_2'])
-                                        <a href="{{ url($treeUrl.Crypt::encrypt($data['right_child_2']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                <div class="tree-level2">
+                                    @if ($data['right_child_1'])
+                                        <a href="{{ url($treeUrl.Crypt::encrypt($data['right_child_1']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
                                     @else
                                         <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
                                     @endif
-                                
-                                    @if ($data['right_child_2'])
-                                        @if (count($data['right_child_2']['getActiveActivations']))
+
+                                    @if ($data['right_child_1'])
+                                        @if (count($data['right_child_1']['getActiveActivations']))
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
                                         @else
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                         @endif
-                                        <span>{{ $data['right_child_2']->login_id }}</span>
+                                        <span>{{ $data['right_child_1']->login_id }}</span>
                                     @else
                                         <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                         <span>Absent</span>
                                     @endif
                                     <div class="LupazTree-tooip-text">
                                         <div class="too-mid">
-                                            @if ($data['right_child_2'])
+                                            @if ($data['right_child_1'])
                                                 <ul>
                                                     <li>
-                                                        <strong> User Id: </strong> {{ $data['right_child_2']->login_id }}
+                                                        <strong> User Id: </strong> {{ $data['right_child_1']->login_id }}
                                                     </li> 
                                                     <li>
-                                                        <strong> Name: </strong> {{ $data['right_child_2']->name }}
+                                                        <strong> Name: </strong> {{ $data['right_child_1']->name }}
                                                     </li> 
                                                     <li>
-                                                        <strong> Sponsor Id: </strong> {{ $data['right_child_2']->sponsor_id }}
+                                                        <strong> Sponsor Id: </strong> {{ $data['right_child_1']->sponsor_id }}
                                                     </li> 
                                                     <li>
-                                                        <strong> Placement Id: </strong> {{ $data['right_child_2']['getLoginIdByParentId']->login_id }}
+                                                        <strong> Placement Id: </strong> {{ $data['right_child_1']['getLoginIdByParentId']->login_id }}
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_2']->created_at)) }}
+                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_1']->created_at)) }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Investment:</strong> ${{ $data['right_child_1']->getActiveActivations->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Left Business:</strong> ${{ $data['right_child_1']->getLeftBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Right Business:</strong> ${{ $data['right_child_1']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
                                                 </ul>
                                             @else
@@ -462,79 +301,366 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> NA
                                                     </li>
+                                                    <li>
+                                                        <strong> Investment: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Left Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Right Business: </strong> NA
+                                                    </li> 
                                                 </ul>
                                             @endif
+                                            
                                         </div>
                                     </div>
                                     </a>
-                                </div>
-                                </div> 
-                                <div class="col-6 p-0">
-                                <div class="tree-level tree-level3-4">
-                                    @if ($data['left_child_2'])
-                                        <a href="{{ url($treeUrl.Crypt::encrypt($data['left_child_2']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                    @else
-                                        <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
-                                    @endif
-                                
-                                    @if ($data['left_child_2'])
-                                        @if (count($data['left_child_2']['getActiveActivations']))
-                                            <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
-                                        @else
-                                            <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
-                                        @endif
-                                        <span>{{ $data['left_child_2']->login_id }}</span>
-                                    @else
-                                        <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
-                                        <span>Absent</span>
-                                    @endif
-                                    <div class="LupazTree-tooip-text">
-                                        <div class="too-mid">
-                                            @if ($data['left_child_2'])
-                                                <ul>
-                                                    <li>
-                                                        <strong> User Id: </strong> {{ $data['left_child_2']->login_id }}
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Name: </strong> {{ $data['left_child_2']->name }}
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Sponsor Id: </strong> {{ $data['left_child_2']->sponsor_id }}
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Placement Id: </strong> {{ $data['left_child_2']['getLoginIdByParentId']->login_id }}
-                                                    </li>
-                                                    <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_2']->created_at)) }}
-                                                    </li>
-                                                </ul>
-                                            @else
-                                                <ul>
-                                                    <li>
-                                                        <strong> User Id: </strong> NA
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Name: </strong> NA
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Sponsor Id: </strong> NA
-                                                    </li> 
-                                                    <li>
-                                                        <strong> Placement Id: </strong> NA
-                                                    </li>
-                                                    <li>
-                                                        <strong> Daet of Joining: </strong> NA
-                                                    </li>
-                                                </ul>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    </a>
-                                </div>
-                                </div> 
-                                <div class="line-v">
                                 </div>
                             </div>
+                            <div class="line-v">
+                            </div>
+                        </div> 
+                        <div class="row t-row-3"> 
+                            <div class="col-6">
+                                <div class="row midline">
+                                    <div class="line-H">
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="tree-level tree-level3-4">
+                                            @if ($data['left_child_2'])
+                                                <a href="{{ url($treeUrl.Crypt::encrypt($data['left_child_2']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @else
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @endif
+                                        
+                                            @if ($data['left_child_2'])
+                                                @if (count($data['left_child_2']['getActiveActivations']))
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
+                                                @else
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
+                                                @endif
+                                                <span>{{ $data['left_child_2']->login_id }}</span>
+                                            @else
+                                                <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
+                                                <span>Absent</span>
+                                            @endif
+                                            <div class="LupazTree-tooip-text">
+                                                <div class="too-mid">
+                                                    @if ($data['left_child_2'])
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> {{ $data['left_child_2']->login_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> {{ $data['left_child_2']->name }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> {{ $data['left_child_2']->sponsor_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> {{ $data['left_child_2']['getLoginIdByParentId']->login_id }}
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_2']->created_at)) }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['left_child_2']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['left_child_2']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['left_child_2']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                        </ul>
+                                                    @else
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
+                                                        </ul>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                    <div class="col-6 p-0">
+                                        <div class="tree-level">
+                                            @if ($data['right_child_2'])
+                                                <a href="{{ url($treeUrl.Crypt::encrypt($data['right_child_2']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @else
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @endif
+                                        
+                                            @if ($data['right_child_2'])
+                                                @if (count($data['right_child_2']['getActiveActivations']))
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
+                                                @else
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
+                                                @endif
+                                                <span>{{ $data['right_child_2']->login_id }}</span>
+                                            @else
+                                                <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
+                                                <span>Absent</span>
+                                            @endif
+                                            <div class="LupazTree-tooip-text">
+                                                <div class="too-mid">
+                                                    @if ($data['right_child_2'])
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> {{ $data['right_child_2']->login_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> {{ $data['right_child_2']->name }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> {{ $data['right_child_2']->sponsor_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> {{ $data['right_child_2']['getLoginIdByParentId']->login_id }}
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_2']->created_at)) }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['right_child_2']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['right_child_2']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['right_child_2']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                        </ul>
+                                                    @else
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
+                                                        </ul>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>  
+                                    <div class="line-v">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row midline">
+                                    <div class="line-H">
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="tree-level3">
+                                            @if ($data['left_child_3'])
+                                                <a href="{{ url($treeUrl.Crypt::encrypt($data['left_child_3']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @else
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @endif
+                                        
+                                            @if ($data['left_child_3'])
+                                                @if (count($data['left_child_3']['getActiveActivations']))
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
+                                                @else
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
+                                                @endif
+                                                <span>{{ $data['left_child_3']->login_id }}</span>
+                                            @else
+                                                <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
+                                                <span>Absent</span>
+                                            @endif
+                                            <div class="LupazTree-tooip-text">
+                                                <div class="too-mid">
+                                                    @if ($data['left_child_3'])
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> {{ $data['left_child_3']->login_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> {{ $data['left_child_3']->name }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> {{ $data['left_child_3']->sponsor_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> {{ $data['left_child_3']['getLoginIdByParentId']->login_id }}
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_3']->created_at)) }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['left_child_3']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['left_child_3']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['left_child_3']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                        </ul>
+                                                    @else
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
+                                                        </ul>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div> 
+                                    <div class="col-6 p-0">
+                                        <div class="tree-level3 tree-level3-1">
+                                            @if ($data['right_child_3'])
+                                                <a href="{{ url($treeUrl.Crypt::encrypt($data['right_child_3']->users_id)) }}" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @else
+                                                <a href="javascript:void(0)" data-toggle="tooltip" data-placement="bottom" id="myTooltip1" class="mytooltip">
+                                            @endif
+                                            
+                                            @if ($data['right_child_3'])
+                                                @if (count($data['right_child_3']['getActiveActivations']))
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-active.png') }}"> 
+                                                @else
+                                                    <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
+                                                @endif
+                                                <span>{{ $data['right_child_3']->login_id }}</span>
+                                            @else
+                                                <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
+                                                <span>Absent</span>
+                                            @endif
+                                            <div class="LupazTree-tooip-text">
+                                                <div class="too-mid">
+                                                    @if ($data['right_child_3'])
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> {{ $data['right_child_3']->login_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> {{ $data['right_child_3']->name }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> {{ $data['right_child_3']->sponsor_id }}
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> {{ $data['right_child_3']['getLoginIdByParentId']->login_id }}
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_3']->created_at)) }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['right_child_3']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['right_child_3']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['right_child_3']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                        </ul>
+                                                    @else
+                                                        <ul>
+                                                            <li>
+                                                                <strong> User Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Sponsor Id: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Placement Id: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Daet of Joining: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
+                                                        </ul>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>
+                                    </div>  
+                                    <div class="line-v">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

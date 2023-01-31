@@ -62,6 +62,7 @@ class User extends Authenticatable
     {
         return self::select('users.id as userID', 'users.login_id', 'users.name', 'users.email', 'users.mobile_no', 'users.country', 'users.sponsor_id', 'users.position', 'users.created_at', 'users.profile_path')
                 ->where('sponsor_id', '=', $login_id)
+                ->where('login_id', '!=', $login_id)
                 ->with('getActiveActivations')
                 ->get();
     }

@@ -41,6 +41,8 @@ class BinaryTree extends Model
             ->where('binary_trees.parent_id', $parent_id)
             ->where('binary_trees.child_position', $position)
             ->with('getActiveActivations')
+            ->with('getLeftBusiness')
+            ->with('getRightBusiness')
             ->with('getLoginIdByParentId')
             ->first();
     }
@@ -50,8 +52,24 @@ class BinaryTree extends Model
                 ->join('users', 'binary_trees.users_id', '=', 'users.id')
                 ->where('binary_trees.users_id', $users_id)
                 ->with('getActiveActivations')
+                ->with('getLeftBusiness')
+                ->with('getRightBusiness')
                 ->with('getLoginIdByParentId')
                 ->first();
+        }
+
+        public function getLeftBusiness(){
+            return $this->hasMany('App\Models\BinaryTreeLeft', 'users_id', 'userID')
+                ->join('activation_histories', 'binary_tree_lefts.child_id', '=', 'activation_histories.users_id')
+                ->where('activation_histories.activation_status', 'ACTIVATED')
+                ->select('binary_tree_lefts.users_id', 'activation_histories.activation_amount');   
+        }
+
+        public function getRightBusiness(){
+            return $this->hasMany('App\Models\BinaryTreeRight', 'users_id', 'userID')
+                ->join('activation_histories', 'binary_tree_rights.child_id', '=', 'activation_histories.users_id')
+                ->where('activation_histories.activation_status', 'ACTIVATED')
+                ->select('binary_tree_rights.users_id', 'activation_histories.activation_amount');   
         }
 
         public function getActiveActivations(){

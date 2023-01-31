@@ -48,6 +48,9 @@
                           #
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          User ID
+                        </th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Request Date
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -71,6 +74,9 @@
                         @foreach ($data as $item)
                         <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">{{ $i++ }}</td>
+                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                {{ $item->login_id }}
+                            </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ date('d M Y', strtotime($item->created_at)) }}
                             </td>

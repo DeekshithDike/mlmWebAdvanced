@@ -86,6 +86,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['parent_det']->created_at)) }}
                                                     </li>
+                                                    <li>
+                                                        <strong>Investment:</strong> ${{ $data['parent_det']->getActiveActivations->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Left Business:</strong> ${{ $data['parent_det']->getLeftBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Right Business:</strong> ${{ $data['parent_det']->getRightBusiness->sum('activation_amount') }}
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -104,6 +113,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> NA
                                                     </li>
+                                                    <li>
+                                                        <strong> Investment: </strong> NA
+                                                    </li>
+                                                    <li>
+                                                        <strong> Left Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Right Business: </strong> NA
+                                                    </li> 
                                                 </ul>
                                             @endif
                                             
@@ -154,6 +172,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_1']->created_at)) }}
                                                     </li>
+                                                    <li>
+                                                        <strong>Investment:</strong> ${{ $data['left_child_1']->getActiveActivations->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Left Business:</strong> ${{ $data['left_child_1']->getLeftBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Right Business:</strong> ${{ $data['left_child_1']->getRightBusiness->sum('activation_amount') }}
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -172,6 +199,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> NA
                                                     </li>
+                                                    <li>
+                                                        <strong> Investment: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Left Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Right Business: </strong> NA
+                                                    </li> 
                                                 </ul>
                                             @endif
                                             
@@ -218,6 +254,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_1']->created_at)) }}
                                                     </li>
+                                                    <li>
+                                                        <strong>Investment:</strong> ${{ $data['right_child_1']->getActiveActivations->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Left Business:</strong> ${{ $data['right_child_1']->getLeftBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Right Business:</strong> ${{ $data['right_child_1']->getRightBusiness->sum('activation_amount') }}
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -236,6 +281,15 @@
                                                     <li>
                                                         <strong> Daet of Joining: </strong> NA
                                                     </li>
+                                                    <li>
+                                                        <strong> Investment: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Left Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Right Business: </strong> NA
+                                                    </li> 
                                                 </ul>
                                             @endif
                                             
@@ -290,6 +344,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_2']->created_at)) }}
                                                             </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['left_child_2']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['left_child_2']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['left_child_2']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -308,6 +371,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> NA
                                                             </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
                                                         </ul>
                                                     @endif
                                                 </div>
@@ -353,6 +425,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_2']->created_at)) }}
                                                             </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['right_child_2']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['right_child_2']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['right_child_2']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -371,6 +452,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> NA
                                                             </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
                                                         </ul>
                                                     @endif
                                                 </div>
@@ -424,6 +514,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_3']->created_at)) }}
                                                             </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['left_child_3']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['left_child_3']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['left_child_3']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -442,6 +541,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> NA
                                                             </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
                                                         </ul>
                                                     @endif
                                                 </div>
@@ -487,6 +595,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_3']->created_at)) }}
                                                             </li>
+                                                            <li>
+                                                                <strong>Investment:</strong> ${{ $data['right_child_3']->getActiveActivations->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Left Business:</strong> ${{ $data['right_child_3']->getLeftBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Right Business:</strong> ${{ $data['right_child_3']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -505,6 +622,15 @@
                                                             <li>
                                                                 <strong> Daet of Joining: </strong> NA
                                                             </li>
+                                                            <li>
+                                                                <strong> Investment: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Left Business: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Right Business: </strong> NA
+                                                            </li> 
                                                         </ul>
                                                     @endif
                                                 </div>

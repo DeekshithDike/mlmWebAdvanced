@@ -116,7 +116,8 @@ class AccountActivationController extends Controller
     public function affiliateActivations() {
         $filter = [
             'isAffiliate' => true,
-            'login_id' => Auth::user()->login_id
+            'login_id' => Auth::user()->login_id,
+            'users_id' => Auth::user()->id,
         ];
         $data = ActivationHistory::viewActivationHistory($filter);
         return view('customer.affiliate-activation-list')->with(['data' => $data]);

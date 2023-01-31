@@ -41,7 +41,7 @@ class ManageUsersController extends Controller
     }
 
     public function listUsersTree() {
-        $users_id = 1;
+        $users_id = config('app.users_id');
         $userDet = BinaryTree::getMyBinaryTreeDet($users_id);
         $results = self::getChildData($userDet);
 
@@ -84,7 +84,7 @@ class ManageUsersController extends Controller
     }
 
     public static function getChildData($userDet) {
-
+        
         $firstLeftChild = BinaryTree::getChild($userDet['users_id'], 'left');
         $firstLeftRight = BinaryTree::getChild($userDet['users_id'], 'right');
         

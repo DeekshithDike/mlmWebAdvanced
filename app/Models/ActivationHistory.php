@@ -38,7 +38,8 @@ class ActivationHistory extends Model
 
         if (isset($filter['login_id'])) {
             if ($filter['isAffiliate']) {
-                $data = $data->where('activation_histories.login_id', '!=', $filter['login_id']);
+                $data = $data->where('activation_histories.login_id', '!=', $filter['login_id'])
+                            ->where('activation_histories.created_by', $filter['users_id']);
             } else {
                 $data = $data->where('activation_histories.login_id', $filter['login_id']);
             }
