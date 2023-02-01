@@ -150,6 +150,25 @@ class AccountActivationController extends Controller
                 "created_by" => $userId
             ]);
 
+            // update direct income
+            $referralPercentage = ActivationHistory::activeTopOnePackage([
+                "login_id" => $activationUserWalletDet->sponsor_id
+            ]);
+
+            if ($referralPercentage) {
+                $sponsorWalletDet = User::getWalletDetail(["login_id" => $activationUserWalletDet->sponsor_id]);
+                $directIncome = ($request->activationAmount * $referralPercentage) / 100;
+                
+                DirectIncome::addDirectIncome([
+                    "users_id" => $sponsorWalletDet->id,
+                    "referred" => $request->activationUserId,
+                    "amount" => $directIncome,
+                    "status" => "PAID",
+                ]);
+                $latestWorkingWalletAmount = $sponsorWalletDet->working_wallet_amount + $directIncome;
+                User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
+            }
+
             return redirect()->back()->with('success', 'Topup successful.');
         }
     }
