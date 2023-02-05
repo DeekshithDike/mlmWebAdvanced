@@ -14,7 +14,7 @@ class FundHistory extends Model
      *
      * @var array
      */
-    protected $fillable = ['users_id','amount','fund_status','coinbase_charges_id'];
+    protected $fillable = ['order_id','users_id','amount','fund_status','coinbase_charges_id','payment_url','created_by'];
 
     public static function addFundHistory($data) {
         self::Create($data);
@@ -38,10 +38,8 @@ class FundHistory extends Model
     */
     public static function getAllFundHistory($filter)
     {
-        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status', 'fund_histories.created_at', 'coinbase_charges.charges_id', 'coinbase_charges.charges_code')
-                ->join('coinbase_charges', 'fund_histories.coinbase_charges_id', '=', 'coinbase_charges.id')
-                ->join('users', 'fund_histories.users_id', '=', 'users.id')
-                ->where('coinbase_charges.payment_for', '=', 'ADD_FUND');
+        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by', 'fund_histories.created_at')
+                ->join('users', 'fund_histories.users_id', '=', 'users.id');
                 
 
         if (isset($filter['userId'])) {
@@ -62,7 +60,7 @@ class FundHistory extends Model
 
     public static function getAdminAllFundHistory($filter)
     {
-        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status', 'fund_histories.created_at')
+        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by','fund_histories.created_at')
                 ->join('users', 'fund_histories.users_id', '=', 'users.id');
                 
 
@@ -74,8 +72,8 @@ class FundHistory extends Model
             $data=$data->where('fund_histories.fund_status', $filter['status']);
         }
 
-        if (isset($filter['coinbase_charges_id'])) {
-            $data=$data->where('fund_histories.coinbase_charges_id', null);
+        if (isset($filter['created_by'])) {
+            $data=$data->where('fund_histories.created_by', $filter['created_by']);
         }
 
         if (isset($filter['fund_histories_id'])) {

@@ -16,9 +16,12 @@ class CreateFundHistoriesTable extends Migration
         Schema::create('fund_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('users_id');
+            $table->string('order_id', 50)->nullable();
             $table->double('amount');
-            $table->string('fund_status', 10)->default('PENDING');  //PENDING, CONFIRMED, DECLINED, REMOVED
+            $table->string('fund_status', 10)->default('PENDING');  //PENDING, CONFIRMED, EXPIRED
             $table->bigInteger('coinbase_charges_id')->nullable();
+            $table->text('payment_url')->nullable();
+            $table->bigInteger('created_by');
             $table->timestamps();
         });
     }

@@ -36,6 +36,13 @@ return [
         'webhooksecret' => env('WEBHOOK_SECRET')
     ],
 
+    'coinpayments' => [
+        'marchantid' => env('COINPAYMENT_MARCHANT_ID'),
+        'publickey' => env('COINPAYMENT_PUBLIC_KEY'),
+        'privatekey' => env('COINPAYMENT_PRIVATE_KEY'),
+        'ipnsecret' => env('COINPAYMENT_IPN_SECRET')
+    ],
+
     'nodeapi' => [
         'endpoint' => env('API_BASE_URL')
     ],

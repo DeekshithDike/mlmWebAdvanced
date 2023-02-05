@@ -80,7 +80,8 @@ class FundController extends Controller
             FundHistory::addFundHistory([
                 'users_id' => $walletDetails->id,
                 'amount' => $request->fundAmount,
-                'fund_status' => "CONFIRMED"
+                'fund_status' => "CONFIRMED",
+                'created_by' => Auth::user()->id
             ]);
             
             $latestAccountWalletAmount = $walletDetails->fund_wallet_amount + $request->fundAmount;
@@ -93,7 +94,7 @@ class FundController extends Controller
     public function listAddFundReport() {
         $filter = [
             'status' => "CONFIRMED",
-            'coinbase_charges_id' => true
+            'created_by' => true
         ];
         $data = FundHistory::getAdminAllFundHistory($filter);
         return view('admin.add-fund-report')->with(["data" => $data]);
@@ -133,7 +134,7 @@ class FundController extends Controller
     public function listRemoveFundReport() {
         $filter = [
             'status' => "REMOVED",
-            'coinbase_charges_id' => true
+            'created_by' => true
         ];
         $data = FundHistory::getAdminAllFundHistory($filter);
         return view('admin.remove-fund-report')->with(["data" => $data]);
