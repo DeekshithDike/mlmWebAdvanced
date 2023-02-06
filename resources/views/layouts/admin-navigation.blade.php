@@ -126,11 +126,11 @@
                 </svg>
             </a>
 
-            <!-- Coinbase -->
+            <!-- Coinpayment -->
             <a
-            href="{{ route('adminCoinbaseReport') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('admin/coinbase/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
-            x-tooltip.placement.right="'Coinbase'"
+            href="{{ route('adminCoinpaymentReport') }}"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('admin/coinpayment/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            x-tooltip.placement.right="'Coinpayment'"
             >
                 <svg width="28" height="30" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.1957 16.1361L14.624 15.5605C14.6094 15.5551 14.5943 15.5501 14.5793 15.5458C13.8253 15.3245 13.2354 14.7779 12.9611 14.0462C12.7293 13.4276 12.7519 12.7564 13.0252 12.1554C13.2985 11.5544 13.7895 11.0956 14.4077 10.8639C15.6839 10.3857 17.1122 11.0347 17.5904 12.3105C17.7297 12.6812 18.1423 12.8689 18.5127 12.7295C18.883 12.5906 19.071 12.1776 18.9321 11.8073C18.4224 10.448 17.2301 9.54222 15.8902 9.32589V8.21163C15.8902 7.81622 15.5692 7.4953 15.1738 7.4953C14.7784 7.4953 14.4575 7.81622 14.4575 8.21163V9.36493C14.2723 9.40468 14.0875 9.45375 13.9048 9.52216C12.9281 9.88821 12.1527 10.6128 11.7211 11.5623C11.2895 12.5118 11.2533 13.5723 11.6197 14.549C12.0506 15.6987 12.9725 16.5591 14.152 16.9133L15.724 17.4889C15.7387 17.4942 15.7533 17.4989 15.7684 17.5035C16.5223 17.7249 17.1122 18.2718 17.3866 19.0032C17.8651 20.2793 17.2157 21.7073 15.9399 22.1858C15.6892 22.28 15.4331 22.3291 15.1792 22.3399C15.1774 22.3399 15.176 22.3395 15.1742 22.3395C15.172 22.3395 15.1702 22.3402 15.1681 22.3402C14.1326 22.3796 13.1409 21.7614 12.7573 20.7396C12.6187 20.3692 12.2057 20.1823 11.835 20.3202C11.4647 20.4591 11.277 20.8721 11.4159 21.2424C11.9256 22.602 13.1172 23.51 14.4575 23.726V24.8381C14.4575 25.2335 14.7784 25.5544 15.1738 25.5544C15.5692 25.5544 15.8902 25.2335 15.8902 24.8381V23.6862C16.0753 23.6464 16.2601 23.5963 16.4428 23.5279C18.4586 22.7718 19.4836 20.5168 18.7283 18.5007C18.297 17.3506 17.3748 16.4899 16.1957 16.1361Z" fill="#667D86"/>
@@ -303,7 +303,7 @@
                 $menuItem5 = request()->is('admin/profit/*');
                 $menuItem6 = request()->is('admin/transfer/*');
                 $menuItem7 = request()->is('admin/fund/*');
-                $menuItem8 = request()->is('admin/coinbase/*');
+                $menuItem8 = request()->is('admin/coinpayment/*');
                 $menuItem9 = request()->is('admin/topup/*');
                 
                 $menuItem1 ? $activeMenu = "menu-item-1" : 
@@ -813,10 +813,10 @@
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('admin/coinbase/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('admin/coinpayment/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
-                            <span>Coinbase</span>
+                            <span>Coinpayment</span>
                             <svg
                                 :class="expanded && 'rotate-90'"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -836,15 +836,15 @@
                         <ul x-collapse x-show="expanded">
                             <li>
                                 <a
-                                    href="{{ route('adminCoinbaseReport') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('admin/coinbase/report') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    href="{{ route('adminCoinpaymentReport') }}"
+                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('admin/coinpayment/report') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
                                             class="h-1.5 w-1.5 rounded-full border border-current opacity-40"
                                             >
                                     </div>
-                                    <span>Coinbase Report</span>
+                                    <span>Coinpayment Report</span>
                                     </div>
                                 </a>
                             </li>

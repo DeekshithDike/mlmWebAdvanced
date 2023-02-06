@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\FundController;
 use App\Http\Controllers\Admin\WithdrawalController;
 use App\Http\Controllers\Admin\ProfitController;
 use App\Http\Controllers\Admin\TransferController;
-use App\Http\Controllers\Admin\CoinbaseController;
+use App\Http\Controllers\CoinpaymentController;
 
 // routes for admin
 Route::prefix('admin')->group(function () {
@@ -80,9 +80,9 @@ Route::prefix('admin')->group(function () {
             Route::post('admin-removefund', [FundController::class, 'removeFundSave'])->name('adminRemoveFundSave');
         });
 
-        // Coinbase
-        Route::prefix('coinbase')->group(function () {
-            Route::get('report', [CoinbaseController::class, 'listCoinbaseReport'])->name('adminCoinbaseReport');           
+        // Coinpayment
+        Route::prefix('coinpayment')->group(function () {
+            Route::get('report', [CoinpaymentController::class, 'listCoinpaymentReport'])->name('adminCoinpaymentReport');           
         });
 
         // Admin Topup
