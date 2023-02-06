@@ -24,9 +24,9 @@ Route::get('/about', function () {
 });
 
 // coinbase Webhook subscriptions
-Route::prefix('webhook')->group(function () {
-    Route::post('charge/confirmed', [CoinbaseController::class, 'chargeConfirmed']);
-});
+// Route::prefix('webhook')->group(function () {
+//     Route::post('charge/confirmed', [CoinbaseController::class, 'chargeConfirmed']);
+// });
 
 // Authenticated & Email verified users routes for all users
 Route::group(['middleware' => ['auth','verified']], function () {
