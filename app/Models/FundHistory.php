@@ -38,7 +38,7 @@ class FundHistory extends Model
     */
     public static function getAllFundHistory($filter)
     {
-        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by', 'fund_histories.created_at')
+        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.order_id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by', 'fund_histories.created_at')
                 ->join('users', 'fund_histories.users_id', '=', 'users.id');
                 
 
@@ -60,7 +60,7 @@ class FundHistory extends Model
 
     public static function getAdminAllFundHistory($filter)
     {
-        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by','fund_histories.created_at')
+        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.order_id', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by','fund_histories.created_at')
                 ->join('users', 'fund_histories.users_id', '=', 'users.id');
                 
 
