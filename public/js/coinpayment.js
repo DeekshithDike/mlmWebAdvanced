@@ -26741,9 +26741,10 @@
                 axios.post(_host + "/coinpayment/ajax/payload", {
                     payload: this._payload
                 }).then(function(t) {
+                    console.log(t.data.data.payload.cancel_url);
                     t.data.result && (e.rates = t.data.data.rates.accepted_coin, e.header = t.data.data.config, e.payload = t.data.data.payload, e.default_currency = t.data.data.default_currency, e.default_coin = t.data.data.default_coin, null != t.data.data.transaction && "null" != t.data.data.transaction && (e.transaction = t.data.data.transaction, e.format_expired()));
                     if (t.data.data.transaction != null) {
-                        window.location = t.data.data.transaction.status_url;    
+                        window.location = t.data.data.payload.cancel_url;    
                     }                    
                 }).catch(function(e) {
                     void 0 !== e.response.data.message && a()(e.response.data.message, {
