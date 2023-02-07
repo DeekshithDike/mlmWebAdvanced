@@ -23,6 +23,8 @@ Route::get('/about', function () {
     return view('website.about');
 });
 
+Route::get('testcron', [CommonController::class, 'testcron'])->name('testcron');
+
 // coinbase Webhook subscriptions
 // Route::prefix('webhook')->group(function () {
 //     Route::post('charge/confirmed', [CoinbaseController::class, 'chargeConfirmed']);
