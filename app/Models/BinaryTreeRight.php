@@ -69,4 +69,24 @@ class BinaryTreeRight extends Model
             return false;
         }
     }
+
+    public static function dashboardViewRightBusiness($filter) {
+        return self::select('binary_tree_rights.users_id', 'activation_histories.activation_amount')
+                ->where('binary_tree_rights.users_id', '=', $filter['users_id'])
+                ->join('activation_histories', 'binary_tree_rights.child_id', '=', 'activation_histories.users_id')
+                ->where('activation_histories.activation_status', 'ACTIVATED')
+                ->sum('activation_histories.activation_amount'); 
+    }
+
+    public static function dashboardViewTotalRightCount($filter) {
+        return self::where('binary_tree_rights.users_id', '=', $filter['users_id'])
+                ->count(); 
+    }
+
+    public static function dashboardViewActiveRightCount($filter) {
+        return self::where('binary_tree_rights.users_id', '=', $filter['users_id'])
+                ->join('activation_histories', 'binary_tree_rights.child_id', '=', 'activation_histories.users_id')
+                ->where('activation_histories.activation_status', 'ACTIVATED')
+                ->count(); 
+    }
 }

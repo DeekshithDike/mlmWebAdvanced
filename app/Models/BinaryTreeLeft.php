@@ -69,4 +69,24 @@ class BinaryTreeLeft extends Model
             return false;
         }
     }
+
+    public static function dashboardViewLeftBusiness($filter) {
+        return self::select('binary_tree_lefts.users_id', 'activation_histories.activation_amount')
+                ->where('binary_tree_lefts.users_id', '=', $filter['users_id'])
+                ->join('activation_histories', 'binary_tree_lefts.child_id', '=', 'activation_histories.users_id')
+                ->where('activation_histories.activation_status', 'ACTIVATED')
+                ->sum('activation_histories.activation_amount'); 
+    }
+
+    public static function dashboardViewTotalLeftCount($filter) {
+        return self::where('binary_tree_lefts.users_id', '=', $filter['users_id'])
+                ->count(); 
+    }
+
+    public static function dashboardViewActiveLeftCount($filter) {
+        return self::where('binary_tree_lefts.users_id', '=', $filter['users_id'])
+                ->join('activation_histories', 'binary_tree_lefts.child_id', '=', 'activation_histories.users_id')
+                ->where('activation_histories.activation_status', 'ACTIVATED')
+                ->count(); 
+    }
 }

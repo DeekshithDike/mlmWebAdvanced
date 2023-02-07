@@ -58,6 +58,12 @@ class BinaryTree extends Model
                 ->first();
         }
 
+        public function getCarryForwards() {
+            return $this->hasOne('App\Models\CarryForward', 'users_id', 'userID')
+                ->where('carry_forwards.status', '=', 0)
+                ->select('carry_forwards.users_id', 'carry_forwards.amount', 'carry_forwards.position');   
+        }
+
         public function getLeftBusiness(){
             return $this->hasMany('App\Models\BinaryTreeLeft', 'users_id', 'userID')
                 ->join('activation_histories', 'binary_tree_lefts.child_id', '=', 'activation_histories.users_id')
