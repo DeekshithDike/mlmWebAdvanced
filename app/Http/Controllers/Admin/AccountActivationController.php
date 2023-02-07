@@ -109,7 +109,7 @@ class AccountActivationController extends Controller
         ]);
 
         $userId = Auth::user()->id;
-        $loginIdExist = User::checkExist(['login_id' => $request->activationUserId]);
+        $loginIdExist = User::checkExist(['login_id' => strtoupper($request->activationUserId)]);
         $packageIdExist = Packages::checkExist(['id' => $request->package]);
 
         if (!$loginIdExist) {
@@ -129,11 +129,11 @@ class AccountActivationController extends Controller
             $startDate = date('Y-m-d'); $noOfDaysToAdd = $packageIdExist->duration; $count = 0;
             $expiryDate = self::getExpiryDate($startDate, $noOfDaysToAdd, $count);
             
-            $activationUserWalletDet = User::getWalletDetail(['login_id' => $request->activationUserId]);
+            $activationUserWalletDet = User::getWalletDetail(['login_id' => strtoupper($request->activationUserId)]);
 
             ActivationHistory::addActivationHistory([
                 "users_id" => $activationUserWalletDet->id,
-                "login_id" => $request->activationUserId,
+                "login_id" => strtoupper($request->activationUserId),
                 "packages_id" => $request->package,
                 "activation_amount" => $request->activationAmount,
                 "packages_name" => $packageIdExist->name,
@@ -162,7 +162,7 @@ class AccountActivationController extends Controller
                 
                 DirectIncome::addDirectIncome([
                     "users_id" => $sponsorWalletDet->id,
-                    "referred" => $request->activationUserId,
+                    "referred" => strtoupper($request->activationUserId),
                     "amount" => $directIncome,
                     "status" => "PAID",
                 ]);
