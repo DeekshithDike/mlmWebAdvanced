@@ -179,11 +179,13 @@ class AccountActivationController extends Controller
                 'todayDateOnly' => date('Y-m-d')
             ];
             
-            // call API to add binary income to users
-            $client = new \GuzzleHttp\Client();
-            $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
-            $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);
-            $promise->wait();
+            if ($binaryTree->parent_id != 0) {
+                // call API to add binary income to users
+                $client = new \GuzzleHttp\Client();
+                $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
+                $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);
+                $promise->wait();
+            }            
 
             return redirect()->back()->with('success', 'Topup successful.');
         }
