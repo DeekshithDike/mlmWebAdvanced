@@ -170,16 +170,17 @@ class AccountActivationController extends Controller
                 User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
             }
 
-            $binaryTree = BinaryTree::checkExist(["users_id" => $activationUserWalletDet->id]);
-            $sendPayload = [
-                'parent_id' => $binaryTree->parent_id,
-                'child_position' => $activationUserWalletDet->position,
-                'activation_amount' => $request->activationAmount,
-                'today' => date('Y-m-d H:i:s'),
-                'todayDateOnly' => date('Y-m-d')
-            ];
+            $binaryTree = BinaryTree::checkExist(["users_id" => $activationUserWalletDet->id]);            
             
             if ($binaryTree->parent_id != 0) {
+                $sendPayload = [
+                    'parent_id' => $binaryTree->parent_id,
+                    'child_position' => $activationUserWalletDet->position,
+                    'activation_amount' => $request->activationAmount,
+                    'today' => date('Y-m-d H:i:s'),
+                    'todayDateOnly' => date('Y-m-d')
+                ];
+                
                 // call API to add binary income to users
                 $client = new \GuzzleHttp\Client();
                 $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
