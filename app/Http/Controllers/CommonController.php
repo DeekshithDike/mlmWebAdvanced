@@ -20,7 +20,7 @@ class CommonController extends Controller
             'users_id' => 433,
             'referred' => 'KM3422243',
             'amount' => 500,
-            'status' => PAID
+            'status' => "PAID"
         ]);
         return 0;
     }
