@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\CoinbaseCharges;
 use App\Models\ActivationHistory;
 use App\Models\DirectIncome;
+use App\Models\BinaryTree;
 use Auth;
 
 class AccountActivationController extends Controller
@@ -94,11 +95,20 @@ class AccountActivationController extends Controller
                 User::updateUser($sponsorWalletDet->id, ['working_wallet_amount' => $latestWorkingWalletAmount]);
             }
 
+            $binaryTree = BinaryTree::checkExist(["users_id" => $activationUserWalletDet->id]);
+            $sendPayload = [
+                'parent_id' => $binaryTree->parent_id,
+                'child_position' => $activationUserWalletDet->position,
+                'activation_amount' => $request->activationAmount,
+                'today' => date('Y-m-d H:i:s'),
+                'todayDateOnly' => date('Y-m-d')
+            ];
+            
             // call API to add binary income to users
-            // $client = new \GuzzleHttp\Client();
-            // $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
-            // $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);
-            // $promise->wait();
+            $client = new \GuzzleHttp\Client();
+            $url = config('services.nodeapi.endpoint')."/api/v1/user/update/binary";
+            $promise = $client->postAsync($url, ['json' => $sendPayload], ['Content-Type' => 'application/json']);
+            $promise->wait();
 
             return redirect()->back()->with('success', 'Activation successful.');
         }
