@@ -46,9 +46,6 @@
                           Full Name
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
-                          Package
-                        </th>
-                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           ROI Amount
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -71,9 +68,6 @@
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ $item->name }}
-                            </td>
-                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                ${{ $item->package_name }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 ${{ $item->paid_amount }}

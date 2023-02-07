@@ -17,8 +17,7 @@ class CreateRoiIncomesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('users_id');
             $table->double('paid_amount');
-            $table->bigInteger('package_id');
-            $table->string('package_name', 100);
+            $table->bigInteger('activation_histories_id');
             $table->timestamp('payment_date')->nullable();
             $table->timestamps();
         });

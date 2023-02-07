@@ -17,8 +17,7 @@ class RoiIncome extends Model
     protected $fillable = [
         'users_id',
         'paid_amount',
-        'package_id',
-        'package_name',
+        'activation_histories_id',
         'payment_date'
     ];
 
@@ -41,7 +40,7 @@ class RoiIncome extends Model
 
     public static function viewRoiIncome($filter)
     {
-        $data = self::select('users.login_id','users.name','roi_incomes.users_id', 'roi_incomes.paid_amount', 'roi_incomes.package_id', 'roi_incomes.package_name', 'roi_incomes.payment_date')
+        $data = self::select('users.login_id','users.name','roi_incomes.users_id', 'roi_incomes.paid_amount', 'roi_incomes.activation_histories_id', 'roi_incomes.payment_date')
                 ->join('users', 'roi_incomes.users_id', '=', 'users.id');
 
         if (isset($filter['users_id'])) {
