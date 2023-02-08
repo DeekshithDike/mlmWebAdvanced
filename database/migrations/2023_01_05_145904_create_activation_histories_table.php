@@ -25,9 +25,9 @@ class CreateActivationHistoriesTable extends Migration
             $table->string('packages_name', 100);
             $table->double('packages_min_amount');
             $table->double('packages_max_amount');
-            $table->integer('packages_roi');
-            $table->integer('packages_referral');
-            $table->integer('packages_binary');
+            $table->double('packages_roi');
+            $table->double('packages_referral');
+            $table->double('packages_binary');
             $table->double('packages_capping');
             $table->integer('packages_duration');
             $table->string('activation_status', 15)->default('ACTIVATED');  //ACTIVATED, EXPIRED
