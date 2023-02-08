@@ -58,7 +58,7 @@ class ActivationHistory extends Model
             return $data->first();
         }
         
-        return $data->get();
+        return $data->orderBy('activation_histories.created_at', 'desc')->get();
     }
 
     public static function activeTopOnePackage($filter) {

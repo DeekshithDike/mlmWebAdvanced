@@ -58,6 +58,6 @@ class WithdrawalHistory extends Model
             return $data->first();
         }
 
-        return $data->get();
+        return $data->orderBy('withdrawal_histories.created_at', 'desc')->get();
     }
 }

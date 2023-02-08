@@ -64,6 +64,7 @@ class User extends Authenticatable
                 ->where('sponsor_id', '=', $login_id)
                 ->where('login_id', '!=', $login_id)
                 ->with('getActiveActivations')
+                ->orderBy('users.created_at', 'desc')
                 ->get();
     }
 
@@ -101,6 +102,6 @@ class User extends Authenticatable
             $data = $data->where('user_role', $filter['user_role']);
         }
         
-        return $data->get();
+        return $data->orderBy('users.created_at', 'desc')->get();
     }
 }

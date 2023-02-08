@@ -138,6 +138,12 @@
             </div>
         </div>
 
+        <div class="col-span-12">
+            <div class="grid grid-cols-1 gap-4">
+                <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,3408,52,4687,2010,74,1958,5426,3890,6636,5994,2,4943" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+            </div>
+        </div>
+
         <div class="col-span-12 space-y-4 sm:space-y-5 lg:space-y-6">
             <div class="grid grid-cols-1 gap-4 sm:col-span-2 sm:grid-cols-4 sm:gap-5 lg:gap-6">
                 <div class="card justify-center p-4.5">

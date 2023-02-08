@@ -54,7 +54,7 @@ class BinaryIncome extends Model
             $data = $data->where('binary_incomes.users_id', $filter['users_id']);
         }
         
-        return $data->get();
+        return $data->orderBy('binary_incomes.payment_date', 'desc')->get();
     }
 
     public static function getBinaryIncomeSum($filter) {

@@ -54,6 +54,9 @@
                           Order ID
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          Transaction ID
+                        </th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Amount
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -75,11 +78,14 @@
                                 {{ $item->order_id }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                {{ $item->txn_id }}
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 ${{ $item->amount }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                              @if ($item->payment_url != null)
-                                  <a href="{{ $item->payment_url }}" class="text-primary">Checkout</a>
+                              @if ($item->status_url != null)
+                                  <a href="{{ $item->status_url }}" class="text-primary">Checkout</a>
                               @else
                                   NA
                               @endif                                

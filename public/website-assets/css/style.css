@@ -9721,7 +9721,7 @@ button.scroltop {
 	border:3px solid;
 	position: fixed;   
 	right: 15px;   
-	bottom:15px;
+	bottom:80px;
 	font-size:11px;
 	line-height:16px;
 	font-weight:bold;
@@ -12802,4 +12802,11 @@ ol.commentlist li::after {
 
 .d-flex {
 	display: flex !important;
+}
+
+.whatsappicon {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	z-index: 1;
 }

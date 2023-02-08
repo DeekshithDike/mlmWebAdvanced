@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">        
 
         <!-- FAVICONS ICON -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230127233845') }}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230208181425') }}" />
         
         <!-- PAGE TITLE HERE -->
         <title>{{ config('app.name', 'MLM') }}</title>
@@ -20,35 +20,35 @@
         <![endif] -->
         
         <!-- BOOTSTRAP STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap.min.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap.min.css?v=20230208181425') }}">
         <!-- FONTAWESOME STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/fontawesome/css/font-awesome.min.css?v=20230127233845') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/fontawesome/css/font-awesome.min.css?v=20230208181425') }}" />
         <!-- FLATICON STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/flaticon.min.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/flaticon.min.css?v=20230208181425') }}">
         <!-- ANIMATE STYLE SHEET --> 
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/animate.min.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/animate.min.css?v=20230208181425') }}">
         <!-- OWL CAROUSEL STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/owl.carousel.min.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/owl.carousel.min.css?v=20230208181425') }}">
         <!-- BOOTSTRAP SELECT BOX STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap-select.min.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/bootstrap-select.min.css?v=20230208181425') }}">
         <!-- MAGNIFIC POPUP STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/magnific-popup.min.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/magnific-popup.min.css?v=20230208181425') }}">
         <!-- LOADER STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/loader.min.css?v=20230127233845') }}">    
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/loader.min.css?v=20230208181425') }}">    
         <!-- MAIN STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/style.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/style.css?v=20230208181425') }}">
         <!-- THEME COLOR CHANGE STYLE SHEET -->
-        <link rel="stylesheet" class="skin" type="text/css" href="{{ asset('website-assets/css/skin/skin-1.css?v=20230127233845') }}">
+        <link rel="stylesheet" class="skin" type="text/css" href="{{ asset('website-assets/css/skin/skin-1.css?v=20230208181425') }}">
         <!-- CUSTOM  STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/custom.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/custom.css?v=20230208181425') }}">
         <!-- SIDE SWITCHER STYLE SHEET -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/switcher.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/css/switcher.css?v=20230208181425') }}">
 
         
         <!-- REVOLUTION SLIDER CSS -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/settings.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/settings.css?v=20230208181425') }}">
         <!-- REVOLUTION NAVIGATION STYLE -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/navigation.css?v=20230127233845') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('website-assets/plugins/revolution/revolution/css/navigation.css?v=20230208181425') }}">
         
         <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">  
@@ -68,7 +68,7 @@
                                 <div class="wt-topbar-left">
                                     <ul class="list-unstyled e-p-bx pull-left">
                                         <li><i class="fa fa-envelope"></i><a href="mailto:support@kryptomusk.com">support@kryptomusk.com</a></li>
-                                        <li><i class="fa fa-whatsapp"></i><a target="_blank" href="https://api.whatsapp.com/send?phone=447362049625">(+44) 736 204 9625</a></li>
+                                        <li><i class="fa fa-whatsapp"></i><a target="_blank" href="https://api.whatsapp.com/send?phone=447496559597">(+44) 7496 559 597</a></li>
                                     </ul>
                                 </div>
                                 
@@ -88,7 +88,7 @@
                         <div class="container">                            
                             <div class="logo-header mostion">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('website-assets/images/logo-white.png?v=20230127233845') }}" width="230" height="67" alt="" />
+                                    <img src="{{ asset('website-assets/images/logo-white.png?v=20230208181425') }}" width="230" height="67" alt="" />
                                 </a>
                             </div>
                             
@@ -147,9 +147,9 @@
                             <div id="rev_slider_1014_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
                                     <ul>
                                         <!-- SLIDE 1 -->	
-                                        <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230127233845') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                        <li data-index="rs-1000" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230208181425') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                         <!-- MAIN IMAGE -->
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230127233845') }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230208181425') }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                         <!-- LAYERS -->
                                         
                                         <!-- LAYER NR. 1 [ for overlay ] -->
@@ -373,7 +373,7 @@
                                         ]'
                                         
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/earth.png?v=20230127233845') }}" alt="" class="spin-city">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/earth.png?v=20230208181425') }}" alt="" class="spin-city">
                                         </div>
                                         
                                         <!-- LAYER NR. 9 [ for more detail botton ] -->
@@ -400,16 +400,16 @@
                                         
                                                                     
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/bitcoin.png?v=20230127233845') }}" alt="">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/bitcoin.png?v=20230208181425') }}" alt="">
                                         </div>  
 
                                         
                                     </li>
                                         
                                         <!-- SLIDE 2 -->
-                                        <li data-index="rs-1001" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230127233845') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                        <li data-index="rs-1001" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230208181425') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                         <!-- MAIN IMAGE -->
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230127233845') }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230208181425') }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                         <!-- LAYERS -->
                                         
                                         <!-- LAYER NR. 1 [ for overlay ] -->
@@ -631,7 +631,7 @@
                                         {"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
                                         
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/earth2.png?v=20230127233845') }}" alt="" class="spin-city">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/earth2.png?v=20230208181425') }}" alt="" class="spin-city">
                                         </div>
                                         
                                         <!-- LAYER NR. 9 [ for more detail botton ] -->
@@ -644,7 +644,7 @@
                                         {"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
                                         
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/earth2-shadow.png?v=20230127233845') }}" alt="">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/earth2-shadow.png?v=20230208181425') }}" alt="">
                                         </div>  
                                                                         
                                         <!-- LAYER NR. 10 [ for more detail botton ] -->
@@ -670,7 +670,7 @@
                                         
                                                                     
                                         style="z-index: 16;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/rocket.png?v=20230127233845') }}" alt="" class="floating">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/rocket.png?v=20230208181425') }}" alt="" class="floating">
                                         </div> 
                                                                             
                                         <!-- LAYER NR. 11 [ for more detail botton ] -->
@@ -696,7 +696,7 @@
                                         
                                                                     
                                         style="z-index: 15;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/fire.gif?v=20230127233845') }}" alt="" class="floating">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/fire.gif?v=20230208181425') }}" alt="" class="floating">
                                         </div>
                                         
                                         <!-- LAYER NR. 12 [ for more detail botton ] -->
@@ -724,15 +724,15 @@
                                         
                                                                     
                                         style="z-index: 12;">
-                                        <div class="coin-slide bg-full-width bg-repeat-y coin-slide-rotate" style="background-image:url({{ asset('website-assets/images/main-slider/slider2/coin-sky.png?v=20230127233845') }});height:100vh;"></div>
+                                        <div class="coin-slide bg-full-width bg-repeat-y coin-slide-rotate" style="background-image:url({{ asset('website-assets/images/main-slider/slider2/coin-sky.png?v=20230208181425') }});height:100vh;"></div>
                                         </div>    
                                                                                                     
                                     </li>
 
                                         <!-- SLIDE  3 -->
-                                        <li data-index="rs-1002" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230127233845') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                        <li data-index="rs-1002" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230208181425') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                         <!-- MAIN IMAGE -->
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230127233845') }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/slide1.jpg?v=20230208181425') }}"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                         <!-- LAYERS -->
                                         
                                         <!-- LAYER NR. 1 [ for overlay ] -->
@@ -956,7 +956,7 @@
                                         ]'
                                         
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/rock.png?v=20230127233845') }}" alt="">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/rock.png?v=20230208181425') }}" alt="">
                                         </div>
                                         
                                         <!-- LAYER NR. 9 [ for more detail botton ] -->
@@ -971,7 +971,7 @@
                                         ]'
                                         
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/agent.png?v=20230127233845') }}" alt="">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/agent.png?v=20230208181425') }}" alt="">
                                         </div>  
                                                                         
                                         <!-- LAYER NR. 10 [ for more detail botton ] -->
@@ -997,7 +997,7 @@
                                         
                                                                     
                                         style="z-index: 13;">
-                                        <img src="{{ asset('website-assets/images/main-slider/slider2/plant.png?v=20230127233845') }}" alt="">
+                                        <img src="{{ asset('website-assets/images/main-slider/slider2/plant.png?v=20230208181425') }}" alt="">
                                         </div> 
                                     </li>
                                                                     
@@ -1009,15 +1009,16 @@
                         </div>
                     </div>
                 </div>
+                <div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,3408,52,4687,2010,74,1958,5426,3890,6636,5994,2,4943" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
                 <!-- SLIDER END -->
                         
                 <!-- ABOUT COMPANY SECTION START -->           
-                <div id="aboutUs" class="section-full home-about-section p-t80 bg-no-repeat bg-bottom-right"  style="background-image:url({{ asset('website-assets/images/background/bg-coin.png?v=20230127233845') }})">
+                <div id="aboutUs" class="section-full home-about-section p-t80 bg-no-repeat bg-bottom-right"  style="background-image:url({{ asset('website-assets/images/background/bg-coin.png?v=20230208181425') }})">
                     <div class="container-fluid ">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="wt-box text-right">
-                                    <img src="{{ asset('website-assets/images/background/bg-laptop.png?v=20230127233845') }}" alt=""> 
+                                    <img src="{{ asset('website-assets/images/background/bg-laptop.png?v=20230208181425') }}" alt=""> 
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -1067,7 +1068,7 @@
                                 <div class="col-md-4 col-sm-6 animate_line">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-29.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-29.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte text-uppercase font-weight-500">Instant Trading</h4>
@@ -1079,7 +1080,7 @@
                                 <div class="col-md-4 col-sm-6 animate_line">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-28.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-28.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content ">
                                             <h4 class="wt-tilte text-uppercase font-weight-500">Recurring Buying</h4>
@@ -1091,7 +1092,7 @@
                                 <div class="col-md-4 col-sm-6 animate_line">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-17.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-17.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte text-uppercase font-weight-500">Safe and Secure</h4>
@@ -1103,7 +1104,7 @@
                                 <div class="col-md-4 col-sm-6 animate_line">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-19.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-19.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte text-uppercase font-weight-500">Investment Planning</h4>
@@ -1115,7 +1116,7 @@
                                 <div class="col-md-4 col-sm-6 animate_line">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-12.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-12.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte text-uppercase font-weight-500">Wallet Transaction</h4>
@@ -1127,7 +1128,7 @@
                                 <div class="col-md-4 col-sm-6 animate_line">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-38.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-38.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte text-uppercase font-weight-500">Easy Withdrawal</h4>
@@ -1144,15 +1145,15 @@
                 <!-- WHY CHOOSE US SECTION END -->                      
 
                 <!-- COMPANY DETAIL SECTION START -->
-                <div class="section-full p-t50 p-b50 overlay-wraper bg-parallax clouds1 bg-repeat"  data-stellar-background-ratio="0.5" style="background-image:url({{ asset('website-assets/images/background/bg-9.jpg?v=20230127233845') }});">
+                <div class="section-full p-t50 p-b50 overlay-wraper bg-parallax clouds1 bg-repeat"  data-stellar-background-ratio="0.5" style="background-image:url({{ asset('website-assets/images/background/bg-9.jpg?v=20230208181425') }});">
                     <div class="overlay-main bg-secondry opacity-05"></div>
                     <div class="container ">
                         <div class="row">
                             <div class="col-md-4 col-sm-6">
                                 <div class="rocket-pic">
                                     <div class="rocket-animation ">
-                                        <img src="{{ asset('website-assets/images/rocket.png?v=20230127233845') }}" alt="" class="floating" />
-                                        <div class="rocket-fire"> <img src="{{ asset('website-assets/images/fire.gif?v=20230127233845') }}" alt="" class="floating"/></div>
+                                        <img src="{{ asset('website-assets/images/rocket.png?v=20230208181425') }}" alt="" class="floating" />
+                                        <div class="rocket-fire"> <img src="{{ asset('website-assets/images/fire.gif?v=20230208181425') }}" alt="" class="floating"/></div>
                                     </div>
                                 </div>
                             </div>
@@ -1194,7 +1195,7 @@
                                 <div class="col-md-4 col-sm-4 step-number-block">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-4.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-4.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <div class="step-number">1</div>
@@ -1207,7 +1208,7 @@
                                 <div class="col-md-4 col-sm-4 step-number-block">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-primary m-a5 ">
                                         <div class="icon-lg m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-28.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-28.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content text-white">
                                             <div class="step-number active">2</div>
@@ -1220,7 +1221,7 @@
                                 <div class="col-md-4 col-sm-4 step-number-block">
                                     <div class="wt-icon-box-wraper  p-a30 center bg-white m-a5">
                                         <div class="icon-lg text-primary m-b20">
-                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-12.png?v=20230127233845') }}" alt=""></a>
+                                            <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/icon/pick-12.png?v=20230208181425') }}" alt=""></a>
                                         </div>
                                         <div class="icon-content">
                                             <div class="step-number">3</div>
@@ -1237,7 +1238,7 @@
                 <!-- HOW IT WORK  SECTION END -->
                         
                 <!-- SECTION CONTENT START -->
-                <div id="trading" class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20230127233845') }});">
+                <div id="trading" class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20230208181425') }});">
                     
                     <div class="container">
                             
@@ -1389,13 +1390,13 @@
                                 <div class="col-md-6 col-sm-6 bg-secondry">
                                     <div class="section-content p-b100 p-t150 p-r30 clearfix">
                                         <div class="wt-left-part any-query">
-                                            <img src="{{ asset('website-assets/images/any-query.png?v=20230127233845') }}" alt="">
+                                            <img src="{{ asset('website-assets/images/any-query.png?v=20230208181425') }}" alt="">
                                             <br />
                                             <br />
                                             <div class="text-center">
                                                 <h3 class="text-uppercase font-weight-500 text-white">Call Us</h3>
                                                 <p class="text-white">Call us to clarify if you've any query.</p>
-                                                <h4><i class="fa fa-whatsapp text-primary"></i>&nbsp;<a class="text-primary" target="_blank" href="https://api.whatsapp.com/send?phone=447362049625">(+44) 736 204 9625</a></h4>
+                                                <h4><i class="fa fa-whatsapp text-primary"></i>&nbsp;<a class="text-primary" target="_blank" href="https://api.whatsapp.com/send?phone=447496559597">(+44) 7496 559 597</a></h4>
                                             </div>    
                                         </div>
                                     </div>                               
@@ -1403,7 +1404,7 @@
                                 <div class="col-md-6 col-sm-6 bg-primary">
                                     <div class="section-content p-b100 p-t150 p-l30 clearfix">
                                         <div class="wt-right-part any-query">
-                                            <img src="{{ asset('website-assets/images/any-query-contact.png?v=20230127233845') }}" alt="">
+                                            <img src="{{ asset('website-assets/images/any-query-contact.png?v=20230208181425') }}" alt="">
                                             <br />
                                             <br />
                                             <div class="text-center">
@@ -1531,7 +1532,7 @@
                 <!-- LATEST BLOG SECTION END -->
 
                 <!-- SECTION CONTENT START -->
-                <div id="faq" class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20230127233845') }});">
+                <div id="faq" class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20230208181425') }});">
                     
                     <div class="container">
                         <!-- TITLE -->
@@ -1685,38 +1686,38 @@
                         <div id="no-more-tables">
                             <div class="row">
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/bitcoin.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
+                                    <img src="{{ asset('website-assets/images/coin-icon/bitcoin.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
                                     <p> Bitcoin </p>
                                 </div>
 
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/ethereum-coin.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
+                                    <img src="{{ asset('website-assets/images/coin-icon/ethereum-coin.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
                                     <p> Ethereum </p>
                                 </div>
 
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/doge.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
+                                    <img src="{{ asset('website-assets/images/coin-icon/doge.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
                                     <p> Doge Coin </p>
                                 </div>
 
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/litecoin.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
+                                    <img src="{{ asset('website-assets/images/coin-icon/litecoin.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
                                     <p> Litecoin </p>
                                 </div>
                             
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/shibainu.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
-                                    <p> Shiba Inu </p>
+                                    <img src="{{ asset('website-assets/images/coin-icon/tron.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
+                                    <p> Tron </p>
                                 </div>
 
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/tether.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
+                                    <img src="{{ asset('website-assets/images/coin-icon/tether.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
                                     <p> Tether </p>
                                 </div>
 
                                 <div class="text-center col-6 col-md-3">
-                                    <img src="{{ asset('website-assets/images/coin-icon/matic.png?v=20230127233845') }}" width="72" height="72" class="p-r10" alt="">
-                                    <p> Matic </p>
+                                    <img src="{{ asset('website-assets/images/coin-icon/solana.png?v=20230208181425') }}" width="72" height="72" class="p-r10" alt="">
+                                    <p> Solana </p>
                                 </div>
                             </div>
 
@@ -1726,7 +1727,7 @@
                 <!-- SECTION TABLE  END -->  
 
                 <!-- Secured By SECTION START  -->
-                <div class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20230127233845') }});">
+                <div class="section-full  p-tb80 bg-full-height bg-repeat-x graph-slide-image" style="background-image:url({{ asset('website-assets/images/background/bg-1.jpg?v=20230208181425') }});">
                     <div class="container">
                         <!-- TITLE START-->
                         <div class="section-head text-center">
@@ -1740,22 +1741,22 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 step-number-block">
                                     <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
-                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/Lets-Encrypt-Logo.png?v=20230127233845') }}" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/Lets-Encrypt-Logo.png?v=20230208181425') }}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 step-number-block">
                                     <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
-                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/Cloudflare-Logo.png?v=20230127233845') }}" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/Cloudflare-Logo.png?v=20230208181425') }}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 step-number-block">
                                     <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
-                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/ncl.png?v=20230127233845') }}" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/ncl.png?v=20230208181425') }}" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-sm-6 step-number-block">
                                     <div class="wt-icon-box-wraper center p-a30 bg-white m-a5">
-                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/duoLogo-web.png?v=20230127233845') }}" alt=""></a>
+                                        <a href="#" class="icon-cell"><img src="{{ asset('website-assets/images/security/duoLogo-web.png?v=20230208181425') }}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1793,7 +1794,7 @@
             <!-- CONTENT END -->
             
             <!-- FOOTER START -->
-            <footer class="site-footer footer-dark bg-no-repeat bg-full-height bg-center "  style="background-image:url({{ asset('website-assets/images/background/footer-bg.jpg?v=20230127233845') }});">
+            <footer class="site-footer footer-dark bg-no-repeat bg-full-height bg-center "  style="background-image:url({{ asset('website-assets/images/background/footer-bg.jpg?v=20230208181425') }});">
                 <!-- FOOTER BLOCKES START -->  
                 <div class="footer-top overlay-wraper">
                     <div class="overlay-main bg-black opacity-05"></div>
@@ -1804,7 +1805,7 @@
                                 <div class="widget widget_about">
                                     <h4 class="widget-title text-white">About Company</h4>
                                     <div class="logo-footer clearfix p-b15">
-                                        <a href="{{ url('/') }}"><img src="{{ asset('website-assets/images/logo-white.png?v=20230127233845') }}" width="230" height="67" alt=""/></a>
+                                        <a href="{{ url('/') }}"><img src="{{ asset('website-assets/images/logo-white.png?v=20230208181425') }}" width="230" height="67" alt=""/></a>
                                     </div>
                                     <p>
                                         Krypto Musk is one of the first hybrid trading platform founded by a group of visionaries whose idea was to offer a Hybrid platform available to ordinary people willing to participate in this global investment phenomenon and profit on daily bases our vision is service over sales, honor over hustle and most importantly people over profits.
@@ -1917,12 +1918,10 @@
                                 <div class="widget widget_social_inks">
                                     <h4 class="widget-title text-white">Social Links</h4>
                                     <ul class="social-icons social-square social-darkest">
-                                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
+                                        <li><a target="_bank" href="https://youtube.com/@kryptomusk" class="fa fa-youtube"></a></li>
+                                        <li><a target="_bank" href="https://www.instagram.com/invites/contact/?i=1f0adt1zcpwdj&utm_content=qjfbv0y" class="fa fa-instagram"></a></li>
+                                        <li><a target="_bank" href="https://www.facebook.com/profile.php?id=100089233525435" class="fa fa-facebook"></a></li>
+                                        <li><a target="_bank" href="https://t.me/+Xzup3eeEKTQ1OTg0" class="fa fa-telegram"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1935,7 +1934,7 @@
                                         </div>
                                         <div class="icon-content text-white">
                                             <h5 class="wt-tilte text-uppercase m-b0">Phone</h5>
-                                            <p class="m-b0"><a target="_blank" href="https://api.whatsapp.com/send?phone=447362049625">(+44) 736 204 9625</a></p>
+                                            <p class="m-b0"><a target="_blank" href="https://api.whatsapp.com/send?phone=447496559597">(+44) 7496 559 597</a></p>
                                         </div>
                                 </div>
                             </div>
@@ -1979,6 +1978,9 @@
             </footer>
             <!-- FOOTER END -->
 
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=447496559597" class="whatsappicon">
+                <img src="{{ asset('website-assets/images/icon/whatsapp.png?v=20230208181425') }}" width="57" alt="" />
+            </a>
             
             <!-- BUTTON TOP START -->
             <button class="scroltop"><span class=" iconmoon-house relative" id="btn-vibrate"></span>Top</button>            
@@ -1991,7 +1993,7 @@
             <div class="loading-pic">
                 <div class="cssload-container">
                     <div class="cssload-dot bg-primary">
-                        <img src="{{ asset('website-assets/images/favicon-white.png?v=20230127233845') }}" width="230" height="67" alt="" />
+                        <img src="{{ asset('website-assets/images/favicon-white.png?v=20230208181425') }}" width="230" height="67" alt="" />
                     </div>
                     <div class="step" id="cssload-s1"></div>
                     <div class="step" id="cssload-s2"></div>
@@ -2001,31 +2003,33 @@
         </div>
         <!-- LOADING AREA  END -->
 
+        <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+
         <!-- JAVASCRIPT  FILES ========================================= --> 
-        <script src="{{ asset('website-assets/js/jquery-1.12.4.min.js?v=20230127233845') }}"></script><!-- JQUERY.MIN JS -->
-        <script   src="{{ asset('website-assets/js/bootstrap.min.js?v=20230127233845') }}"></script><!-- BOOTSTRAP.MIN JS -->
+        <script src="{{ asset('website-assets/js/jquery-1.12.4.min.js?v=20230208181425') }}"></script><!-- JQUERY.MIN JS -->
+        <script   src="{{ asset('website-assets/js/bootstrap.min.js?v=20230208181425') }}"></script><!-- BOOTSTRAP.MIN JS -->
 
-        <script   src="{{ asset('website-assets/js/bootstrap-select.min.js?v=20230127233845') }}"></script><!-- FORM JS -->
-        <script   src="{{ asset('website-assets/js/jquery.bootstrap-touchspin.min.js?v=20230127233845') }}"></script><!-- FORM JS -->
+        <script   src="{{ asset('website-assets/js/bootstrap-select.min.js?v=20230208181425') }}"></script><!-- FORM JS -->
+        <script   src="{{ asset('website-assets/js/jquery.bootstrap-touchspin.min.js?v=20230208181425') }}"></script><!-- FORM JS -->
 
-        <script   src="{{ asset('website-assets/js/magnific-popup.min.js?v=20230127233845') }}"></script><!-- MAGNIFIC-POPUP JS -->
+        <script   src="{{ asset('website-assets/js/magnific-popup.min.js?v=20230208181425') }}"></script><!-- MAGNIFIC-POPUP JS -->
 
-        <script   src="{{ asset('website-assets/js/waypoints.min.js?v=20230127233845') }}"></script><!-- WAYPOINTS JS -->
-        <script   src="{{ asset('website-assets/js/counterup.min.js?v=20230127233845') }}"></script><!-- COUNTERUP JS -->
-        <script   src="{{ asset('website-assets/js/waypoints-sticky.min.js?v=20230127233845') }}"></script><!-- COUNTERUP JS -->
+        <script   src="{{ asset('website-assets/js/waypoints.min.js?v=20230208181425') }}"></script><!-- WAYPOINTS JS -->
+        <script   src="{{ asset('website-assets/js/counterup.min.js?v=20230208181425') }}"></script><!-- COUNTERUP JS -->
+        <script   src="{{ asset('website-assets/js/waypoints-sticky.min.js?v=20230208181425') }}"></script><!-- COUNTERUP JS -->
 
-        <script  src="{{ asset('website-assets/js/isotope.pkgd.min.js?v=20230127233845') }}"></script><!-- MASONRY  -->
+        <script  src="{{ asset('website-assets/js/isotope.pkgd.min.js?v=20230208181425') }}"></script><!-- MASONRY  -->
 
-        <script   src="{{ asset('website-assets/js/owl.carousel.min.js?v=20230127233845') }}"></script><!-- OWL  SLIDER  -->
+        <script   src="{{ asset('website-assets/js/owl.carousel.min.js?v=20230208181425') }}"></script><!-- OWL  SLIDER  -->
 
-        <script   src="{{ asset('website-assets/js/stellar.min.js?v=20230127233845') }}"></script><!-- PARALLAX BG IMAGE   --> 
-        <script   src="{{ asset('website-assets/js/scrolla.min.js?v=20230127233845') }}"></script><!-- ON SCROLL CONTENT ANIMTE   -->
+        <script   src="{{ asset('website-assets/js/stellar.min.js?v=20230208181425') }}"></script><!-- PARALLAX BG IMAGE   --> 
+        <script   src="{{ asset('website-assets/js/scrolla.min.js?v=20230208181425') }}"></script><!-- ON SCROLL CONTENT ANIMTE   -->
 
-        <script   src="{{ asset('website-assets/js/custom.js?v=20230127233845') }}"></script><!-- CUSTOM FUCTIONS  -->
-        <script   src="{{ asset('website-assets/js/shortcode.js?v=20230127233845') }}"></script><!-- SHORTCODE FUCTIONS  -->
-        <script   src="{{ asset('website-assets/js/switcher.js?v=20230127233845') }}"></script><!-- SWITCHER FUCTIONS  -->
-        <script  src="{{ asset('website-assets/js/jquery.bgscroll.js?v=20230127233845') }}"></script><!-- BACKGROUND SCROLL -->
-        <script  src="{{ asset('website-assets/js/tickerNews.min.js?v=20230127233845') }}"></script><!-- TICKERNEWS-->
+        <script   src="{{ asset('website-assets/js/custom.js?v=20230208181425') }}"></script><!-- CUSTOM FUCTIONS  -->
+        <script   src="{{ asset('website-assets/js/shortcode.js?v=20230208181425') }}"></script><!-- SHORTCODE FUCTIONS  -->
+        <script   src="{{ asset('website-assets/js/switcher.js?v=20230208181425') }}"></script><!-- SWITCHER FUCTIONS  -->
+        <script  src="{{ asset('website-assets/js/jquery.bgscroll.js?v=20230208181425') }}"></script><!-- BACKGROUND SCROLL -->
+        <script  src="{{ asset('website-assets/js/tickerNews.min.js?v=20230208181425') }}"></script><!-- TICKERNEWS-->
         <!-- TICKERNEWS FUNCTiON -->
         <script type="text/javascript">
             jQuery(function(){
@@ -2046,13 +2050,13 @@
         </script>
         <!-- REVOLUTION JS FILES -->
 
-        <script  src="{{ asset('website-assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js?v=20230127233845') }}"></script>
-        <script  src="{{ asset('website-assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js?v=20230127233845') }}"></script>
+        <script  src="{{ asset('website-assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js?v=20230208181425') }}"></script>
+        <script  src="{{ asset('website-assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js?v=20230208181425') }}"></script>
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
-        <script  src="{{ asset('website-assets/plugins/revolution/revolution/js/extensions/revolution-plugin.js?v=20230127233845') }}"></script>
+        <script  src="{{ asset('website-assets/plugins/revolution/revolution/js/extensions/revolution-plugin.js?v=20230208181425') }}"></script>
 
         <!-- REVOLUTION SLIDER FUNCTION  ===== -->
-        <script   src="{{ asset('website-assets/js/rev-script-1.js?v=20230127233845') }}"></script>
+        <script   src="{{ asset('website-assets/js/rev-script-1.js?v=20230208181425') }}"></script>
     </body>    
 </html>

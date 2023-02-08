@@ -49,6 +49,6 @@ class TransferHistory extends Model
         }
 
 
-        return $data->get();
+        return $data->orderBy('transfer_histories.created_at', 'desc')->get();
     }
 }

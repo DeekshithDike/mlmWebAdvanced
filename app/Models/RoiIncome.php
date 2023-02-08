@@ -40,14 +40,14 @@ class RoiIncome extends Model
 
     public static function viewRoiIncome($filter)
     {
-        $data = self::select('users.login_id','users.name','roi_incomes.users_id', 'roi_incomes.paid_amount', 'roi_incomes.activation_histories_id', 'roi_incomes.payment_date')
+        $data = self::select('users.login_id','users.name','roi_incomes.users_id', 'roi_incomes.paid_amount', 'roi_incomes.activation_histories_id', 'roi_incomes.payment_date', 'roi_incomes.created_at')
                 ->join('users', 'roi_incomes.users_id', '=', 'users.id');
 
         if (isset($filter['users_id'])) {
             $data = $data->where('roi_incomes.users_id', $filter['users_id']);
         }
 
-        return $data->get();
+        return $data->orderBy('roi_incomes.payment_date', 'desc')->get();
     }
 
     public static function getRoiIncomeSum($filter) {

@@ -27,6 +27,10 @@ class WithdrawalController extends Controller
             return back()->withErrors([
                 'activationUserId' => "You don't have sufficient balance in working wallet to withdraw.",
             ]);
+        } else if (Auth::user()->wallet_address == "") {
+            return back()->withErrors([
+                'activationUserId' => "You've not added your BTC wallet address, kindly update BTC wallet address in profile settings before withdraw any amount.",
+            ]);
         } else {
             $random = str_shuffle('1234567890');
             $otp = substr($random, 0, 6);
@@ -51,6 +55,10 @@ class WithdrawalController extends Controller
         if ($request->withdrawAmount > Auth::user()->working_wallet_amount) {
             return back()->withErrors([
                 'activationUserId' => "You don't have sufficient balance in working wallet to withdraw.",
+            ]);
+        } else if (Auth::user()->wallet_address == "") {
+            return back()->withErrors([
+                'activationUserId' => "You've not added your BTC wallet address, kindly update BTC wallet address in profile settings before withdraw any amount.",
             ]);
         } else {
             $random = str_shuffle('1234567890');
@@ -82,6 +90,10 @@ class WithdrawalController extends Controller
         } else if ($request->withdrawAmount > Auth::user()->working_wallet_amount) {
             return back()->withErrors([
                 'activationUserId' => "You don't have sufficient balance in working wallet to withdraw.",
+            ]);
+        } else if (Auth::user()->wallet_address == "") {
+            return back()->withErrors([
+                'activationUserId' => "You've not added your BTC wallet address, kindly update BTC wallet address in profile settings before withdraw any amount.",
             ]);
         } else {
             WithdrawalHistory::addWithdrawalHistory([
@@ -126,6 +138,10 @@ class WithdrawalController extends Controller
         } else if ($request->withdrawAmount > Auth::user()->roi_wallet_amount) {
             return back()->withErrors([
                 'activationUserId' => "You don't have sufficient balance in roi wallet to withdraw.",
+            ]);
+        } else if (Auth::user()->wallet_address == "") {
+            return back()->withErrors([
+                'activationUserId' => "You've not added your BTC wallet address, kindly update BTC wallet address in profile settings before withdraw any amount.",
             ]);
         } else {
             WithdrawalHistory::addWithdrawalHistory([

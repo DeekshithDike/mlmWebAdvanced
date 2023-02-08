@@ -51,7 +51,7 @@ class DirectIncome extends Model
             $data = $data->where('direct_incomes.users_id', $filter['users_id']);
         }
 
-        return $data->get();
+        return $data->orderBy('direct_incomes.created_at', 'desc')->get();
     }
 
     public static function getDirectIncomeSum($filter) {

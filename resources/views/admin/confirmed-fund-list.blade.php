@@ -43,19 +43,19 @@
                           User ID
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
-                          Full Name
-                        </th>
-                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
-                          Email
-                        </th>
-                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Order ID
+                        </th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          Transaction ID
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Date
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Amount
+                        </th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          Action
                         </th>
                       </tr>
                     </thead>
@@ -70,19 +70,23 @@
                                 {{ $item->login_id }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                {{ $item->name }}
-                            </td>
-                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                {{ $item->email }}
-                            </td>
-                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ $item->order_id }}
                             </td>
+                            <th class="whitespace-nowrap px-4 py-3 sm:px-5">
+                              {{ $item->txn_id }}
+                            </th>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ date('d M Y', strtotime($item->created_at)) }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 ${{ $item->amount }}
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                              @if ($item->status_url != null)
+                                  <a href="{{ $item->status_url }}" class="text-primary">Checkout</a>
+                              @else
+                                  NA
+                              @endif                                
                             </td>
                         </tr>
                         @endforeach
