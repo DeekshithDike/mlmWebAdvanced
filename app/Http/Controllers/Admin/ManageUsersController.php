@@ -227,28 +227,24 @@ class ManageUsersController extends Controller
     public function viewCustomerDashboard($id) {
         $userId = Crypt::decrypt($id);
         
-        $totalLeftBusiness = BinaryTreeLeft::viewLeftBusinessAndCount([
-            "users_id" => $userId,
-            "sum" => true
+        $totalLeftBusiness = BinaryTreeLeft::dashboardViewLeftBusiness([
+            "users_id" => $userId
         ]);
-        $totalRightBusiness = BinaryTreeRight::viewRightBusinessAndCount([
-            "users_id" => $userId,
-            "sum" => true,
+        $totalRightBusiness = BinaryTreeRight::dashboardViewRightBusiness([
+            "users_id" => $userId
         ]);
-        $totalLeftUserCount = BinaryTreeLeft::viewLeftBusinessAndCount([
-            "users_id" => $userId,
-            "count" => true
+        $totalLeftUserCount = BinaryTreeLeft::dashboardViewTotalLeftCount([
+            "users_id" => $userId
         ]);
-        $totalRightUserCount = BinaryTreeRight::viewRightBusinessAndCount([
-            "users_id" => $userId,
-            "count" => true
+        $totalRightUserCount = BinaryTreeRight::dashboardViewTotalRightCount([
+            "users_id" => $userId
         ]);
-        $activeLeftUserCount = BinaryTreeLeft::viewLeftBusinessAndCount([
+        $activeLeftUserCount = BinaryTreeLeft::dashboardViewActiveLeftCount([
             "users_id" => $userId,
             "count" => true,
             "activation_status" => "ACTIVATED"
         ]);
-        $activeRightUserCount = BinaryTreeRight::viewRightBusinessAndCount([
+        $activeRightUserCount = BinaryTreeRight::dashboardViewActiveRightCount([
             "users_id" => $userId,
             "count" => true,
             "activation_status" => "ACTIVATED"
