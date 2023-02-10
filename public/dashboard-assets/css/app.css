@@ -144,3 +144,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     text-decoration: none;
     cursor: pointer;
 }
+
+.bg-menu {
+    background-color: #263a4c !important;
+}

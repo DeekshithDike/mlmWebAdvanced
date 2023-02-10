@@ -5,18 +5,35 @@
 @section('content')
     <div class="mt-4 grid grid-cols-12 gap-4 sm:mt-5 sm:gap-5 lg:mt-6 lg:gap-6">
         <div class="col-span-12">
-            <h1 class="text-primary text-center text-xl">User ID: {{ Auth::user()->login_id }} ({{ Auth::user()->name }})</h1>
-            @if (isset(Auth::user()->last_login_datetime) && isset(Auth::user()->login_ip_address))
-                <p class="text-center">IP Address: {{ Auth::user()->login_ip_address }}</p>             
-                <p class="text-center">Last Login On: {{ date('d M Y h:m:s', strtotime(Auth::user()->last_login_datetime)) }}</p>             
-            @endif
+            <div :class="$store.breakpoints.smAndUp &amp;&amp; 'via-purple-300'" class="card mt-12 bg-gradient-to-l from-pink-300 to-indigo-400 p-5 sm:mt-0 sm:flex-row via-purple-300">
+              <div class="flex justify-center sm:order-last">
+                <img class="-mt-16 h-40 sm:mt-0" src="{{ asset('dashboard-assets/images/illustrations/rocket.svg?v=20230210180652') }}" alt="">
+              </div>
+              <div class="mt-2 flex-1 pt-2 text-center text-white sm:mt-0 sm:text-left">
+                <h3 class="text-xl">
+                  Welcome Back, <span class="font-semibold">{{ Auth::user()->name }}</span>
+                </h3>
+                <p class="mt-2 leading-relaxed">
+                  Your User Id is:
+                  <span class="font-semibold text-navy-700">{{ Auth::user()->login_id }}</span>
+                </p>
+                <p class="mt-2 leading-relaxed">
+                  IP Address: 
+                  <span class="font-semibold text-navy-700">{{ Auth::user()->login_ip_address }}</span>
+                </p>
+                <p class="mt-2 leading-relaxed">
+                  Last Login On: 
+                  <span class="font-semibold text-navy-700">{{ date('d M Y h:m:s', strtotime(Auth::user()->last_login_datetime)) }}</span>
+                </p>
+              </div>
+            </div>
         </div>
         <div class="col-span-12 space-y-4 sm:space-y-5 lg:space-y-6">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
                 <div class="card bg-gradient-to-r from-blue-500 to-indigo-600 px-5 pb-5">
                     <div>
                         <div class="ax-transparent-gridline mt-5 w-1/2">
-                        <div x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.earningWhite); $el._x_chart.render() });"></div>
+                        {{-- <div x-init="$nextTick(() => { $el._x_chart = new ApexCharts($el,pages.charts.earningWhite); $el._x_chart.render() });"></div> --}}
                         </div>
                         <p class="mt-3 text-base font-medium tracking-wide text-indigo-100">
                         Account Wallet
@@ -34,63 +51,27 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-4 sm:col-span-2 sm:grid-cols-2 sm:gap-5 lg:gap-6">
-                    <div class="card justify-center p-4.5">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p
-                                class="text-base font-semibold text-slate-700 dark:text-navy-100"
-                                >
-                                ${{ Auth::user()->roi_wallet_amount }}
-                                </p>
-                                <p class="text-xs+ line-clamp-1">ROI Wallet</p>
-                            </div>
-                            <div class="mask is-star flex h-10 w-10 shrink-0 items-center justify-center bg-success">
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-white"
-                                fill="none"
-                                viewbox="0 0 24 24"
-                                stroke="currentColor"
-                                >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
-                                />
-                                </svg>
-                            </div>
+                    <div class="relative flex flex-col overflow-hidden rounded-lg bg-gradient-to-br from-pink-500 to-rose-500 p-3.5">
+                        <p class="text-xs uppercase text-pink-100">ROI Wallet</p>
+                        <div class="flex items-end justify-between space-x-2">
+                        <p class="mt-4 text-2xl font-medium text-white">${{ Auth::user()->roi_wallet_amount }}</p>
+                        {{-- <a href="#" class="border-b border-dotted border-current pb-0.5 text-xs font-medium text-pink-100 outline-none transition-colors duration-300 line-clamp-1 hover:text-white focus:text-white">Get Report
+                        </a> --}}
                         </div>
+                        <div class="mask is-hexagon-2 absolute top-0 right-0 -m-3 h-16 w-16 bg-white/20"></div>
                     </div>
-                    <div class="card justify-center p-4.5">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p
-                                class="text-base font-semibold text-slate-700 dark:text-navy-100"
-                                >
-                                ${{ Auth::user()->working_wallet_amount }}
-                                </p>
-                                <p class="text-xs+ line-clamp-1">Working Wallet</p>
-                            </div>
-                            <div class="mask is-star flex h-10 w-10 shrink-0 items-center justify-center bg-info">
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5 text-white"
-                                fill="none"
-                                viewbox="0 0 24 24"
-                                stroke="currentColor"
-                                >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                                </svg>
-                            </div>
+
+                    <div class="relative flex flex-col overflow-hidden rounded-lg bg-gradient-to-br from-amber-400 to-orange-600 p-3.5">
+                        <p class="text-xs uppercase text-amber-50">Working Wallet</p>
+                        <div class="flex items-end justify-between space-x-2">
+                        <p class="mt-4 text-2xl font-medium text-white">${{ Auth::user()->working_wallet_amount }}</p>
+                        {{-- <a href="#" class="border-b border-dotted border-current pb-0.5 text-xs font-medium text-amber-50 outline-none transition-colors duration-300 line-clamp-1 hover:text-white focus:text-white">Get Report
+                        </a> --}}
                         </div>
+                        <div class="mask is-diamond absolute top-0 right-0 -m-3 h-16 w-16 bg-white/20"></div>
                     </div>
-                    <div class="card justify-center p-4.5">
+                    
+                    <div class="card bg-warning/15 p-4 dark:bg-transparent justify-center p-4.5">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p
@@ -112,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card justify-center p-4.5">
+                    <div class="card bg-primary/15 p-4 dark:bg-transparent justify-center p-4.5">
                         <div class="flex items-center justify-between">
                             <div>
                                 <p

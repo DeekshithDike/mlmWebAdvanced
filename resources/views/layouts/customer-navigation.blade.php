@@ -1,13 +1,13 @@
 <div class="sidebar print:hidden">
     <!-- Main Sidebar -->
     <div class="main-sidebar">
-        <div class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-white dark:border-navy-700 dark:bg-navy-800">
+        <div class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-menu dark:border-navy-700 dark:bg-navy-800">
         <!-- Application Logo -->
         <div class="flex pt-4">
             <a href="{{ route('dashboard') }}">
             <img
                 class="h-11 w-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
-                src="{{ asset('website-assets/images/favicon.png?v=20230127233845') }}"
+                src="{{ asset('website-assets/images/favicon.png?v=20230210180652') }}"
                 alt="logo"
                 />
             </a>
