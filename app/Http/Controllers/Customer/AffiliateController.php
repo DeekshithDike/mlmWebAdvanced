@@ -17,6 +17,7 @@ class AffiliateController extends Controller
         $users_id = Auth::user()->id;
         $userDet = BinaryTree::getMyBinaryTreeDet($users_id);
         $results = self::getChildData($userDet);
+        // dd($results);
 
         return view('customer.member-tree')->with(['data' => $results]);
     }

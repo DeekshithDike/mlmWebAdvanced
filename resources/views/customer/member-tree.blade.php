@@ -3,7 +3,7 @@
 @section('title', 'Affiliate')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('dashboard-assets/css/tree.css') }}" />
+    <link rel="stylesheet" href="{{ asset('dashboard-assets/css/tree.css?v=20230210165050') }}" />
 @endsection
 
 @section('content')
@@ -35,12 +35,12 @@
             </div>
 
 
-             @php
+            @php
                 if (Auth::user()->user_role != "USER") {
                     $treeUrl = "admin/tree/";
                 } else {
                     $treeUrl = "customer/affiliate/tree/";
-                }                
+                }
             @endphp
 
 
@@ -95,6 +95,13 @@
                                                     <li>
                                                         <strong>Right Business:</strong> ${{ $data['parent_det']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
+                                                    <li>
+                                                        @if ($data['parent_det']->getCarryForwards != null)
+                                                            <strong>Carry Amount:</strong> ${{ $data['parent_det']->getCarryForwards->amount }} (Position: {{ $data['parent_det']->getCarryForwards->position }})    
+                                                        @else
+                                                            <strong> Carry Amount: </strong> NA
+                                                        @endif                                                        
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -121,6 +128,9 @@
                                                     </li> 
                                                     <li>
                                                         <strong> Right Business: </strong> NA
+                                                    </li>
+                                                    <li>
+                                                        <strong> Carry Amount: </strong> NA
                                                     </li> 
                                                 </ul>
                                             @endif
@@ -181,6 +191,13 @@
                                                     <li>
                                                         <strong>Right Business:</strong> ${{ $data['left_child_1']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
+                                                    <li>
+                                                        @if ($data['left_child_1']->getCarryForwards != null)
+                                                            <strong>Carry Amount:</strong> ${{ $data['left_child_1']->getCarryForwards->amount }} (Position: {{ $data['left_child_1']->getCarryForwards->position }})    
+                                                        @else
+                                                            <strong> Carry Amount: </strong> NA
+                                                        @endif
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -207,6 +224,9 @@
                                                     </li> 
                                                     <li>
                                                         <strong> Right Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Carry Amount: </strong> NA
                                                     </li> 
                                                 </ul>
                                             @endif
@@ -263,6 +283,13 @@
                                                     <li>
                                                         <strong>Right Business:</strong> ${{ $data['right_child_1']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
+                                                    <li>
+                                                        @if ($data['right_child_1']->getCarryForwards != null)
+                                                            <strong>Carry Amount:</strong> ${{ $data['right_child_1']->getCarryForwards->amount }} (Position: {{ $data['right_child_1']->getCarryForwards->position }})    
+                                                        @else
+                                                            <strong> Carry Amount: </strong> NA
+                                                        @endif
+                                                    </li>
                                                 </ul>
                                             @else
                                                 <ul>
@@ -289,6 +316,9 @@
                                                     </li> 
                                                     <li>
                                                         <strong> Right Business: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Carry Amount: </strong> NA
                                                     </li> 
                                                 </ul>
                                             @endif
@@ -353,6 +383,13 @@
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['left_child_2']->getRightBusiness->sum('activation_amount') }}
                                                             </li>
+                                                            <li>
+                                                                @if ($data['left_child_2']->getCarryForwards != null)
+                                                                    <strong>Carry Amount:</strong> ${{ $data['left_child_2']->getCarryForwards->amount }} (Position: {{ $data['left_child_2']->getCarryForwards->position }})    
+                                                                @else
+                                                                    <strong> Carry Amount: </strong> NA
+                                                                @endif
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -379,7 +416,10 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Right Business: </strong> NA
-                                                            </li> 
+                                                            </li>
+                                                            <li>
+                                                                <strong> Carry Amount: </strong> NA
+                                                            </li>
                                                         </ul>
                                                     @endif
                                                 </div>
@@ -434,6 +474,13 @@
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['right_child_2']->getRightBusiness->sum('activation_amount') }}
                                                             </li>
+                                                            <li>
+                                                                @if ($data['right_child_2']->getCarryForwards != null)
+                                                                    <strong>Carry Amount:</strong> ${{ $data['right_child_2']->getCarryForwards->amount }} (Position: {{ $data['right_child_2']->getCarryForwards->position }})    
+                                                                @else
+                                                                    <strong> Carry Amount: </strong> NA
+                                                                @endif
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -461,6 +508,9 @@
                                                             <li>
                                                                 <strong> Right Business: </strong> NA
                                                             </li> 
+                                                            <li>
+                                                                <strong> Carry Amount: </strong> NA
+                                                            </li>
                                                         </ul>
                                                     @endif
                                                 </div>
@@ -523,6 +573,13 @@
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['left_child_3']->getRightBusiness->sum('activation_amount') }}
                                                             </li>
+                                                            <li>
+                                                                @if ($data['left_child_3']->getCarryForwards != null)
+                                                                    <strong>Carry Amount:</strong> ${{ $data['left_child_3']->getCarryForwards->amount }} (Position: {{ $data['left_child_3']->getCarryForwards->position }})    
+                                                                @else
+                                                                    <strong> Carry Amount: </strong> NA
+                                                                @endif
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -549,6 +606,9 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Right Business: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Carry Amount: </strong> NA
                                                             </li> 
                                                         </ul>
                                                     @endif
@@ -604,6 +664,13 @@
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['right_child_3']->getRightBusiness->sum('activation_amount') }}
                                                             </li>
+                                                            <li>
+                                                                @if ($data['right_child_3']->getCarryForwards != null)
+                                                                    <strong>Carry Amount:</strong> ${{ $data['right_child_3']->getCarryForwards->amount }} (Position: {{ $data['right_child_3']->getCarryForwards->position }})    
+                                                                @else
+                                                                    <strong> Carry Amount: </strong> NA
+                                                                @endif
+                                                            </li>
                                                         </ul>
                                                     @else
                                                         <ul>
@@ -630,6 +697,9 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Right Business: </strong> NA
+                                                            </li>
+                                                            <li>
+                                                                <strong> Carry Amount: </strong> NA
                                                             </li> 
                                                         </ul>
                                                     @endif

@@ -44,6 +44,7 @@ class BinaryTree extends Model
             ->with('getLeftBusiness')
             ->with('getRightBusiness')
             ->with('getLoginIdByParentId')
+            ->with('getCarryForwards')
             ->first();
     }
 
@@ -55,6 +56,7 @@ class BinaryTree extends Model
                 ->with('getLeftBusiness')
                 ->with('getRightBusiness')
                 ->with('getLoginIdByParentId')
+                ->with('getCarryForwards')
                 ->first();
         }
 
