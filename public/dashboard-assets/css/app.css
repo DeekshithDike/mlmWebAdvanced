@@ -146,5 +146,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 }
 
 .bg-menu {
-    background-color: #263a4c !important;
+    background-color: #2d5270 !important;
+}
+
+.menu-shadow {
+    box-shadow: 7px -1px 20px 1px #868b8d8c !important;
+}
+
+.coinPriceBlock-container {
+    overflow-x: hidden !important;
 }

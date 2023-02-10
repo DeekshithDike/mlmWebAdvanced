@@ -1,13 +1,13 @@
 <div class="sidebar print:hidden">
     <!-- Main Sidebar -->
     <div class="main-sidebar">
-        <div class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-menu dark:border-navy-700 dark:bg-navy-800">
+        <div class="flex h-full w-full flex-col items-center border-r border-slate-150 bg-white dark:border-navy-700 dark:bg-navy-800">
         <!-- Application Logo -->
         <div class="flex pt-4">
             <a href="{{ route('dashboard') }}">
             <img
                 class="h-11 w-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
-                src="{{ asset('website-assets/images/favicon.png?v=20230210180652') }}"
+                src="{{ asset('website-assets/images/favicon.png?v=20230211005214') }}"
                 alt="logo"
                 />
             </a>
@@ -17,7 +17,7 @@
             <!-- Dashobard -->
             <a
             href="{{ route('dashboard') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/dashboard') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/dashboard') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90"
             x-tooltip.placement.right="'Dashboard'"
             >
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@
             <!-- Manage My Funds -->
             <a
             href="{{ route('customerAddFund') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/fund/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/fund/*') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Manage My Funds'"
             >
                 <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@
             <!-- Activations -->
             <a
             href="{{ route('customerActivateAccount') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/activations/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/activations/*') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Activations'"
             >
                 <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
             <!-- Affiliate -->
             <a
             href="{{ route('customerMemberTree') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/affiliate/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/affiliate/*') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Affiliate'"
             >
                 <svg width="32" height="32" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@
             <!-- Withdrawal -->
             <a
             href="{{ route('customerWithdrawWorkingProfit') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/withdrawal/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/withdrawal/*') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Withdrawal'"
             >
                 <svg width="30" height="24" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +88,7 @@
             <!-- Income -->
             <a
             href="{{ route('customerDirectMembersProfit') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/profit/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/profit/*') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Income'"
             >
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +104,7 @@
             <!-- Transfer -->
             <a
             href="{{ route('customerKmToKmTransfer') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/transfer/*') ? 'bg-primary/10' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/transfer/*') ? 'bg-menu' : ''}} outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Transfer'"
             >
                 <svg width="28" height="30" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -251,7 +251,7 @@
 
     <!-- Sidebar Panel -->
     <div class="sidebar-panel">
-        <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750">
+        <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750 menu-shadow">
             <!-- Sidebar Panel Header -->
             <div class="flex h-18 w-full items-center justify-between pl-4 pr-1">
             <p class="text-base tracking-wider text-slate-800 dark:text-navy-100">
@@ -296,21 +296,21 @@
                 class="h-[calc(100%-4.5rem)] overflow-x-hidden pb-6"
                 x-init="$el._x_simplebar = new SimpleBar($el);"
                 >
-                <ul class="flex flex-1 flex-col px-4 font-inter">
-                    <li x-init="$el.scrollIntoView({block: 'center'})">
+                <ul class="flex flex-1 flex-col font-inter">
+                    <li class="border-t px-4 py-2" x-init="$el.scrollIntoView({block: 'center'})">
                         <a
                             href="{{ route('dashboard') }}"
-                            class="flex py-2 text-xs+ font-medium tracking-wide {{ request()->is('customer/dashboard') ? 'text-primary' : 'text-slate-500'}} outline-none transition-colors duration-300 ease-in-out dark:text-accent-light"
+                            class="flex py-2 text-lg font-medium tracking-wide {{ request()->is('customer/dashboard') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-colors duration-300 ease-in-out dark:text-accent-light"
                             >
                             Dashboard
                         </a>
                     </li>
 
-                    <li x-data="accordionItem('menu-item-1')">
+                    <li class="border-t px-4 py-2" x-data="accordionItem('menu-item-1')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('customer/fund/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/fund/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
                             <span>Manage My Funds</span>
@@ -334,7 +334,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerAddFund') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/fund/create') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/fund/create') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -348,7 +348,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerPendingFundList') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/fund/pending') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/fund/pending') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -362,7 +362,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerConfirmedFundList') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/fund/confirmed') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/fund/confirmed') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -376,11 +376,11 @@
                         </ul>
                     </li>
                     
-                    <li x-data="accordionItem('menu-item-2')">
+                    <li class="border-t px-4 py-2" x-data="accordionItem('menu-item-2')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('customer/activations/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/activations/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
                             <span>Activations</span>
@@ -404,7 +404,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerActivateAccount') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/activations/create') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/activations/create') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -418,7 +418,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerMyActivationList') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/activations/my') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/activations/my') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -432,7 +432,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerAffiliateActivationList') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/activations/affiliate') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/activations/affiliate') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -446,11 +446,11 @@
                         </ul>
                     </li>
                     
-                    <li x-data="accordionItem('menu-item-3')">
+                    <li class="border-t px-4 py-2" x-data="accordionItem('menu-item-3')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('customer/affiliate/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/affiliate/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
                             <span>Affiliate</span>
@@ -474,7 +474,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerMemberTree') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/affiliate/tree') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/affiliate/tree') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -488,7 +488,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerDirectMembers') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/affiliate/direct') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/affiliate/direct') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -502,7 +502,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerAllMembers') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/affiliate/all') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/affiliate/all') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -516,11 +516,11 @@
                         </ul>
                     </li>
                     
-                    <li x-data="accordionItem('menu-item-4')">
+                    <li class="border-t px-4 py-2" x-data="accordionItem('menu-item-4')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('customer/withdrawal/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/withdrawal/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
                             <span>Withdrawal</span>
@@ -544,7 +544,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerWithdrawWorkingProfit') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/withdrawal/working-profit') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/withdrawal/working-profit') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -558,7 +558,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerWithdrawRoiProfit') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/withdrawal/roi-profit') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/withdrawal/roi-profit') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -572,7 +572,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerWithdrawWorkingProfitReport') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/withdrawal/report/working-profit') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/withdrawal/report/working-profit') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -586,7 +586,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerWithdrawRoiProfitReport') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/withdrawal/report/roi-profit') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/withdrawal/report/roi-profit') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -600,11 +600,11 @@
                         </ul>
                     </li>
                     
-                    <li x-data="accordionItem('menu-item-5')">
+                    <li class="border-t px-4 py-2" x-data="accordionItem('menu-item-5')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('customer/profit/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/profit/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
                             <span>Income</span>
@@ -628,7 +628,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerDirectMembersProfit') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/profit/direct-members') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/profit/direct-members') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -642,7 +642,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerRoiIncomeProfit') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/profit/roi') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/profit/roi') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -656,7 +656,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerBinaryProfit') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/profit/binary') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/profit/binary') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -670,11 +670,11 @@
                         </ul>
                     </li>
                     
-                    <li x-data="accordionItem('menu-item-6')">
+                    <li class="border-y px-4 py-2" x-data="accordionItem('menu-item-6')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
                             @click="expanded = !expanded"
-                            class="flex items-center justify-between py-2 text-xs+ tracking-wide {{ request()->is('customer/transfer/*') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/transfer/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="javascript:void(0);"
                             >
                             <span>Transfer</span>
@@ -698,7 +698,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerKmToKmTransfer') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/transfer/km-to-km') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/transfer/km-to-km') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -712,7 +712,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerRoiToKmTransfer') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/transfer/roi-to-km') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/transfer/roi-to-km') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -726,7 +726,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerWorkingToKmTransfer') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/transfer/working-to-km') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/transfer/working-to-km') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
@@ -740,7 +740,7 @@
                             <li>
                                 <a
                                     href="{{ route('customerTransferReport') }}"
-                                    class="flex items-center justify-between p-2 text-xs+ tracking-wide {{ request()->is('customer/transfer/report/transfer') ? 'text-primary' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                                    class="flex items-center justify-between p-2 text-base tracking-wide {{ request()->is('customer/transfer/report/transfer') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:pl-4 hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                                     >
                                     <div class="flex items-center space-x-2">
                                     <div
