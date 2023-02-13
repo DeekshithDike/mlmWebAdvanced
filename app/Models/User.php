@@ -91,7 +91,7 @@ class User extends Authenticatable
 
     public static function listAllUsers($filter)
     {
-        $data = self::select('users.id as userID', 'users.login_id', 'users.name', 'users.email', 'users.mobile_no', 'users.sponsor_id', 'users.position', 'users.fund_wallet_amount', 'users.fund_wallet_amount', 'users.fund_wallet_amount', 'users.working_wallet_amount', 'users.roi_wallet_amount', 'users.wallet_address', 'users.created_at', 'users.login_ip_address', 'users.reg_ip_address', 'users.last_login_datetime')
+        $data = self::select('users.id as userID', 'users.login_id', 'users.name', 'users.email', 'users.mobile_no', 'users.country', 'users.sponsor_id', 'users.position', 'users.fund_wallet_amount', 'users.fund_wallet_amount', 'users.fund_wallet_amount', 'users.working_wallet_amount', 'users.roi_wallet_amount', 'users.wallet_address', 'users.created_at', 'users.login_ip_address', 'users.reg_ip_address', 'users.last_login_datetime')
                 ->with('getActiveActivations');
         
         if (isset($filter['login_status'])) {

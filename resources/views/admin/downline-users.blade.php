@@ -58,6 +58,9 @@
                           Sponsor ID
                         </th>
                         <th data-hide="all" class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          Country
+                        </th>
+                        <th data-hide="all" class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Account Wallet
                         </th>
                         <th data-hide="all" class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -110,6 +113,9 @@
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ $item->sponsor_id }}
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                {{ $item->country }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 @if ($item->fund_wallet_amount == null)
