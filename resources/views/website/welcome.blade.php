@@ -18,12 +18,6 @@
         <meta name="keywords" content="Investment, Invest, Forex, krypto, kryptocurrency, Share market, Firstscrap, First Scrap" />
         <meta name="description" content="Krypto Musk is one of the first hybrid trading platforms founded by a group of visionaries in Investment, Invest, Forex, krypto, kryptocurrency, Share market." />
         <meta name="author" content="Kryptomusk LLC" />
-
-        <meta property="og:title" content="Second Opinion for Cancer | Cansr.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${menuLink.baseUrl}${menuLink.home}`} />
-        <meta property="og:image" content={`${menuLink.baseUrl}/images/backgrounds/landing-page-section-1.webp`} />
-        <meta property="og:description" content="Your best approach for a second opinion is through a team of experts." />
         
         <!-- [if lt IE 9]>
             <script src="js/html5shiv.min.js"></script>
