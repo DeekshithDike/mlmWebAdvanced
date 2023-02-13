@@ -52,9 +52,9 @@ class WithdrawalController extends Controller
 
         $userId = Auth::user()->id;
 
-        if ($request->withdrawAmount > Auth::user()->working_wallet_amount) {
+        if ($request->withdrawAmount > Auth::user()->roi_wallet_amount) {
             return back()->withErrors([
-                'activationUserId' => "You don't have sufficient balance in working wallet to withdraw.",
+                'activationUserId' => "You don't have sufficient balance in ROI wallet to withdraw.",
             ]);
         } else if (Auth::user()->wallet_address == "") {
             return back()->withErrors([
@@ -137,7 +137,7 @@ class WithdrawalController extends Controller
             ]);
         } else if ($request->withdrawAmount > Auth::user()->roi_wallet_amount) {
             return back()->withErrors([
-                'activationUserId' => "You don't have sufficient balance in roi wallet to withdraw.",
+                'activationUserId' => "You don't have sufficient balance in ROI wallet to withdraw.",
             ]);
         } else if (Auth::user()->wallet_address == "") {
             return back()->withErrors([
