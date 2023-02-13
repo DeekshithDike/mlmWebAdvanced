@@ -52,6 +52,9 @@
                           Net Amount
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          Wallet Address
+                        </th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Withdraw Date
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -70,7 +73,7 @@
                         <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">{{ $i++ }}</td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                ${{ $item->login_id }}
+                                {{ $item->login_id }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 ${{ $item->withdrawal_amount }}
@@ -79,7 +82,10 @@
                                 ${{ $deduction }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                {{ $item->withdrawal_amount - $deduction }}
+                                ${{ $item->withdrawal_amount - $deduction }}
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                {{ $item->wallet_address }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ date('d M Y', strtotime($item->created_at)) }}

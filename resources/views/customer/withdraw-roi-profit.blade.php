@@ -22,7 +22,7 @@
                 ROI Profit
               </h2>
               <p>
-                Withdrawal you ROI profit.
+                Withdraw your ROI profit.
               </p>
             </div>
             
@@ -35,7 +35,8 @@
             
             <h4 class="py-4 text-info">Your ROI wallet balance: ${{ Auth::user()->roi_wallet_amount }}</h4>
             
-            <form method="POST" action="{{ route('customerWithdrawRoiReqSendOTP') }}">
+            @if (date('N') == 6)
+              <form method="POST" action="{{ route('customerWithdrawRoiReqSendOTP') }}">
                 @csrf
                 <div class="max-w-xl">
                     <div x-data="pages.formValidation.initFormValidationExample" class="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6">
@@ -73,6 +74,11 @@
                     </button>
                 </div>
             </form>
+            @else
+                <div class="py-6">
+                  <h2 class="text-xl text-primary">Withdrawal is disabled on weekdays. You can withdraw only on Saturdays.</h2>
+                </div>
+            @endif            
           </div>
         </div>
     </div>

@@ -74,6 +74,9 @@
                                                         <strong> Name: </strong> {{ $data['parent_det']->name }}
                                                     </li> 
                                                     <li>
+                                                        <strong> Country: </strong> {{ $data['parent_det']->country }}
+                                                    </li>  
+                                                    <li>
                                                         <strong> Sponsor Id: </strong> {{ $data['parent_det']->sponsor_id }}
                                                     </li> 
                                                     <li>
@@ -110,6 +113,9 @@
                                                     </li> 
                                                     <li>
                                                         <strong> Name: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Country: </strong> NA
                                                     </li> 
                                                     <li>
                                                         <strong> Sponsor Id: </strong> NA
@@ -174,6 +180,9 @@
                                                         <strong> Name: </strong> {{ $data['left_child_1']->name }}
                                                     </li> 
                                                     <li>
+                                                        <strong> Country: </strong> {{ $data['left_child_1']->country }}
+                                                    </li>  
+                                                    <li>
                                                         <strong> Sponsor Id: </strong> {{ $data['left_child_1']->sponsor_id }}
                                                     </li> 
                                                     <li>
@@ -206,6 +215,9 @@
                                                     </li> 
                                                     <li>
                                                         <strong> Name: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Country: </strong> NA
                                                     </li> 
                                                     <li>
                                                         <strong> Sponsor Id: </strong> NA
@@ -266,6 +278,12 @@
                                                         <strong> Name: </strong> {{ $data['right_child_1']->name }}
                                                     </li> 
                                                     <li>
+                                                        <strong> Country: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Country: </strong> {{ $data['right_child_1']->country }}
+                                                    </li>
+                                                    <li>
                                                         <strong> Sponsor Id: </strong> {{ $data['right_child_1']->sponsor_id }}
                                                     </li> 
                                                     <li>
@@ -298,6 +316,9 @@
                                                     </li> 
                                                     <li>
                                                         <strong> Name: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Country: </strong> NA
                                                     </li> 
                                                     <li>
                                                         <strong> Sponsor Id: </strong> NA
@@ -366,6 +387,9 @@
                                                                 <strong> Name: </strong> {{ $data['left_child_2']->name }}
                                                             </li> 
                                                             <li>
+                                                                <strong> Country: </strong> {{ $data['left_child_2']->country }}
+                                                            </li>
+                                                            <li>
                                                                 <strong> Sponsor Id: </strong> {{ $data['left_child_2']->sponsor_id }}
                                                             </li> 
                                                             <li>
@@ -398,6 +422,9 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Country: </strong> NA
                                                             </li> 
                                                             <li>
                                                                 <strong> Sponsor Id: </strong> NA
@@ -457,6 +484,9 @@
                                                                 <strong> Name: </strong> {{ $data['right_child_2']->name }}
                                                             </li> 
                                                             <li>
+                                                                <strong> Country: </strong> {{ $data['right_child_2']->country }}
+                                                            </li>
+                                                            <li>
                                                                 <strong> Sponsor Id: </strong> {{ $data['right_child_2']->sponsor_id }}
                                                             </li> 
                                                             <li>
@@ -489,6 +519,9 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Country: </strong> NA
                                                             </li> 
                                                             <li>
                                                                 <strong> Sponsor Id: </strong> NA
@@ -556,6 +589,9 @@
                                                                 <strong> Name: </strong> {{ $data['left_child_3']->name }}
                                                             </li> 
                                                             <li>
+                                                                <strong> Country: </strong> {{ $data['left_child_3']->country }}
+                                                            </li>
+                                                            <li>
                                                                 <strong> Sponsor Id: </strong> {{ $data['left_child_3']->sponsor_id }}
                                                             </li> 
                                                             <li>
@@ -588,6 +624,9 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Country: </strong> NA
                                                             </li> 
                                                             <li>
                                                                 <strong> Sponsor Id: </strong> NA
@@ -647,6 +686,9 @@
                                                                 <strong> Name: </strong> {{ $data['right_child_3']->name }}
                                                             </li> 
                                                             <li>
+                                                                <strong> Country: </strong> {{ $data['right_child_3']->country }}
+                                                            </li>
+                                                            <li>
                                                                 <strong> Sponsor Id: </strong> {{ $data['right_child_3']->sponsor_id }}
                                                             </li> 
                                                             <li>
@@ -679,6 +721,9 @@
                                                             </li> 
                                                             <li>
                                                                 <strong> Name: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Country: </strong> NA
                                                             </li> 
                                                             <li>
                                                                 <strong> Sponsor Id: </strong> NA

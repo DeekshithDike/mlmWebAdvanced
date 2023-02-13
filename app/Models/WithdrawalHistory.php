@@ -42,7 +42,7 @@ class WithdrawalHistory extends Model
     }
 
     public static function viewWithdrawalHistory($filter) {
-        $data = self::select('users.login_id','users.name','users.email','withdrawal_histories.id','withdrawal_histories.users_id', 'withdrawal_histories.withdrawal_amount', 'withdrawal_histories.deduction', 'withdrawal_histories.withdraw_from', 'withdrawal_histories.transaction_reference', 'withdrawal_histories.withdrawal_status', 'withdrawal_histories.remarks', 'withdrawal_histories.created_at')
+        $data = self::select('users.login_id','users.name','users.email','users.wallet_address','withdrawal_histories.id','withdrawal_histories.users_id', 'withdrawal_histories.withdrawal_amount', 'withdrawal_histories.deduction', 'withdrawal_histories.withdraw_from', 'withdrawal_histories.transaction_reference', 'withdrawal_histories.withdrawal_status', 'withdrawal_histories.remarks', 'withdrawal_histories.created_at')
                 ->join('users', 'withdrawal_histories.users_id', '=', 'users.id');
         
         if (isset($filter['withdrawalStatus'])) {

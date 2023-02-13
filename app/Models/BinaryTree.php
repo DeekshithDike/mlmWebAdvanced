@@ -36,7 +36,7 @@ class BinaryTree extends Model
     }
 
     public static function getChild($parent_id, $position){
-        return self::select('binary_trees.users_id', 'binary_trees.parent_id as parentId', 'users.id as userID', 'users.login_id', 'users.name', 'users.sponsor_id', 'users.position', 'users.created_at')
+        return self::select('binary_trees.users_id', 'binary_trees.parent_id as parentId', 'users.id as userID', 'users.login_id', 'users.name', 'users.sponsor_id', 'users.position', 'users.country', 'users.created_at')
             ->join('users', 'binary_trees.users_id', '=', 'users.id')
             ->where('binary_trees.parent_id', $parent_id)
             ->where('binary_trees.child_position', $position)
@@ -49,7 +49,7 @@ class BinaryTree extends Model
     }
 
         public static function getMyBinaryTreeDet($users_id){
-            return self::select('binary_trees.users_id', 'binary_trees.parent_id as parentId', 'users.id as userID', 'users.login_id', 'users.name', 'users.sponsor_id', 'users.position', 'users.created_at')
+            return self::select('binary_trees.users_id', 'binary_trees.parent_id as parentId', 'users.id as userID', 'users.login_id', 'users.name', 'users.sponsor_id', 'users.position', 'users.country', 'users.created_at')
                 ->join('users', 'binary_trees.users_id', '=', 'users.id')
                 ->where('binary_trees.users_id', $users_id)
                 ->with('getActiveActivations')

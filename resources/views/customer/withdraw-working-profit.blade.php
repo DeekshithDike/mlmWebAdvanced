@@ -22,7 +22,7 @@
                 Working Profit
               </h2>
               <p>
-                Withdrawal you working profit.
+                Withdraw your working profit.
               </p>
             </div>
             

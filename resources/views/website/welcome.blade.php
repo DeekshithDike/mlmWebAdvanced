@@ -9,10 +9,21 @@
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230208181425') }}" />
         
         <!-- PAGE TITLE HERE -->
-        <title>{{ config('app.name', 'MLM') }}</title>
+        <title>Investment, Invest, , krypto, kyrptocurrency | kryptomusk</title>
         
         <!-- MOBILE SPECIFIC -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="Investment, Invest, Forex, krypto, kryptocurrency, Share market, Firstscrap, First Scrap" />
+        <meta name="description" content="Krypto Musk is one of the first hybrid trading platforms founded by a group of visionaries in Investment, Invest, Forex, krypto, kryptocurrency, Share market." />
+        <meta name="author" content="Kryptomusk LLC" />
+
+        <meta property="og:title" content="Second Opinion for Cancer | Cansr.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${menuLink.baseUrl}${menuLink.home}`} />
+        <meta property="og:image" content={`${menuLink.baseUrl}/images/backgrounds/landing-page-section-1.webp`} />
+        <meta property="og:description" content="Your best approach for a second opinion is through a team of experts." />
         
         <!-- [if lt IE 9]>
             <script src="js/html5shiv.min.js"></script>
@@ -1782,6 +1793,9 @@
                                 </div>
                                 <div class="">
                                     <a target="_blank" href="{{ asset('website-assets/docs/087-554407_20221223-135802_14727.pdf') }}" class="site-button text-uppercase m-r15">Company Capital</a>
+                                </div>
+                                <div class="">
+                                    <a target="_blank" href="{{ asset('website-assets/docs/DOC-20230209-WA0000.pdf') }}" class="site-button text-uppercase m-r15">Company Certificate</a>
                                 </div>
                             </div>
                         </div>

@@ -181,10 +181,11 @@ class ManageUsersController extends Controller
             'email' => ['required', 'string', 'email', 'max:75'],
             'mobile_number' => ['required','numeric','digits_between:4,20'],
             'users_id' => ['required'],
+            'country' => ['required'],
             'oldEmailId' => ['required']
         ]);
 
-        User::updateUser($request->users_id, ["email" => $request->email, "name" => $request->name, "mobile_no" => $request->mobile_number]);
+        User::updateUser($request->users_id, ["email" => $request->email, "name" => $request->name, "mobile_no" => $request->mobile_number, "country" => $request->country]);
         return redirect()->back()->with('success', 'Customer details updated successfully.');
     }
 
