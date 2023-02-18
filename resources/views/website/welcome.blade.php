@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">        
-
-        <!-- FAVICONS ICON -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230208181425') }}" />
-        
         <!-- PAGE TITLE HERE -->
         <title>Investment, Invest, , krypto, kyrptocurrency | kryptomusk</title>
         
         <!-- MOBILE SPECIFIC -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="Investment, Invest, Forex, krypto, kryptocurrency, Share market, Firstscrap, First Scrap" />
         <meta name="description" content="Krypto Musk is one of the first hybrid trading platforms founded by a group of visionaries in Investment, Invest, Forex, krypto, kryptocurrency, Share market." />
-        <meta name="author" content="Kryptomusk LLC" />
+        <meta name="author" content="Kryptomusk LLC" /> 
+
+        <meta property="og:title" content="Investment, Invest, , krypto, kyrptocurrency | kryptomusk" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kryptomusk.com/" />
+        <meta property="og:image" content="{{ asset('website-assets/images/logo-white.png?v=20230208181425') }}" />
+        <meta property="og:description" content="Krypto Musk is one of the first hybrid trading platforms founded by a group of visionaries in Investment, Invest, Forex, krypto, kryptocurrency, Share market." />
+
+        <!-- FAVICONS ICON -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('website-assets/images/favicon.png?v=20230208181425') }}" />
+        
         
         <!-- [if lt IE 9]>
             <script src="js/html5shiv.min.js"></script>
