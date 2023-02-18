@@ -76,7 +76,7 @@ class User extends Authenticatable
     }
 
     public static function getWalletDetail($filter) {
-        $data = self::select('id', 'login_id', 'sponsor_id', 'position', 'fund_wallet_amount', 'working_wallet_amount', 'roi_wallet_amount', 'wallet_address');
+        $data = self::select('id', 'login_id', 'name', 'email', 'sponsor_id', 'position', 'fund_wallet_amount', 'working_wallet_amount', 'roi_wallet_amount', 'wallet_address');
 
         if (isset($filter['users_id'])) {
             $data = $data->where('id', $filter['users_id']);

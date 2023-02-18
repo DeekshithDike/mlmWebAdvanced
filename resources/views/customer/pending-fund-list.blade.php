@@ -78,7 +78,11 @@
                                 {{ $item->order_id }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                {{ $item->txn_id }}
+                              @if ($item->type != 'admin')
+                                  {{ $item->txn_id }}
+                              @else
+                                  NA
+                              @endif                                
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 ${{ $item->amount }}

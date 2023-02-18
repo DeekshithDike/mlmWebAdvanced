@@ -38,7 +38,7 @@ class FundHistory extends Model
     */
     public static function getAllFundHistory($filter)
     {
-        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.order_id', 'coinpayment_transactions.txn_id', 'coinpayment_transactions.status_url', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by', 'fund_histories.created_at')
+        $data = self::select('users.login_id','users.name','users.email','users.mobile_no','fund_histories.id', 'fund_histories.order_id', 'coinpayment_transactions.txn_id', 'coinpayment_transactions.status_url','coinpayment_transactions.type', 'fund_histories.users_id', 'fund_histories.amount', 'fund_histories.fund_status','fund_histories.payment_url','fund_histories.created_by', 'fund_histories.created_at')
                 ->join('users', 'fund_histories.users_id', '=', 'users.id')
                 ->join('coinpayment_transactions', 'fund_histories.order_id', '=', 'coinpayment_transactions.order_id');
                 

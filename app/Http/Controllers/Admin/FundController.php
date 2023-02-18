@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\FundHistory;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Auth;
 
 class FundController extends Controller
 {
@@ -77,11 +79,40 @@ class FundController extends Controller
             ]);
         } else {
             $walletDetails = User::getWalletDetail(["login_id" =>$request->userId]);
+            $orderId = uniqid("km_", TRUE);
             FundHistory::addFundHistory([
                 'users_id' => $walletDetails->id,
+                'order_id' => $orderId,
                 'amount' => $request->fundAmount,
                 'fund_status' => "CONFIRMED",
                 'created_by' => Auth::user()->id
+            ]);
+
+            DB::table('coinpayment_transactions')->insert([
+                'uuid' => uniqid("uuid_", TRUE),
+                'order_id' => $orderId,
+                'buyer_name' => $walletDetails->name,
+                'buyer_email' => $walletDetails->email,
+                'currency_code' => 'USD',
+                'received' => $request->fundAmount,
+                'status' => 100,
+                'status_text' => 'Complete',
+                'type' => 'admin',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            ]);
+            
+            $lastInsertId = DB::getPdo()->lastInsertId();
+            DB::table('coinpayment_transaction_items')->insert([
+                'coinpayment_transaction_id' => $lastInsertId,
+                'description' => "Krypto Musk - paid by admin",
+                'price' => $request->fundAmount,
+                'qty' => 1,
+                'subtotal' => $request->fundAmount,
+                'currency_code' => 'USD',
+                'type' => 'admin',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
             ]);
             
             $latestAccountWalletAmount = $walletDetails->fund_wallet_amount + $request->fundAmount;

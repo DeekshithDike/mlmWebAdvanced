@@ -73,7 +73,11 @@
                                 {{ $item->order_id }}
                             </td>
                             <th class="whitespace-nowrap px-4 py-3 sm:px-5">
-                              {{ $item->txn_id }}
+                              @if ($item->type != 'admin')
+                                  {{ $item->txn_id }}
+                              @else
+                                  NA
+                              @endif
                             </th>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ date('d M Y', strtotime($item->created_at)) }}
