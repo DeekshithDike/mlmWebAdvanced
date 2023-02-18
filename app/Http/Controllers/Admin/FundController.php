@@ -94,7 +94,7 @@ class FundController extends Controller
                 'buyer_name' => $walletDetails->name,
                 'buyer_email' => $walletDetails->email,
                 'currency_code' => 'USD',
-                'received' => $request->fundAmount,
+                'amount_total_fiat' => $request->fundAmount,
                 'status' => 100,
                 'status_text' => 'Complete',
                 'type' => 'admin',

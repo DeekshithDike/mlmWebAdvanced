@@ -109,7 +109,11 @@
                                 {{ date('d M Y', strtotime($item->created_at)) }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                                <a href="{{ $item->status_url }}" class="text-info">View</a>
+                              @if ($item->type == "admin")
+                                  NA
+                              @else
+                                  <a href="{{ $item->status_url }}" class="text-info">View</a>
+                              @endif                                
                             </td>
                         </tr>
                         @endforeach

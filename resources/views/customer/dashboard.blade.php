@@ -357,7 +357,7 @@
                             >
                             ${{ $activeRightUserCount }}
                             </p>
-                            <p class="text-xs+ line-clamp-1">Active Rigth Users</p>
+                            <p class="text-xs+ line-clamp-1">Active Right Users</p>
                         </div>
                         <div class="mask is-star flex h-10 w-10 shrink-0 items-center justify-center bg-warning">
                             <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">

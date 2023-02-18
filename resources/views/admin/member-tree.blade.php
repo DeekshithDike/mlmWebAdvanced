@@ -107,7 +107,7 @@
                                                         @endif
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['parent_det']->created_at)) }}
+                                                        <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['parent_det']->created_at)) }}
                                                     </li>
                                                     <li>
                                                         <strong>Investment:</strong> ${{ $data['parent_det']->getActiveActivations->sum('activation_amount') }}
@@ -144,7 +144,7 @@
                                                         <strong> Placement Id: </strong> NA
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> NA
+                                                        <strong> Date of Joining: </strong> NA
                                                     </li>
                                                     <li>
                                                         <strong> Investment: </strong> NA
@@ -209,7 +209,7 @@
                                                         <strong> Placement Id: </strong> {{ $data['left_child_1']['getLoginIdByParentId']->login_id }}
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_1']->created_at)) }}
+                                                        <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_1']->created_at)) }}
                                                     </li>
                                                     <li>
                                                         <strong>Investment:</strong> ${{ $data['left_child_1']->getActiveActivations->sum('activation_amount') }}
@@ -246,7 +246,7 @@
                                                         <strong> Placement Id: </strong> NA
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> NA
+                                                        <strong> Date of Joining: </strong> NA
                                                     </li>
                                                     <li>
                                                         <strong> Investment: </strong> NA
@@ -307,7 +307,7 @@
                                                         <strong> Placement Id: </strong> {{ $data['right_child_1']['getLoginIdByParentId']->login_id }}
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_1']->created_at)) }}
+                                                        <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_1']->created_at)) }}
                                                     </li>
                                                     <li>
                                                         <strong>Investment:</strong> ${{ $data['right_child_1']->getActiveActivations->sum('activation_amount') }}
@@ -344,7 +344,7 @@
                                                         <strong> Placement Id: </strong> NA
                                                     </li>
                                                     <li>
-                                                        <strong> Daet of Joining: </strong> NA
+                                                        <strong> Date of Joining: </strong> NA
                                                     </li>
                                                     <li>
                                                         <strong> Investment: </strong> NA
@@ -413,7 +413,7 @@
                                                                 <strong> Placement Id: </strong> {{ $data['left_child_2']['getLoginIdByParentId']->login_id }}
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_2']->created_at)) }}
+                                                                <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_2']->created_at)) }}
                                                             </li>
                                                             <li>
                                                                 <strong>Investment:</strong> ${{ $data['left_child_2']->getActiveActivations->sum('activation_amount') }}
@@ -450,7 +450,7 @@
                                                                 <strong> Placement Id: </strong> NA
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> NA
+                                                                <strong> Date of Joining: </strong> NA
                                                             </li>
                                                             <li>
                                                                 <strong> Investment: </strong> NA
@@ -510,7 +510,7 @@
                                                                 <strong> Placement Id: </strong> {{ $data['right_child_2']['getLoginIdByParentId']->login_id }}
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_2']->created_at)) }}
+                                                                <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_2']->created_at)) }}
                                                             </li>
                                                             <li>
                                                                 <strong>Investment:</strong> ${{ $data['right_child_2']->getActiveActivations->sum('activation_amount') }}
@@ -547,7 +547,7 @@
                                                                 <strong> Placement Id: </strong> NA
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> NA
+                                                                <strong> Date of Joining: </strong> NA
                                                             </li>
                                                             <li>
                                                                 <strong> Investment: </strong> NA
@@ -615,7 +615,7 @@
                                                                 <strong> Placement Id: </strong> {{ $data['left_child_3']['getLoginIdByParentId']->login_id }}
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_3']->created_at)) }}
+                                                                <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['left_child_3']->created_at)) }}
                                                             </li>
                                                             <li>
                                                                 <strong>Investment:</strong> ${{ $data['left_child_3']->getActiveActivations->sum('activation_amount') }}
@@ -652,7 +652,7 @@
                                                                 <strong> Placement Id: </strong> NA
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> NA
+                                                                <strong> Date of Joining: </strong> NA
                                                             </li>
                                                             <li>
                                                                 <strong> Investment: </strong> NA
@@ -712,7 +712,7 @@
                                                                 <strong> Placement Id: </strong> {{ $data['right_child_3']['getLoginIdByParentId']->login_id }}
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_3']->created_at)) }}
+                                                                <strong> Date of Joining: </strong> {{ date('d M Y', strtotime($data['right_child_3']->created_at)) }}
                                                             </li>
                                                             <li>
                                                                 <strong>Investment:</strong> ${{ $data['right_child_3']->getActiveActivations->sum('activation_amount') }}
@@ -749,7 +749,7 @@
                                                                 <strong> Placement Id: </strong> NA
                                                             </li>
                                                             <li>
-                                                                <strong> Daet of Joining: </strong> NA
+                                                                <strong> Date of Joining: </strong> NA
                                                             </li>
                                                             <li>
                                                                 <strong> Investment: </strong> NA
