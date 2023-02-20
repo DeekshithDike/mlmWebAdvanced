@@ -76,26 +76,11 @@ class RegisteredUserController extends Controller
                 event(new Registered($user));
 
                 $userDet = User::getUsersDetails(["login_id" => $request->sponsorId]);
-                if ($request->position == "Left") {
-                    $leftorRightMostId = BinaryTreeLeft::getLeftMostId([
-                        "users_id" => $userDet->id,
-                    ]);
-                } else {
-                    $leftorRightMostId = BinaryTreeRight::getRightMostId([
-                        "users_id" => $userDet->id,
-                    ]);
-                }
-
-                if ($leftorRightMostId) {
-                    $parent_id = $leftorRightMostId->child_id;
-                } else {
-                    $parent_id = $userDet->id;
-                }
                 
                 $sendPayload = [
                     'users_id' => $user->id,
                     'sponsor_id' => $userDet->id,
-                    'parent_id' => $parent_id,
+                    'parent_id' => $userDet->id,
                     'child_position' => strtolower($request->position),
                     'name' => $request->name,
                     'email' => $request->email,

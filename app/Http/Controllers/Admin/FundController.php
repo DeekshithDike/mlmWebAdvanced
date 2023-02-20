@@ -152,7 +152,8 @@ class FundController extends Controller
             FundHistory::addFundHistory([
                 'users_id' => $walletDetails->id,
                 'amount' => $request->fundAmount,
-                'fund_status' => "REMOVED"
+                'fund_status' => "REMOVED",
+                'created_by' => Auth::user()->id
             ]);
             
             $latestAccountWalletAmount = $walletDetails->fund_wallet_amount - $request->fundAmount;
@@ -165,7 +166,7 @@ class FundController extends Controller
     public function listRemoveFundReport() {
         $filter = [
             'status' => "REMOVED",
-            'created_by' => true
+            'created_by' => Auth::user()->id
         ];
         $data = FundHistory::getAdminAllFundHistory($filter);
         return view('admin.remove-fund-report')->with(["data" => $data]);

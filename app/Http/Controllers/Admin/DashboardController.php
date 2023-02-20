@@ -19,7 +19,8 @@ class DashboardController extends Controller
         $activeUsers = User::where(["user_role" => "USER", "login_status" => 1])->count();
         $blockedUsers = User::where(["user_role" => "USER", "login_status" => 0])->count();
         $pendingWithdrawal = WithdrawalHistory::where(["withdrawal_status" => "PENDING"])->count();
-        $pendingFundRequest = FundHistory::where(["fund_status" => "PENDING"])->count();
+        $pendingFundRequest = FundHistory::where(["fund_histories.fund_status" => "PENDING"])
+                                ->join('coinpayment_transactions', 'fund_histories.order_id', '=', 'coinpayment_transactions.order_id')->count();
         $totalDirectIncome = DirectIncome::where(["status" => "PAID"])->sum('amount');
         $totalBinaryIncome = BinaryIncome::where(["status" => "PAID"])->sum('paid_amount');
         $totalRoiIncome = RoiIncome::sum('paid_amount');
