@@ -53,6 +53,10 @@ class WithdrawalHistory extends Model
             $data = $data->where('withdrawal_histories.withdraw_from', $filter['withdrawalFrom']);
         }
 
+        if (isset($filter['users_id'])) {
+            $data = $data->where('withdrawal_histories.users_id', $filter['users_id']);
+        }
+
         if (isset($filter['withdrawal_histories_id'])) {
             $data = $data->where('withdrawal_histories.id', $filter['withdrawal_histories_id']);
             return $data->first();

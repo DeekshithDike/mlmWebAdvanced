@@ -168,7 +168,8 @@ class WithdrawalController extends Controller
 
     public function workingProfitReport() {
         $filter = [
-            "withdrawalFrom" => "WORKING_WALLET"
+            "withdrawalFrom" => "WORKING_WALLET",
+            "users_id" => Auth::user()->id,
         ];
         $data = WithdrawalHistory::viewWithdrawalHistory($filter);
         return view('customer.working-wallet-withdrawal-report')->with(["data" => $data]);
@@ -176,7 +177,8 @@ class WithdrawalController extends Controller
 
     public function roiProfitReport() {
         $filter = [
-            "withdrawalFrom" => "ROI_WALLET"
+            "withdrawalFrom" => "ROI_WALLET",
+            "users_id" => Auth::user()->id,
         ];
         $data = WithdrawalHistory::viewWithdrawalHistory($filter);
         return view('customer.roi-wallet-withdrawal-report')->with(["data" => $data]);
