@@ -158,7 +158,7 @@
                             <p
                             class="text-base font-semibold text-slate-700 dark:text-navy-100"
                             >
-                            ${{ $totalLeftUserCount }}
+                            {{ $totalLeftUserCount }}
                             </p>
                             <p class="text-xs+ line-clamp-1">Total Left Users</p>
                         </div>
@@ -176,7 +176,7 @@
                             <p
                             class="text-base font-semibold text-slate-700 dark:text-navy-100"
                             >
-                            ${{ $totalRightUserCount }}
+                            {{ $totalRightUserCount }}
                             </p>
                             <p class="text-xs+ line-clamp-1">Total Right User</p>
                         </div>
@@ -194,7 +194,7 @@
                             <p
                             class="text-base font-semibold text-slate-700 dark:text-navy-100"
                             >
-                            ${{ $activeLeftUserCount }}
+                            {{ $activeLeftUserCount }}
                             </p>
                             <p class="text-xs+ line-clamp-1">Active Left Users</p>
                         </div>
@@ -212,7 +212,7 @@
                             <p
                             class="text-base font-semibold text-slate-700 dark:text-navy-100"
                             >
-                            ${{ $activeRightUserCount }}
+                            {{ $activeRightUserCount }}
                             </p>
                             <p class="text-xs+ line-clamp-1">Active Right Users</p>
                         </div>
