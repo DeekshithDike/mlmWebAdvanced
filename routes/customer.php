@@ -8,6 +8,7 @@ use App\Http\Controllers\Customer\AffiliateController;
 use App\Http\Controllers\Customer\WithdrawalController;
 use App\Http\Controllers\Customer\ProfitController;
 use App\Http\Controllers\Customer\TransferController;
+use App\Http\Controllers\Customer\RewardController;
 
 // routes for customer
 Route::prefix('customer')->group(function () {
@@ -87,6 +88,11 @@ Route::prefix('customer')->group(function () {
                 // Route::get('roi-to-km', [TransferController::class, 'roiToKmTransferReport'])->name('customerRoiToKmTransferReport');
                 // Route::get('working-to-km', [TransferController::class, 'workingToKmTransferReport'])->name('customerWorkingToKmTransferReport');
             });            
+        });
+
+        // Reward
+        Route::prefix('reward')->group(function () {
+            Route::get('reward-history', [RewardController::class, 'rewardHistory'])->name('customerRewardHistory');
         });
 
 
