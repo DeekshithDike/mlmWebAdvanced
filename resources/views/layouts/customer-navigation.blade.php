@@ -117,7 +117,7 @@
             <!-- Rewards -->
             <a
             href="{{ route('customerRewardHistory') }}"
-            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/reward') ? 'bg-menu' : ''}}  outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+            class="flex h-11 w-11 items-center justify-center rounded-lg {{ request()->is('customer/reward/*') ? 'bg-menu' : ''}}  outline-none transition-colors duration-200 hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
             x-tooltip.placement.right="'Rewards'"
             >
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -775,7 +775,7 @@
                     <li class="border-t px-4 py-2" x-data="accordionItem('menu-item-7')">
                         <a
                             :class="expanded && 'text-slate-800 font-semibold dark:text-navy-50'"
-                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/reward') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
+                            class="flex items-center justify-between py-2 text-lg tracking-wide {{ request()->is('customer/reward/*') ? 'text-primary font-semibold' : 'text-slate-500'}} outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50"
                             href="{{ route('customerRewardHistory') }}"
                             >
                             <span>Rewards</span>

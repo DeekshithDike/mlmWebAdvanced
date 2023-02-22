@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\WithdrawalController;
 use App\Http\Controllers\Admin\ProfitController;
 use App\Http\Controllers\Admin\TransferController;
 use App\Http\Controllers\CoinpaymentController;
+use App\Http\Controllers\Admin\RewardController;
 
 // routes for admin
 Route::prefix('admin')->group(function () {
@@ -106,6 +107,11 @@ Route::prefix('admin')->group(function () {
             Route::post('wallet-address', [ManageUsersController::class, 'viewCustomerWalletAddressSave'])->name('adminCustomerWalletAddressSave');
             
             Route::get('dashboard/{id}', [ManageUsersController::class, 'viewCustomerDashboard'])->name('adminViewCustomerDashboard');
+        });
+
+        // Reward
+        Route::prefix('reward')->group(function () {
+            Route::get('reward-history', [RewardController::class, 'rewardHistory'])->name('adminRewardHistory');
         });
 
     });
