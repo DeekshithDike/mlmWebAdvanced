@@ -155,8 +155,12 @@ class FundController extends Controller
                 'fund_status' => "REMOVED",
                 'created_by' => Auth::user()->id
             ]);
-            
-            $latestAccountWalletAmount = $walletDetails->fund_wallet_amount - $request->fundAmount;
+
+            if ($walletDetails->fund_wallet_amount < $request->fundAmount) {
+                $latestAccountWalletAmount = 0;
+            } else {
+                $latestAccountWalletAmount = $walletDetails->fund_wallet_amount - $request->fundAmount;
+            }
             User::updateUser($walletDetails->id, ['fund_wallet_amount' => $latestAccountWalletAmount]);
 
             return redirect()->back()->with('success', 'Fund removed successfully.');
