@@ -72,9 +72,9 @@ class AccountActivationController extends Controller
             $_startDate = date('Y-m-d', strtotime($_startDate. ' + 1 days'));
             $dayOfWeek = date("N", strtotime($_startDate));
             
-            // if($dayOfWeek != 6 && $dayOfWeek != 7){
+            if($dayOfWeek != 6 && $dayOfWeek != 7){
               $count++;
-            // }
+            }
             return self::getExpiryDate($_startDate, $noOfDaysToAdd, $count);
         }
         return $_startDate;
