@@ -1036,7 +1036,7 @@
                                         <!-- TITLE START -->
                                         <div class="section-head text-left">
                                             <span class="wt-title-subline font-16 text-gray-dark m-b15">Who we are</span>
-                                            <h2 class="text-uppercase">ABOUT KRYPTO MUSK</h2>
+                                            <h1 class="text-uppercase">ABOUT KRYPTO MUSK</h1>
                                             <div class="wt-separator-outer"><div class="wt-separator bg-primary"></div></div>
                                         </div>
                                         <!-- TITLE END -->

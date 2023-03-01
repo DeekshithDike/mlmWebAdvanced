@@ -270,9 +270,9 @@
         <div class="flex h-full grow flex-col bg-white pl-[var(--main-sidebar-width)] dark:bg-navy-750 menu-shadow">
             <!-- Sidebar Panel Header -->
             <div class="flex h-18 w-full items-center justify-between pl-4 pr-1">
-            <p class="text-base tracking-wider text-slate-800 dark:text-navy-100">
-                Menu
-            </p>
+            <h1 class="text-base tracking-wider text-white text-2xl">
+                <strong>Kryptomusk</strong>
+            </h1>
             <button @click="$store.global.isSidebarExpanded = false" class="btn h-7 w-7 rounded-full p-0 text-primary hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:text-accent-light/80 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25 xl:hidden">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -275,6 +275,7 @@ class ManageUsersController extends Controller
             "totalDirectIncome" => $totalDirectIncome,
             "login_id" => $userDet->login_id,
             "name" => $userDet->name,
+            "country" => $userDet->country,
             "last_login_datetime" => $userDet->last_login_datetime,
             "login_ip_address" => $userDet->login_ip_address,
             "fund_wallet_amount" => $userDet->fund_wallet_amount,

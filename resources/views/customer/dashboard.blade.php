@@ -59,8 +59,8 @@
                   <span class="font-semibold text-slate-100">{{ Auth::user()->login_id }}</span>
                 </p>
                 <p class="mt-2 leading-relaxed">
-                  IP Address: 
-                  <span class="font-semibold text-slate-100">{{ Auth::user()->login_ip_address }}</span>
+                  Country: 
+                  <span class="font-semibold text-slate-100">{{ Auth::user()->country }}</span>
                 </p>
                 <p class="mt-2 leading-relaxed">
                   Last Login On: 
@@ -91,7 +91,7 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="text-slate-700 text-semibold">${{ $totalRoiIncome }}</h3>
+                        <h3 class="text-slate-700 dark:text-navy-100 text-semibold">${{ $totalRoiIncome }}</h3>
                     </div>
                     <div class="flex cursor-pointer items-center justify-between space-x-2">
                         <div class="flex items-center space-x-3">
@@ -106,7 +106,7 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="text-slate-700 text-semibold">${{ $totalBinaryIncome }}</h3>
+                        <h3 class="text-slate-700 dark:text-navy-100 text-semibold">${{ $totalBinaryIncome }}</h3>
                     </div>
                     <div class="flex cursor-pointer items-center justify-between space-x-2">
                         <div class="flex items-center space-x-3">
@@ -121,7 +121,7 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="text-slate-700 text-semibold">${{ $totalDirectIncome }}</h3>
+                        <h3 class="text-slate-700 dark:text-navy-100 text-semibold">${{ $totalDirectIncome }}</h3>
                     </div>
                 </div>
             </div>

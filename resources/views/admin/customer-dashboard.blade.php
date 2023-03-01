@@ -22,6 +22,10 @@
                   <span class="font-semibold text-navy-700">{{ $login_ip_address }}</span>
                 </p>
                 <p class="mt-2 leading-relaxed">
+                  Country: 
+                  <span class="font-semibold text-navy-700">{{ $country }}</span>
+                </p>
+                <p class="mt-2 leading-relaxed">
                   Last Login On: 
                   <span class="font-semibold text-navy-700">{{ date('d M Y h:m:s', strtotime($last_login_datetime)) }}</span>
                 </p>
@@ -251,7 +255,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <h3>{{ $totalRoiIncome }}</h3>
+                            <h3 class="text-slate-700 dark:text-navy-100 text-semibold">{{ $totalRoiIncome }}</h3>
                         </div>
                         <div class="flex cursor-pointer items-center justify-between space-x-2">
                             <div class="flex items-center space-x-3">
@@ -266,7 +270,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <h3>${{ $totalBinaryIncome }}</h3>
+                            <h3 class="text-slate-700 dark:text-navy-100 text-semibold">${{ $totalBinaryIncome }}</h3>
                         </div>
                         <div class="flex cursor-pointer items-center justify-between space-x-2">
                             <div class="flex items-center space-x-3">
@@ -281,7 +285,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <h3>{{ $totalDirectIncome }}</h3>
+                            <h3 class="text-slate-700 dark:text-navy-100 text-semibold">{{ $totalDirectIncome }}</h3>
                         </div>
                     </div>
                 </div>

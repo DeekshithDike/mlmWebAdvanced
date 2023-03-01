@@ -22,6 +22,7 @@
       </div>
       <!-- Right: Header buttons -->
       <div class="-mr-1.5 flex items-center space-x-1">
+        <a target="_blank" href="{{ asset('website-assets/docs/kryptomusk_english.pdf') }}" class="text-primary mr-2">Company Brochure</a>
         <a target="_blank" href="{{ asset('website-assets/docs/DOC-20230209-WA0000.pdf') }}" class="text-primary">View Certificate</a>
         {{-- <!-- Dark Mode Toggle -->
         <button

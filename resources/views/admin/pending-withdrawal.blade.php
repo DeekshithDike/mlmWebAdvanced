@@ -43,6 +43,9 @@
                           User ID
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
+                          Name
+                        </th>
+                        <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
                           Withdrawal Amount
                         </th>
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -74,6 +77,9 @@
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">{{ $i++ }}</td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 {{ $item->login_id }}
+                            </td>
+                            <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                                {{ $item->name }}
                             </td>
                             <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                                 ${{ $item->withdrawal_amount }}

@@ -34,8 +34,8 @@ class ActivationHistory extends Model
     }
 
     public static function viewActivationHistory($filter) {
-        $data = self::select('activation_histories.id', 'activation_histories.users_id', 'activation_histories.login_id', 'activation_histories.packages_id', 'activation_histories.activation_amount', 'activation_histories.packages_name', 'activation_histories.packages_min_amount', 'activation_histories.packages_max_amount', 'activation_histories.packages_roi', 'activation_histories.packages_referral', 'activation_histories.packages_binary', 'activation_histories.packages_capping', 'activation_histories.packages_duration', 'activation_histories.activation_status', 'activation_histories.created_at', 'activation_histories.activated_on', 'activation_histories.expiry_date', 'activation_histories.declined_on','activation_histories.activation_by','activation_histories.created_by');
-
+        $data = self::select('users.name', 'activation_histories.id', 'activation_histories.users_id', 'activation_histories.login_id', 'activation_histories.packages_id', 'activation_histories.activation_amount', 'activation_histories.packages_name', 'activation_histories.packages_min_amount', 'activation_histories.packages_max_amount', 'activation_histories.packages_roi', 'activation_histories.packages_referral', 'activation_histories.packages_binary', 'activation_histories.packages_capping', 'activation_histories.packages_duration', 'activation_histories.activation_status', 'activation_histories.created_at', 'activation_histories.activated_on', 'activation_histories.expiry_date', 'activation_histories.declined_on','activation_histories.activation_by','activation_histories.created_by')
+                    ->join('users', 'activation_histories.users_id', '=', 'users.id');
         if (isset($filter['login_id'])) {
             if ($filter['isAffiliate']) {
                 $data = $data->where('activation_histories.login_id', '!=', $filter['login_id'])
