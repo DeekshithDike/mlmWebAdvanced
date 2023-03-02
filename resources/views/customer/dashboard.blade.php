@@ -13,28 +13,28 @@
                       <div class="swiper-slide">
                         <img
                           class="h-64 w-full object-cover"
-                          src="{{ asset('website-assets/images/banner/blog-banner.jpg?v=20230211005214') }}"
+                          src="{{ asset('website-assets/images/banner/blog-banner.jpg?v=20230303001525') }}"
                           alt=""
                         />
                       </div>
                       <div class="swiper-slide">
                         <img
                           class="h-64 w-full object-cover object-top"
-                          src="{{ asset('website-assets/images/background/bg2.jpg?v=20230211005214') }}"
+                          src="{{ asset('website-assets/images/background/bg2.jpg?v=20230303001525') }}"
                           alt=""
                         />
                       </div>
                       <div class="swiper-slide">
                         <img
                           class="h-64 w-full object-cover object-center"
-                          src="{{ asset('website-assets/images/banner/our-team-banner.jpg?v=20230211005214') }}"
+                          src="{{ asset('website-assets/images/banner/our-team-banner.jpg?v=20230303001525') }}"
                           alt=""
                         />
                       </div>
                       <div class="swiper-slide">
                         <img
                           class="h-64 w-full object-cover object-center"
-                          src="{{ asset('website-assets/images/banner/about-banner.jpg?v=20230211005214') }}"
+                          src="{{ asset('website-assets/images/banner/about-banner.jpg?v=20230303001525') }}"
                           alt=""
                         />
                       </div>
@@ -48,7 +48,7 @@
         <div class="col-span-12 lg:col-span-8">
             <div :class="$store.breakpoints.smAndUp &amp;&amp; 'via-purple-300'" class="card mt-12 bg-gradient-to-l from-pink-300 to-indigo-400 p-5 sm:mt-0 sm:flex-row via-purple-300">
               <div class="flex justify-center sm:order-last">
-                <img class="-mt-16 h-40 sm:mt-0" src="{{ asset('dashboard-assets/images/illustrations/rocket.svg?v=20230211005214') }}" alt="">
+                <img class="-mt-16 h-40 sm:mt-0" src="{{ asset('dashboard-assets/images/illustrations/rocket.svg?v=20230303001525') }}" alt="">
               </div>
               <div class="mt-2 flex-1 pt-2 text-center text-white sm:mt-0 sm:text-left">
                 <h3 class="text-xl">

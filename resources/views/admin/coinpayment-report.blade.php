@@ -5,6 +5,7 @@
 @section('styles')    
     <!-- FooTable -->
     <link href="{{ asset('dashboard-assets/css/plugins/footable/footable.core.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
 @endsection
 
 @section('content')
@@ -34,9 +35,9 @@
             
             <div class="mt-5">
                 <div class="is-scrollbar-hidden min-w-full overflow-x-auto">
-                  <input type="text" class="form-input mt-1.5 w-full rounded-lg border bg-transparent px-3 py-2 placeholder:text-slate-400/70" id="filter" placeholder="Search in table">
+                  {{-- <input type="text" class="form-input mt-1.5 w-full rounded-lg border bg-transparent px-3 py-2 placeholder:text-slate-400/70" id="filter" placeholder="Search in table"> --}}
 
-                  <table id="tableDataTbl" class="footable table table-stripped toggle-arrow-tiny" data-page-size="15" data-filter=#filter>
+                  <table id="tableDataTbl" class="footable table table-stripped toggle-arrow-tiny" data-page-size="{{ count($data) }}" data-filter=#filter>
                     <thead>
                       <tr class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500">
                         <th class="whitespace-nowrap px-3 py-3 font-semibold uppercase text-slate-800 dark:text-navy-100 lg:px-5">
@@ -128,14 +129,16 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('dashboard-assets/js/jquery-3.1.1.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
 
     <!-- FooTable -->
     <script src="{{ asset('dashboard-assets/js/plugins/footable/footable.all.min.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 
     <script>
         $(document).ready(function() {
             $('.footable').footable();
+            $('#tableDataTbl').DataTable();
         });
     </script>
 @endsection
