@@ -119,19 +119,25 @@
                     </span>
                 </span>
                 </label>
-                <div class="mt-4 flex items-center justify-end space-x-2">
-                <a
-                    href="{{ route('password.request') }}"
-                    class="text-xs text-slate-400 transition-colors line-clamp-1 hover:text-slate-800 focus:text-slate-800 dark:text-navy-300 dark:hover:text-navy-100 dark:focus:text-navy-100"
-                    >Forgot your password?</a
-                >
+
+                <div class="mt-2 flex items-center justify-end space-x-2">
+                  <input type="checkbox" onclick="showPassword()"> <span class="ml-1 text-xs">Show Password</span>
                 </div>
+                
                 <button
                 class="btn mt-5 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"
                 >
                 Sign In
                 </button>
                 
+                <div class="mt-2 flex items-center justify-end space-x-2">
+                <a
+                    href="{{ route('password.request') }}"
+                    class="text-xs text-slate-400 transition-colors line-clamp-1 hover:text-slate-800 focus:text-slate-800 dark:text-navy-300 dark:hover:text-navy-100 dark:focus:text-navy-100"
+                    >Forgot your password?</a
+                >
+                </div>
+
                 <div class="my-7 flex items-center space-x-3">
                 <div class="h-px flex-1 bg-slate-200 dark:bg-navy-500"></div>
                 <p>OR</p>
@@ -154,6 +160,15 @@
     </div>
     <script>
       window.addEventListener("DOMContentLoaded", () => Alpine.start());
+
+      function showPassword() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
     </script>
   </body>
 </html>

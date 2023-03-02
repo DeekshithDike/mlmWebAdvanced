@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\TransferHistory;
 use App\Models\User;
+use App\Models\BinaryTreeLeft;
+use App\Models\BinaryTreeRight;
 use Auth;
 
 class TransferController extends Controller
@@ -22,6 +24,7 @@ class TransferController extends Controller
 
         $userId = Auth::user()->id;
         $loginIdExist = User::checkExist(['login_id' => $request->transferUserId]);
+        
 
         if (!$loginIdExist) {
             return back()->withErrors([
@@ -36,24 +39,28 @@ class TransferController extends Controller
                 'transferAmount' => "You don't have sufficient fund to transfer in your account wallet.",
             ]);
         } else {
-            TransferHistory::addTransferHistory([
-                "users_id" => $userId,
-                "transfer_type" => "KM_TO_KM",
-                "transferred_amount" => $request->transferAmount,
-                "transferred_to" => $request->transferUserId
-            ]);
+            $walletDetailsByLoginId = User::getWalletDetail(["login_id" => $request->transferUserId]);
+            $isLeftDownLine = BinaryTreeLeft::where(['users_id' => $userId, 'child_id' => $walletDetailsByLoginId->id])->exists();
+            if (!$isLeftDownLine) {
+                return back()->withErrors([
+                    'transferUserId' => "The provided User ID not your downline user.",
+                ]);
+            } else {
+                TransferHistory::addTransferHistory([
+                    "users_id" => $userId,
+                    "transfer_type" => "KM_TO_KM",
+                    "transferred_amount" => $request->transferAmount,
+                    "transferred_to" => $request->transferUserId
+                ]);
+                
+                $latestMinusFund = Auth::user()->fund_wallet_amount - $request->transferAmount;
+                User::updateUser($userId, ['fund_wallet_amount' => $latestMinusFund]);
+                
+                $latestAddFund = $walletDetailsByLoginId->fund_wallet_amount + $request->transferAmount;
+                User::updateUser($walletDetailsByLoginId->id, ['fund_wallet_amount' => $latestAddFund]);
 
-            $walletDetailsByLoginId = User::getWalletDetail([
-                "login_id" => $request->transferUserId
-            ]);
-            
-            $latestMinusFund = Auth::user()->fund_wallet_amount - $request->transferAmount;
-            User::updateUser($userId, ['fund_wallet_amount' => $latestMinusFund]);
-            
-            $latestAddFund = $walletDetailsByLoginId->fund_wallet_amount + $request->transferAmount;
-            User::updateUser($walletDetailsByLoginId->id, ['fund_wallet_amount' => $latestAddFund]);
-
-            return redirect()->back()->with('success', 'Transfer successful.');
+                return redirect()->back()->with('success', 'Transfer successful.');
+            }
         }
     }
 

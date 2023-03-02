@@ -183,7 +183,7 @@
     font-weight: 700;
     border-radius: 5px;
     color: black;
-    top: 25px;
+    top: 80px;
     transform: translate(-50%, -105%);
     width: 230px;
     background: white;
@@ -271,7 +271,7 @@
 }
 
 .tree-level1 .LupazTree-tooip-text {
-    top: 180px;
+    top: 280px;
     left: 190px;
 }
 

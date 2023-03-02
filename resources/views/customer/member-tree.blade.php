@@ -3,7 +3,7 @@
 @section('title', 'Affiliate')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('dashboard-assets/css/tree.css?v=20230210165050') }}" />
+    <link rel="stylesheet" href="{{ asset('dashboard-assets/css/tree.css?v=20230302232022') }}" />
 @endsection
 
 @section('content')
@@ -24,14 +24,21 @@
 
         <div class="grid grid-cols-1 gap-4 sm:gap-5 lg:gap-6">
           <div class="card px-4 pb-4 sm:px-5">
-            <div class="my-5 space-y-1 h-8">
-              <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100 lg:text-base">
-                Member Tree
-              </h2>
-              <p>
-                Display members in tree view.
-              </p>
+            <div class="my-5 space-y-1 h-8 flex justify-between">
+              <div>
+                <h2 class="font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100 lg:text-base">
+                    Member Tree
+                </h2>
+                <p class="text-xs">
+                    Display members in tree view.
+                </p>
+              </div>
               <a href="javascript:void(0);" onclick="window.history.go(-1); return false;" class="btn bg-info text-xs font-medium text-white hover:bg-info-focus focus:bg-info-focus active:bg-info-focus/90">Go Back</a>
+            </div>
+
+            <div class="mt-4 flex justify-between">
+                <p class="text-slate-700 dark:text-navy-100 text-xs">Total Left User: {{ $data['parent_det']->totalLeftUserCount->count() }}</p>
+                <p class="text-slate-700 dark:text-navy-100 text-xs">Total Right User: {{ $data['parent_det']->totalRightUserCount->count() }}</p>
             </div>
 
 
@@ -58,7 +65,7 @@
                                         @else
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                         @endif
-                                        <span>{{ $data['parent_det']->login_id }}</span>
+                                        <span class="text-slate-700 dark:text-navy-100">{{ $data['parent_det']->login_id }}</span>
                                     @else
                                         <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                         <span>Absent</span>
@@ -99,6 +106,12 @@
                                                         <strong>Right Business:</strong> ${{ $data['parent_det']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
                                                     <li>
+                                                        <strong>Total Left Users:</strong> {{ $data['parent_det']->totalLeftUserCount->count() }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Total Right Users:</strong> {{ $data['parent_det']->totalRightUserCount->count() }}
+                                                    </li>
+                                                    <li>
                                                         @if ($data['parent_det']->getCarryForwards != null)
                                                             <strong>Carry Amount:</strong> ${{ $data['parent_det']->getCarryForwards->amount }} (Position: {{ $data['parent_det']->getCarryForwards->position }})    
                                                         @else
@@ -136,6 +149,12 @@
                                                         <strong> Right Business: </strong> NA
                                                     </li>
                                                     <li>
+                                                        <strong> Total Left Users: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Total Right Users: </strong> NA
+                                                    </li> 
+                                                    <li>
                                                         <strong> Carry Amount: </strong> NA
                                                     </li> 
                                                 </ul>
@@ -164,7 +183,7 @@
                                         @else
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                         @endif
-                                        <span>{{ $data['left_child_1']->login_id }}</span>
+                                        <span class="text-slate-700 dark:text-navy-100">{{ $data['left_child_1']->login_id }}</span>
                                     @else
                                         <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                         <span>Absent</span>
@@ -199,6 +218,12 @@
                                                     </li>
                                                     <li>
                                                         <strong>Right Business:</strong> ${{ $data['left_child_1']->getRightBusiness->sum('activation_amount') }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Total Left Users:</strong> {{ $data['left_child_1']->totalLeftUserCount->count() }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Total Right Users:</strong> {{ $data['left_child_1']->totalRightUserCount->count() }}
                                                     </li>
                                                     <li>
                                                         @if ($data['left_child_1']->getCarryForwards != null)
@@ -238,6 +263,12 @@
                                                         <strong> Right Business: </strong> NA
                                                     </li> 
                                                     <li>
+                                                        <strong> Total Left Users: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Total Right Users: </strong> NA
+                                                    </li> 
+                                                    <li>
                                                         <strong> Carry Amount: </strong> NA
                                                     </li> 
                                                 </ul>
@@ -262,7 +293,7 @@
                                         @else
                                             <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                         @endif
-                                        <span>{{ $data['right_child_1']->login_id }}</span>
+                                        <span class="text-slate-700 dark:text-navy-100">{{ $data['right_child_1']->login_id }}</span>
                                     @else
                                         <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                         <span>Absent</span>
@@ -302,6 +333,12 @@
                                                         <strong>Right Business:</strong> ${{ $data['right_child_1']->getRightBusiness->sum('activation_amount') }}
                                                     </li>
                                                     <li>
+                                                        <strong>Total Left Users:</strong> {{ $data['right_child_1']->totalLeftUserCount->count() }}
+                                                    </li>
+                                                    <li>
+                                                        <strong>Total Right Users:</strong> {{ $data['right_child_1']->totalRightUserCount->count() }}
+                                                    </li>
+                                                    <li>
                                                         @if ($data['right_child_1']->getCarryForwards != null)
                                                             <strong>Carry Amount:</strong> ${{ $data['right_child_1']->getCarryForwards->amount }} (Position: {{ $data['right_child_1']->getCarryForwards->position }})    
                                                         @else
@@ -339,6 +376,12 @@
                                                         <strong> Right Business: </strong> NA
                                                     </li> 
                                                     <li>
+                                                        <strong> Total Left Users: </strong> NA
+                                                    </li> 
+                                                    <li>
+                                                        <strong> Total Right Users: </strong> NA
+                                                    </li> 
+                                                    <li>
                                                         <strong> Carry Amount: </strong> NA
                                                     </li> 
                                                 </ul>
@@ -371,7 +414,7 @@
                                                 @else
                                                     <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                                 @endif
-                                                <span>{{ $data['left_child_2']->login_id }}</span>
+                                                <span class="text-slate-700 dark:text-navy-100">{{ $data['left_child_2']->login_id }}</span>
                                             @else
                                                 <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                                 <span>Absent</span>
@@ -406,6 +449,12 @@
                                                             </li>
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['left_child_2']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Left Users:</strong> {{ $data['left_child_2']->totalLeftUserCount->count() }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Right Users:</strong> {{ $data['left_child_2']->totalRightUserCount->count() }}
                                                             </li>
                                                             <li>
                                                                 @if ($data['left_child_2']->getCarryForwards != null)
@@ -445,6 +494,12 @@
                                                                 <strong> Right Business: </strong> NA
                                                             </li>
                                                             <li>
+                                                                <strong> Total Left Users: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Total Right Users: </strong> NA
+                                                            </li> 
+                                                            <li>
                                                                 <strong> Carry Amount: </strong> NA
                                                             </li>
                                                         </ul>
@@ -468,7 +523,7 @@
                                                 @else
                                                     <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                                 @endif
-                                                <span>{{ $data['right_child_2']->login_id }}</span>
+                                                <span class="text-slate-700 dark:text-navy-100">{{ $data['right_child_2']->login_id }}</span>
                                             @else
                                                 <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                                 <span>Absent</span>
@@ -503,6 +558,12 @@
                                                             </li>
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['right_child_2']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Left Users:</strong> {{ $data['right_child_2']->totalLeftUserCount->count() }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Right Users:</strong> {{ $data['right_child_2']->totalRightUserCount->count() }}
                                                             </li>
                                                             <li>
                                                                 @if ($data['right_child_2']->getCarryForwards != null)
@@ -542,6 +603,12 @@
                                                                 <strong> Right Business: </strong> NA
                                                             </li> 
                                                             <li>
+                                                                <strong> Total Left Users: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Total Right Users: </strong> NA
+                                                            </li> 
+                                                            <li>
                                                                 <strong> Carry Amount: </strong> NA
                                                             </li>
                                                         </ul>
@@ -573,7 +640,7 @@
                                                 @else
                                                     <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                                 @endif
-                                                <span>{{ $data['left_child_3']->login_id }}</span>
+                                                <span class="text-slate-700 dark:text-navy-100">{{ $data['left_child_3']->login_id }}</span>
                                             @else
                                                 <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                                 <span>Absent</span>
@@ -608,6 +675,12 @@
                                                             </li>
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['left_child_3']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Left Users:</strong> {{ $data['left_child_3']->totalLeftUserCount->count() }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Right Users:</strong> {{ $data['left_child_3']->totalRightUserCount->count() }}
                                                             </li>
                                                             <li>
                                                                 @if ($data['left_child_3']->getCarryForwards != null)
@@ -647,6 +720,12 @@
                                                                 <strong> Right Business: </strong> NA
                                                             </li>
                                                             <li>
+                                                                <strong> Total Left Users: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Total Right Users: </strong> NA
+                                                            </li> 
+                                                            <li>
                                                                 <strong> Carry Amount: </strong> NA
                                                             </li> 
                                                         </ul>
@@ -670,7 +749,7 @@
                                                 @else
                                                     <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-inactive.png') }}"> 
                                                 @endif
-                                                <span>{{ $data['right_child_3']->login_id }}</span>
+                                                <span class="text-slate-700 dark:text-navy-100">{{ $data['right_child_3']->login_id }}</span>
                                             @else
                                                 <img class="display-inline" src="{{ asset('dashboard-assets/images/avatar/user-absent.png') }}">
                                                 <span>Absent</span>
@@ -705,6 +784,12 @@
                                                             </li>
                                                             <li>
                                                                 <strong>Right Business:</strong> ${{ $data['right_child_3']->getRightBusiness->sum('activation_amount') }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Left Users:</strong> {{ $data['right_child_3']->totalLeftUserCount->count() }}
+                                                            </li>
+                                                            <li>
+                                                                <strong>Total Right Users:</strong> {{ $data['right_child_3']->totalRightUserCount->count() }}
                                                             </li>
                                                             <li>
                                                                 @if ($data['right_child_3']->getCarryForwards != null)
@@ -743,6 +828,12 @@
                                                             <li>
                                                                 <strong> Right Business: </strong> NA
                                                             </li>
+                                                            <li>
+                                                                <strong> Total Left Users: </strong> NA
+                                                            </li> 
+                                                            <li>
+                                                                <strong> Total Right Users: </strong> NA
+                                                            </li> 
                                                             <li>
                                                                 <strong> Carry Amount: </strong> NA
                                                             </li> 

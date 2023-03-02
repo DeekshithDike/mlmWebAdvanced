@@ -43,6 +43,8 @@ class BinaryTree extends Model
             ->with('getActiveActivations')
             ->with('getLeftBusiness')
             ->with('getRightBusiness')
+            ->with('totalLeftUserCount')
+            ->with('totalRightUserCount')
             ->with('getLoginIdByParentId')
             ->with('getCarryForwards')
             ->first();
@@ -55,9 +57,21 @@ class BinaryTree extends Model
                 ->with('getActiveActivations')
                 ->with('getLeftBusiness')
                 ->with('getRightBusiness')
+                ->with('totalLeftUserCount')
+                ->with('totalRightUserCount')
                 ->with('getLoginIdByParentId')
                 ->with('getCarryForwards')
                 ->first();
+        }
+
+        public function totalLeftUserCount() {
+            return $this->hasMany('App\Models\BinaryTreeLeft', 'users_id', 'userID')
+                ->select('binary_tree_lefts.users_id'); 
+        }
+
+        public function totalRightUserCount() {
+            return $this->hasMany('App\Models\BinaryTreeRight', 'users_id', 'userID')
+                ->select('binary_tree_rights.users_id'); 
         }
 
         public function getCarryForwards() {
