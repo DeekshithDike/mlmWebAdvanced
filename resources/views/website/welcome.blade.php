@@ -80,9 +80,10 @@
                                         <li><i class="fa fa-envelope"></i><a href="mailto:support@kryptomusk.com">support@kryptomusk.com</a></li>
                                         <li><i class="fa fa-whatsapp"></i><a target="_blank" href="https://api.whatsapp.com/send?phone=447496559597">(+44) 7496 559 597</a></li>
                                     </ul>
+                                    <div id="google_translate_element"></div>
                                 </div>
                                 
-                                <div class="wt-topbar-right">                                    
+                                <div class="wt-topbar-right">                                  
                                     <ul class="list-unstyled e-p-bx pull-right">
                                         <li><a href="{{ route('login') }}"><i class="fa fa-user"></i>Login</a></li>
                                         <li><a href="{{ route('register') }}"><i class="fa fa-sign-in"></i>Register</a></li>
@@ -2015,6 +2016,14 @@
             </div>
         </div>
         <!-- LOADING AREA  END -->
+
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
         <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
 
