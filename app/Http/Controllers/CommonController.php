@@ -15,19 +15,19 @@ class CommonController extends Controller
         return redirect()->route('adminDashboard');
     }
 
-    public function testcron() {
-        DirectIncome::addDirectIncome([
-            'users_id' => 1,
-            'referred' => 'KM0000000',
-            'amount' => 500,
-            'status' => "PAID",
-            'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => date('Y-m-d H:i:s')
-        ]);
-        return json_encode([
-            "status" => "success"
-        ]);
-    }
+    // public function testcron() {
+    //     DirectIncome::addDirectIncome([
+    //         'users_id' => 1,
+    //         'referred' => 'KM0000000',
+    //         'amount' => 500,
+    //         'status' => "PAID",
+    //         'created_at' => date('Y-m-d H:i:s'),
+    //         'updated_at' => date('Y-m-d H:i:s')
+    //     ]);
+    //     return json_encode([
+    //         "status" => "success"
+    //     ]);
+    // }
 
     public function sendDailyBinary() {
         $sendPayload = [
