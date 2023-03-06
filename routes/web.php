@@ -30,6 +30,11 @@ Route::get('testcron', [CommonController::class, 'testcron'])->name('testcron');
 //     Route::post('charge/confirmed', [CoinbaseController::class, 'chargeConfirmed']);
 // });
 
+Route::prefix('cron')->group(function () {
+    Route::get('dailybinary', [CommonController::class, 'sendDailyBinary']);
+    Route::get('dailyroi', [CommonController::class, 'sendDailyRoi']);
+});
+
 // Authenticated & Email verified users routes for all users
 Route::group(['middleware' => ['auth','verified']], function () {
     Route::get('dashboard', [CommonController::class, 'index'])->name('dashboard');
