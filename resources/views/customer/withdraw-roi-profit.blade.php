@@ -35,7 +35,7 @@
             
             <h4 class="py-4 text-info">Your ROI wallet balance: ${{ Auth::user()->roi_wallet_amount }}</h4>
             
-            @if (date('N') == 6)
+            @if (date('N') == 6 || date('N') == 3)
               <form method="POST" action="{{ route('customerWithdrawRoiReqSendOTP') }}">
                 @csrf
                 <div class="max-w-xl">
@@ -76,7 +76,7 @@
             </form>
             @else
                 <div class="py-6">
-                  <h2 class="text-xl text-primary">Withdrawal is disabled on weekdays. You can withdraw only on Saturdays.</h2>
+                  <h2 class="text-xl text-primary">ROI profit withdrawal will be enabled only on Wednesday and Saturday.</h2>
                 </div>
             @endif            
           </div>
